@@ -1,10 +1,10 @@
 {
     "head": {
-        "url": "https://beatles-db.vercel.app/"
+        "url": "https://dai-sengoku-nenpyo.vercel.app/"
     },
     "header": {
-        "title":"ビートルズDB",
-        "text": "ビートルズが結成から解散までにリリースした楽曲（1961〜1970年）のデータベース"
+        "title":"大戦国・年表",
+        "text": "南北合一から元和偃武までの戦国時代の年表（1392〜1616年）"
     },
     "main": {
         "title":"メインページです",

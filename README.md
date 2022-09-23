@@ -1,16 +1,15 @@
-# ビートルズDB
+# 大戦国・年表
 
-ビートルズが結成から解散まで（1961〜1970年）にリリースした楽曲のデータベース
+南北合一から元和偃武までの戦国時代の年表（1392〜1616年）
 
 ## 作っているもの
 
-※参考：[ビートルズDB](https://beatles-db.vercel.app/)
+※参考：[大戦国年表](https://dai-sengoku-nenpyo.vercel.app/)
 
 ## 進捗（コミット）
 
-- ブログのリンク追加 [#3](https://github.com/ryo-i/beatles-db/issues/3)
-- 項目数のズレ？を更新 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- タイトル変更 [#1](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/1)
 
 ## 詳細（ブログ）
 
-※参考：[【React/Next.js】「ビートルズDB」を作った（ビートルズの楽曲を検索できるアプリ）](https://www.i-ryo.com/entry/2022/09/13/065345)
+※参考：[作成中]
