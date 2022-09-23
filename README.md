@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- タイトル変更 [#1](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/1)
+- 年表追加：和暦の各年の開始日（改元日は除く） [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 
 ## 詳細（ブログ）
 
