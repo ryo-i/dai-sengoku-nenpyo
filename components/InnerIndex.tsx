@@ -117,7 +117,7 @@ function InnerIndex() {
   const [yearList, setYearList] = useState([]);
   const [formatList, setFormatList] = useState([]);
   const [pageInfo, setPageInfo] = useState({});
-  const [tracksData, setTracksData] = useState([]);
+  const [nenpyoData, setNenpyoData] = useState([]);
   const {isCategory, setIsCategory} = useContext(categoryContext);
   const {categoryName, setCategoryName} = useContext(categoryContext);
   const {categoryPath, setCategoryPath} = useContext(categoryContext);
@@ -185,7 +185,7 @@ function InnerIndex() {
         const resJson = await res.json();
         const data = resJson;
         // console.log('data', data);
-        setTracksData(data.nenpyoList);
+        setNenpyoData(data.nenpyoList);
         setYearList(data.yearList);
         setFormatList(data.formatList);
         setPageInfo(data.pageInfo);
@@ -212,25 +212,21 @@ function InnerIndex() {
     } else {
       return (
         <ul className="trackList">
-          {tracksData.map((data, index) =>
-            <li key={index} className={getTopTrack(data.order, index, tracksData)} data-order={data.order}>
-              <figure>
-                <p className="icon">
-                  <Link href={hierarchy + "category/" + data.path}>
-                    <a>{data.icon}</a>
-                  </Link>
-                </p>
-              </figure>
+          {nenpyoData.map((data, index) =>
+            <li key={index} className={getTopTrack(data.order, index, nenpyoData)} data-order={data.order}>
               <dl>
                 <dt>
                   <Link href={hierarchy + "track/" + data.id}>
                     <a>
-                      <p className="num">{data.number}</p>
-                      <p className="song">{data.track}</p>
+                      <p className="title">{data.title}</p>
                     </a>
                   </Link>
                 </dt>
                 <dd>
+                  <p className="date">
+                    {data.waYear}年{data.waMonth}月{data.waDay}日
+                    （{data.adYear}年{data.adMonth}月{data.adDay}日）
+                  </p>
                   <p className="title-area">
                     <span className="year">
                       <Link href={
@@ -238,23 +234,7 @@ function InnerIndex() {
                         hierarchy + "category/" + data.path + "?year=" + data.year :
                         hierarchy + "?year=" + data.year
                       }>
-                        <a>{data.year}</a>
-                      </Link>
-                    </span>
-                    <span className="format">
-                      <Link href={isCategory ?
-                        hierarchy + "category/" + data.path + "?format=" + data.format :
-                        hierarchy + "?format=" + data.format
-                      }>
-                        <a>{data.format}</a>
-                      </Link>
-                    </span>
-                    <span className="title">
-                      <Link href={isCategory ?
-                        hierarchy + "category/" + data.path + "?order=" + data.order + "&title=" + data.title :
-                        hierarchy + "?order=" + data.order + "&title=" + data.title
-                      }>
-                        <a>{data.title}</a>
+                        <a>{data.waYear}年</a>
                       </Link>
                     </span>
                   </p>
