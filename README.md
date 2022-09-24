@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 年代と元号を追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 年代に単位「年代」を追記 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 
 ## 詳細（ブログ）
 
