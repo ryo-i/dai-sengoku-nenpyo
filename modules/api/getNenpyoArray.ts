@@ -9,9 +9,11 @@ const getNenpyoArray = (dataLength, pageInfo, data, keyNumbers) => {
   const nenpyoArray = [];
   for (var i = startNum; i < startNum + addLength; i++) {
     const thisObj = {};
+    thisObj['adAge'] = data[i][keyNumbers.adAge];
     thisObj['adYear'] = data[i][keyNumbers.adYear];
     thisObj['adMonth'] = data[i][keyNumbers.adMonth];
     thisObj['adDay'] = data[i][keyNumbers.adDay];
+    thisObj['waGengo'] = data[i][keyNumbers.waGengo];
     thisObj['waYear'] = data[i][keyNumbers.waYear];
     thisObj['waMonth'] = data[i][keyNumbers.waMonth];
     thisObj['waDay'] = data[i][keyNumbers.waDay];
