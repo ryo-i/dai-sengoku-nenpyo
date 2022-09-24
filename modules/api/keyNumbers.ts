@@ -1,15 +1,17 @@
 // KeyNumbers
 const keyNumbers = {
-  id: 0,
-  year: 0,
-  icon: 0,
-  path: 0,
-  artist: 0,
-  format: 0,
-  title: 0,
-  order: 0,
-  number: 0,
-  track: 0
+  adAge: 0,
+  adYear: 0,
+  adMonth: 0,
+  adDay: 0,
+  waGengo: 0,
+  waYear: 0,
+  waMonth: 0,
+  waDay: 0,
+  region: 0,
+  country: 0,
+  category: 0,
+  title: 0
 };
 
 export { keyNumbers };

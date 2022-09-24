@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- タグに年号、年代、西暦年を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- APIのレスポンスに地域情報を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 - 地域などの項目名を整理 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 
 ## 詳細（ブログ）

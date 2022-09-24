@@ -17,6 +17,10 @@ const getKeyNumber = (data, keyNumbers) => {
       keyNumbers.waMonth = i;
     } else if (data[i] === 'waDay') {
       keyNumbers.waDay = i;
+    } else if (data[i] === 'region') {
+      keyNumbers.region = i;
+    } else if (data[i] === 'country') {
+      keyNumbers.country = i;
     } else if (data[i] === 'category') {
       keyNumbers.category = i;
     } else if (data[i] === 'title') {
