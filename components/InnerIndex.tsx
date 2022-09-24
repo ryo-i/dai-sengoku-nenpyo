@@ -225,7 +225,16 @@ function InnerIndex() {
                 </dt>
                 <dd>
 
-                  <p className="title-area">
+                  <p className="tab-area">
+                    <span className="year">
+                      <Link href={
+                        isCategory ?
+                        hierarchy + "category/" + data.path + "?year=" + data.year :
+                        hierarchy + "?year=" + data.year
+                      }>
+                        <a>{data.waGengo}</a>
+                      </Link>
+                    </span>
                     <span className="year">
                       <Link href={
                         isCategory ?
@@ -235,14 +244,24 @@ function InnerIndex() {
                         <a>{data.waYear}年</a>
                       </Link>
                     </span>
-                  </p>
-                  <p className="artist">
-                      <Link href={isCategory ?
-                        hierarchy + "category/" + data.path + "?artist=" + data.artist :
-                        hierarchy + "?artist=" + data.artist
+                    <span className="year">
+                      <Link href={
+                        isCategory ?
+                        hierarchy + "category/" + data.path + "?year=" + data.year :
+                        hierarchy + "?year=" + data.year
                       }>
-                        <a>{data.artist}</a>
+                        <a>{data.adAge}</a>
                       </Link>
+                    </span>
+                    <span className="year">
+                      <Link href={
+                        isCategory ?
+                        hierarchy + "category/" + data.path + "?year=" + data.year :
+                        hierarchy + "?year=" + data.year
+                      }>
+                        <a>{data.adYear}年</a>
+                      </Link>
+                    </span>
                   </p>
                 </dd>
               </dl>
