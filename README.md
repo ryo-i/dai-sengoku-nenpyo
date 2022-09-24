@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 年月日を和暦（西暦）に書式変更 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
-- 元号開始年を「元年」で統一 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- タイトルも元号開始年を「元年」で統一 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 
 ## 詳細（ブログ）
 
