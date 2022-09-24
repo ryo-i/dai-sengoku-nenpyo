@@ -177,7 +177,7 @@ function InnerIndex() {
     setPageKey(pageKey);
 
     // fetch
-    const url: string = isCategory ? '../api/beatles' + queryText : 'api/beatles' + queryText;
+    const url: string = isCategory ? '../api/nenpyo' + queryText : 'api/nenpyo' + queryText;
     // console.log('url', url);
     async function getTracksData (url) {
       try {
@@ -185,7 +185,7 @@ function InnerIndex() {
         const resJson = await res.json();
         const data = resJson;
         // console.log('data', data);
-        setTracksData(data.trackList);
+        setTracksData(data.nenpyoList);
         setYearList(data.yearList);
         setFormatList(data.formatList);
         setPageInfo(data.pageInfo);

@@ -14,7 +14,7 @@ function Home() {
   const [categoryName, setCategoryName] = useState('All');
   const [categoryPath, setCategoryPath] = useState('');
 
-  /* return (
+  return (
     <>
       <Header />
       <main>
@@ -26,9 +26,9 @@ function Home() {
       </main>
       <Footer />
     </>
-  ) */
+  )
 
-  return (
+  /* return (
     <>
       <Header />
       <main>
@@ -38,7 +38,7 @@ function Home() {
       </main>
       <Footer />
     </>
-  )
+  ) */
 }
 
 export default Home;

@@ -1,4 +1,4 @@
-import beatlesData from '../data/beatles.json';
+import nenpyoData from '../data/nenpyo.json';
 import { keyNumbers } from '../../../modules/api/keyNumbers';
 import { getKeyNumber }from '../../../modules/api/getKeyNumber';
 import { getFilterData }from '../../../modules/api/getFilterData';
@@ -7,15 +7,15 @@ import { getPageSegmentation }from '../../../modules/api/getPageSegmentation';
 import { getDataLength }from '../../../modules/api/getDataLength';
 import { getYearsArray }from '../../../modules/api/getYearsArray';
 import { getFormatsArray }from '../../../modules/api/getFormatsArray';
-import { getTracksArray }from '../../../modules/api/getTracksArray';
+import { getNenpyoArray }from '../../../modules/api/getNenpyoArray';
 
 
-getKeyNumber(beatlesData.values[0], keyNumbers);
+getKeyNumber(nenpyoData.values[0], keyNumbers);
 
 
 // Response
 export default (req, res) => {
-  let resultData = beatlesData.values;
+  let resultData = nenpyoData.values;
   const query = req.query;
 
   // category
@@ -71,12 +71,12 @@ export default (req, res) => {
   const pageParam = req.query.page;
   const dataLength = getDataLength(pageParam);
   const pageInfo = getPageSegmentation(pageParam, resultData);
-  const tracksArray = getTracksArray(dataLength, pageInfo, resultData, keyNumbers);
+  const nenpyoArray = getNenpyoArray(dataLength, pageInfo, resultData, keyNumbers);
 
-  const tracksData = {};
-  tracksData['pageInfo'] = pageInfo;
-  tracksData['yearList'] = yearsArray;
-  tracksData['formatList'] = formatsArray;
-  tracksData['trackList'] = tracksArray;
-  res.status(200).json(tracksData);
+  const resNenpyoData = {};
+  resNenpyoData['pageInfo'] = pageInfo;
+  resNenpyoData['yearList'] = yearsArray;
+  resNenpyoData['formatList'] = formatsArray;
+  resNenpyoData['nenpyoList'] = nenpyoArray;
+  res.status(200).json(resNenpyoData);
 }
