@@ -11,7 +11,7 @@ const pageText = 'xxxx、xxxx、xxxxなどで絞り込みができます。';
 
 function Home() {
   const [isCategory, setIsCategory] = useState(false);
-  const [categoryName, setCategoryName] = useState('All');
+  const [categoryName, setCategoryName] = useState('すべて');
   const [categoryPath, setCategoryPath] = useState('');
 
   return (
@@ -27,18 +27,6 @@ function Home() {
       <Footer />
     </>
   )
-
-  /* return (
-    <>
-      <Header />
-      <main>
-        <h1>{ pageTitle }</h1>
-        <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
-        作成中
-      </main>
-      <Footer />
-    </>
-  ) */
 }
 
 export default Home;
