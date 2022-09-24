@@ -59,13 +59,12 @@ function About() {
                 <h2>進捗</h2>
                 <ul>
                     <li>年月日を和暦（西暦）に書式変更 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
-                    <li>年代に単位「年代」を追記 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
+                    <li>元号開始年を「元年」で統一 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
                 </ul>
             </section>
             <section>
                 <h2>今後の予定</h2>
                 <ul>
-                    <li>年表表示 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/1" target="_blank">#1</a></li>
                 </ul>
             </section>
             <section>
