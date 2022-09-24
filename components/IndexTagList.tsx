@@ -4,7 +4,7 @@ import { categoryContext } from '../context/categoryContext';
 import { indexContext } from '../context/indexContext';
 import styled from 'styled-components';
 import tagStyle from './style/tagStyle';
-import { getTagList } from '../modules/trackList/getTagList';
+import { getTagList } from '../modules/nenpyoList/getTagList';
 
 
 // CSS in JS

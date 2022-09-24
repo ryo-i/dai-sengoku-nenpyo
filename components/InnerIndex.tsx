@@ -13,12 +13,11 @@ import Pagination from './IndexPagination';
 import Nav from './style/Nav';
 import tagStyle from './style/tagStyle';
 import Data from '../data/data.json';
-import { getTopTrack } from '../modules/trackList/getTopTrack';
-import { getQueryParam } from '../modules/trackList/getQueryParam';
-import { getHeadInfo } from '../modules/trackList/getHeadInfo';
-import { getQueryInfo } from '../modules/trackList/getQueryInfo';
-import { getPageKey } from '../modules/trackList/getPageKey';
-import { deleteParam } from '../modules/trackList/deleteParam';
+import { getQueryParam } from '../modules/nenpyoList/getQueryParam';
+import { getHeadInfo } from '../modules/nenpyoList/getHeadInfo';
+import { getQueryInfo } from '../modules/nenpyoList/getQueryInfo';
+import { getPageKey } from '../modules/nenpyoList/getPageKey';
+import { deleteParam } from '../modules/nenpyoList/deleteParam';
 
 const headerTitle = Data.header.title;
 const headerText = Data.header.text;
@@ -30,7 +29,7 @@ const Section = styled.section`
     color: #333;
     margin: 0 0 10px;
   }
-  .trackList {
+  .nenpyoList {
     padding: 10px 0;
     li {
       display: flex;
@@ -99,9 +98,6 @@ const Section = styled.section`
     }
     li:last-child {
       border-bottom: 2px solid #ccc;
-    }
-    li:first-child, .topTrack {
-      border-top: 2px solid #999;
     }
   }
 `;
@@ -179,7 +175,7 @@ function InnerIndex() {
     // fetch
     const url: string = isCategory ? '../api/nenpyo' + queryText : 'api/nenpyo' + queryText;
     // console.log('url', url);
-    async function getTracksData (url) {
+    async function getNenpyoData (url) {
       try {
         const res = await fetch(url);
         const resJson = await res.json();
@@ -198,25 +194,25 @@ function InnerIndex() {
     };
 
     if (router.isReady && queryText !== null) {
-      getTracksData(url);
+      getNenpyoData(url);
     }
   }, [router, queryParam, categoryName]);
 
 
-  // Track List
-  const TrackList = () => {
+  // Nenpyo List
+  const NenpyoList = () => {
     if (error) {
       return <p>エラー: {error.message}</p>;
     } else if (!isLoaded) {
       return <p>読み込み中...</p>;
     } else {
       return (
-        <ul className="trackList">
+        <ul className="nenpyoList">
           {nenpyoData.map((data, index) =>
-            <li key={index} className={getTopTrack(data.order, index, nenpyoData)} data-order={data.order}>
+            <li key={index} data-order={data.order}>
               <dl>
                 <dt>
-                  <Link href={hierarchy + "track/" + data.id}>
+                  <Link href={hierarchy + "nenpyo/" + data.id}>
                     <a>
                       <p className="title">{data.title}</p>
                     </a>
@@ -285,7 +281,7 @@ function InnerIndex() {
           <TagList />
           <Information />
           <Pagination />
-          <TrackList />
+          <NenpyoList />
           <Pagination />
         </Section>
       </indexContext.Provider>
