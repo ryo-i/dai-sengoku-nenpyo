@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- API設定に年代と元号を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- API設定に年代と元号を追加-2 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 - タイトルも元号開始年を「元年」で統一 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 
 ## 詳細（ブログ）
