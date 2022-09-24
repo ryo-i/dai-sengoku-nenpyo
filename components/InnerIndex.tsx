@@ -55,21 +55,24 @@ const Section = styled.section`
       dl {
         margin: 0;
         flex: 1;
-        dt a {
+        dt {
           margin: 0 0 10px;
-          display: flex;
-          align-items: center;
+          /* display: flex;
+          align-items: center; */
           text-decoration: none;
-          .num {
+          .category {
             margin: 0 8px 0 0;
+            padding: 4px;
+            display: inline-block;
             font-size: 10px;
             background: #ddd;
-            width: 18px;
-            height: 18px;
-            line-height: 18px;
             text-align: center;
             border-radius: 3px;
             color: #000;
+          }
+          .date {
+            display: inline-block;
+            font-size: 0.75em;
           }
           .song {
             font-size: 18px;
@@ -212,6 +215,8 @@ function InnerIndex() {
             <li key={index} data-order={data.order}>
               <dl>
                 <dt>
+                  <p className="category">{data.category}</p>
+                  <p className="date">{data.adYear}年{data.adMonth}月{data.adDay}日</p>
                   <Link href={hierarchy + "nenpyo/" + data.id}>
                     <a>
                       <p className="title">{data.title}</p>
@@ -219,10 +224,7 @@ function InnerIndex() {
                   </Link>
                 </dt>
                 <dd>
-                  <p className="date">
-                    {data.waYear}年{data.waMonth}月{data.waDay}日
-                    （{data.adYear}年{data.adMonth}月{data.adDay}日）
-                  </p>
+
                   <p className="title-area">
                     <span className="year">
                       <Link href={
