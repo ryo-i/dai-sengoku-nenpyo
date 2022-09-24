@@ -94,7 +94,7 @@ const Section = styled.section`
           .artist a {
             color: #666;
           }
-          .year a,
+          .tab-area a,
           .format a ${tagStyle}
         }
       }
@@ -224,44 +224,70 @@ function InnerIndex() {
                   </Link>
                 </dt>
                 <dd>
-
                   <p className="tab-area">
-                    <span className="year">
-                      <Link href={
-                        isCategory ?
-                        hierarchy + "category/" + data.path + "?year=" + data.year :
-                        hierarchy + "?year=" + data.year
-                      }>
-                        <a>{data.waGengo}</a>
-                      </Link>
-                    </span>
-                    <span className="year">
-                      <Link href={
-                        isCategory ?
-                        hierarchy + "category/" + data.path + "?year=" + data.year :
-                        hierarchy + "?year=" + data.year
-                      }>
-                        <a>{data.waYear}年</a>
-                      </Link>
-                    </span>
-                    <span className="year">
-                      <Link href={
-                        isCategory ?
-                        hierarchy + "category/" + data.path + "?year=" + data.year :
-                        hierarchy + "?year=" + data.year
-                      }>
-                        <a>{data.adAge}</a>
-                      </Link>
-                    </span>
-                    <span className="year">
-                      <Link href={
-                        isCategory ?
-                        hierarchy + "category/" + data.path + "?year=" + data.year :
-                        hierarchy + "?year=" + data.year
-                      }>
-                        <a>{data.adYear}年</a>
-                      </Link>
-                    </span>
+                    {
+                      data.waYear ?
+                      <span className="waYear">
+                        <Link href={
+                          isCategory ?
+                          hierarchy + "category/" + data.path + "?waYear=" + data.waYear :
+                          hierarchy + "?waYear=" + data.waYear
+                        }>
+                          <a>{data.waYear}年</a>
+                        </Link>
+                      </span> :
+                      <span className="waGengo">
+                        <Link href={
+                          isCategory ?
+                          hierarchy + "category/" + data.path + "?waGengo=" + data.waGengo :
+                          hierarchy + "?waGengo=" + data.waGengo
+                        }>
+                          <a>{data.waGengo}</a>
+                        </Link>
+                      </span>
+                    }
+                    {
+                      data.adYear ?
+                      <span className="adYear">
+                        <Link href={
+                          isCategory ?
+                          hierarchy + "category/" + data.path + "?adYear=" + data.adYear :
+                          hierarchy + "?adYear=" + data.adYear
+                        }>
+                          <a>{data.adYear}年</a>
+                        </Link>
+                      </span> :
+                      <span className="adAge">
+                        <Link href={
+                          isCategory ?
+                          hierarchy + "category/" + data.path + "?adAge=" + data.adAge :
+                          hierarchy + "?adAge=" + data.adAge
+                        }>
+                          <a>{data.adAge}</a>
+                        </Link>
+                      </span>
+                     }
+                    {
+                      data.country ?
+                      <span className="country">
+                        <Link href={
+                          isCategory ?
+                          hierarchy + "category/" + data.path + "?country=" + data.country :
+                          hierarchy + "?country=" + data.country
+                        }>
+                          <a>{data.country}</a>
+                        </Link>
+                      </span> :
+                      <span className="region">
+                        <Link href={
+                          isCategory ?
+                          hierarchy + "category/" + data.path + "?region=" + data.region :
+                          hierarchy + "?region=" + data.region
+                        }>
+                          <a>{data.region}</a>
+                        </Link>
+                      </span>
+                    }
                   </p>
                 </dd>
               </dl>

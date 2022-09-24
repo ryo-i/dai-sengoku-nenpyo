@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- APIのレスポンスに地域情報を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- タグの和暦、西暦、地域を優先度順で表示 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 - 地域などの項目名を整理 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 
 ## 詳細（ブログ）
