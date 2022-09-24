@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- モジュールなどのtrackをnenpyoに打ち替え [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- InnerTrackのimportパス修正 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 - 年代に単位「年代」を追記 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 
 ## 詳細（ブログ）

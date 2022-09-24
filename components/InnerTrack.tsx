@@ -6,8 +6,8 @@ import styled from 'styled-components';
 import TrackBreadcrumb from './TrackBreadcrumb';
 import PrevNextNav from './PrevNextNav';
 import Nav from './style/Nav';
-import { getPeopleArray } from '../modules/trackInfo/getPeopleArray';
-import { getDividedArray } from '../modules/trackInfo/getDividedArray';
+import { getPeopleArray } from '../modules/nenpyoInfo/getPeopleArray';
+import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
 
 
 // CSS in JS
