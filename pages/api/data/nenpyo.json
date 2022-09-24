@@ -3,14 +3,14 @@
   "majorDimension": "ROWS",
   "values": [
     [
-      "ad-age",
-      "ad-year",
-      "ad-month",
-      "ad-day",
-      "wa-gengo",
-      "wa-year",
-      "wa-month",
-      "wa-day",
+      "adAge",
+      "adYear",
+      "adMonth",
+      "adDay",
+      "waGengo",
+      "waYear",
+      "waMonth",
+      "waDay",
       "time",
       "continent",
       "country",
@@ -20,12 +20,12 @@
       "category",
       "title",
       "url",
-      "ten-no",
+      "tenNou",
       "kanpaku",
       "syogun",
       "kanrei",
-      "kanto-kubo",
-      "kanto-kanrei"
+      "kantoKubo",
+      "kantoKanrei"
     ],
     [
       "1390年代",

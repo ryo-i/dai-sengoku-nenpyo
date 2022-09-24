@@ -1,7 +1,7 @@
 // Get Filter Data
 const getNoCategoryData = (data, keyNumbers) => {
   const result = data.filter((item, index) => {
-    if (item[keyNumbers['id']] !== 'id') {
+    if (item[keyNumbers['adYear']] !== 'adYear') {
       return item;
     }
   });
