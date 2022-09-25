@@ -17,10 +17,11 @@ const getNenpyoArray = (dataLength, pageInfo, data, keyNumbers) => {
     thisObj['waYear'] = data[i][keyNumbers.waYear];
     thisObj['waMonth'] = data[i][keyNumbers.waMonth];
     thisObj['waDay'] = data[i][keyNumbers.waDay];
-    thisObj['region'] = data[i][keyNumbers.region];
-    thisObj['country'] = data[i][keyNumbers.country];
     thisObj['category'] = data[i][keyNumbers.category];
     thisObj['title'] = data[i][keyNumbers.title];
+    thisObj['region'] = data[i][keyNumbers.region];
+    thisObj['country'] = data[i][keyNumbers.country];
+    thisObj['influence'] = data[i][keyNumbers.influence];
     nenpyoArray.push(thisObj);
   }
   return nenpyoArray;

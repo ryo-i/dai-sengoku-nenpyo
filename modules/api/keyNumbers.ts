@@ -8,10 +8,11 @@ const keyNumbers = {
   waYear: 0,
   waMonth: 0,
   waDay: 0,
+  category: 0,
+  title: 0,
   region: 0,
   country: 0,
-  category: 0,
-  title: 0
+  influence: 0
 };
 
 export { keyNumbers };
