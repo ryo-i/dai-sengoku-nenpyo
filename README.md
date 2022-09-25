@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 勢力、人物の項目を追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- 勢力をページに表示 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- 勢力タグ、複数件に対応 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

@@ -18,6 +18,7 @@ import { getHeadInfo } from '../modules/nenpyoList/getHeadInfo';
 import { getQueryInfo } from '../modules/nenpyoList/getQueryInfo';
 import { getPageKey } from '../modules/nenpyoList/getPageKey';
 import { deleteParam } from '../modules/nenpyoList/deleteParam';
+import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
 
 const headerTitle = Data.header.title;
 const headerText = Data.header.text;
@@ -202,6 +203,36 @@ function InnerIndex() {
   }, [router, queryParam, categoryName]);
 
 
+  // Influence Array
+  function InfluenceArray (props) {
+    if (error) {
+      return <p>エラー: {error.source}</p>;
+    } else if (props.source === '-' || props.source === '') {
+      return null;
+    } else if (!props.source) {
+      return <p>読み込み中...</p>;
+    }
+
+    const resultArray = getDividedArray(props.source);
+
+    return (
+      <>
+        {resultArray.map((data, index) =>
+          <span className="influence" key={index}>
+            <Link href={
+              isCategory ?
+              hierarchy + "category/" + props.path + "?influence=" + data :
+              hierarchy + "?influence=" + data
+            }>
+              <a>{data}</a>
+            </Link>
+          </span>
+        )}
+      </>
+    );
+  }
+
+
   // Nenpyo List
   const NenpyoList = () => {
     if (error) {
@@ -288,15 +319,7 @@ function InnerIndex() {
                         </Link>
                       </span>
                     }
-                    <span className="influence">
-                      <Link href={
-                        isCategory ?
-                        hierarchy + "category/" + data.path + "?influence=" + data.influence :
-                        hierarchy + "?influence=" + data.influence
-                      }>
-                        <a>{data.influence}</a>
-                      </Link>
-                    </span>
+                    <InfluenceArray source={data.influence} />
                   </p>
                 </dd>
               </dl>

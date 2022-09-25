@@ -1,7 +1,7 @@
 // Get Divided Array
 const getDividedArray = (text) => {
     let resultArray = [];
-    const delimiterSlash = ' / ';
+    const delimiterSlash = ' | ';
     const isMultipleSlash = text.indexOf(delimiterSlash) !== -1;
 
     if (isMultipleSlash) {
