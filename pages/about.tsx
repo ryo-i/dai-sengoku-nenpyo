@@ -58,8 +58,8 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>APIレスポンスに勢力を追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                     <li>勢力、人物の項目を追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
+                    <li>勢力をページに表示 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
             <section>

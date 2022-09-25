@@ -8,8 +8,8 @@
 
 ## 進捗（コミット）
 
-- APIレスポンスに勢力を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 - 勢力、人物の項目を追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 勢力をページに表示 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

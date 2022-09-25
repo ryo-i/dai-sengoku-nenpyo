@@ -288,6 +288,15 @@ function InnerIndex() {
                         </Link>
                       </span>
                     }
+                    <span className="influence">
+                      <Link href={
+                        isCategory ?
+                        hierarchy + "category/" + data.path + "?influence=" + data.influence :
+                        hierarchy + "?influence=" + data.influence
+                      }>
+                        <a>{data.influence}</a>
+                      </Link>
+                    </span>
                   </p>
                 </dd>
               </dl>
