@@ -206,25 +206,25 @@ function InnerIndex() {
   // Influence Array
   function InfluenceArray (props) {
     if (error) {
-      return <p>エラー: {error.source}</p>;
-    } else if (props.source === '-' || props.source === '') {
+      return <p>エラー: {error.influence}</p>;
+    } else if (props.influence === '-' || props.influence === '') {
       return null;
-    } else if (!props.source) {
+    } else if (!props.influence) {
       return <p>読み込み中...</p>;
     }
 
-    const resultArray = getDividedArray(props.source);
+    const resultArray = getDividedArray(props.influence);
 
     return (
       <>
         {resultArray.map((data, index) =>
-          <span className="influence" key={index}>
+          <span className="influence-area" key={index}>
             <Link href={
               isCategory ?
               hierarchy + "category/" + props.path + "?influence=" + data :
               hierarchy + "?influence=" + data
             }>
-              <a>{data}</a>
+              <a className="influence">{data}</a>
             </Link>
           </span>
         )}
@@ -256,70 +256,62 @@ function InnerIndex() {
                 </dt>
                 <dd>
                   <p className="tab-area">
-                    {
-                      data.waYear ?
-                      <span className="waYear">
+                    <span className="wa-area">
+                      {data.waYear ?
                         <Link href={
                           isCategory ?
                           hierarchy + "category/" + data.path + "?waYear=" + data.waYear :
                           hierarchy + "?waYear=" + data.waYear
                         }>
-                          <a>{data.waYear}年</a>
-                        </Link>
-                      </span> :
-                      <span className="waGengo">
+                          <a className="waYear">{data.waYear}年</a>
+                        </Link> :
                         <Link href={
                           isCategory ?
                           hierarchy + "category/" + data.path + "?waGengo=" + data.waGengo :
                           hierarchy + "?waGengo=" + data.waGengo
                         }>
-                          <a>{data.waGengo}</a>
+                          <a className="waGengo">{data.waGengo}</a>
                         </Link>
-                      </span>
-                    }
-                    {
+                      }
+                    </span>
+                    <span className="ad-area">
+                      {
                       data.adYear ?
-                      <span className="adYear">
                         <Link href={
                           isCategory ?
                           hierarchy + "category/" + data.path + "?adYear=" + data.adYear :
                           hierarchy + "?adYear=" + data.adYear
                         }>
-                          <a>{data.adYear}年</a>
-                        </Link>
-                      </span> :
-                      <span className="adAge">
+                          <a className="adYear">{data.adYear}年</a>
+                        </Link> :
                         <Link href={
                           isCategory ?
                           hierarchy + "category/" + data.path + "?adAge=" + data.adAge :
                           hierarchy + "?adAge=" + data.adAge
                         }>
-                          <a>{data.adAge}</a>
+                          <a className="adAge">{data.adAge}</a>
                         </Link>
-                      </span>
-                     }
-                    {
-                      data.country ?
-                      <span className="country">
+                      }
+                     </span>
+                    <span className="place-area">
+                      {data.country ?
                         <Link href={
                           isCategory ?
                           hierarchy + "category/" + data.path + "?country=" + data.country :
                           hierarchy + "?country=" + data.country
                         }>
-                          <a>{data.country}</a>
-                        </Link>
-                      </span> :
-                      <span className="region">
+                          <a className="country">{data.country}</a>
+                        </Link> :
                         <Link href={
                           isCategory ?
                           hierarchy + "category/" + data.path + "?region=" + data.region :
                           hierarchy + "?region=" + data.region
                         }>
-                          <a>{data.region}</a>
+                          <a className="region">{data.region}</a>
                         </Link>
-                      </span>
-                    }
-                    <InfluenceArray source={data.influence} />
+                      }
+                    </span>
+                    <InfluenceArray influence={data.influence} />
                   </p>
                 </dd>
               </dl>
