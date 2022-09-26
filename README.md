@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 勢力、人物の項目を追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 年代、年間行を追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - タグclass名などを整理 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
