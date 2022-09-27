@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 「全般」「年間」を削除 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- 年月日の項目に空欄があれば非表示に [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- カテゴリリンクを追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

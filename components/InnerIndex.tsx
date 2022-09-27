@@ -246,7 +246,9 @@ function InnerIndex() {
             <li key={index} data-order={data.order}>
               <dl>
                 <dt>
-                  <p className="category">{data.category}</p>
+                  <Link href={hierarchy + "category/" + data.path}>
+                    <a><p className="category">{data.category}</p></a>
+                  </Link>
                   <p className="date">
                     {data.waYear && data.waYear + "年"}
                     {data.adYear && "（" + data.adYear + "）"}
@@ -254,9 +256,7 @@ function InnerIndex() {
                     {data.waDay && data.waDay + "日"}
                   </p>
                   <Link href={hierarchy + "nenpyo/" + data.id}>
-                    <a>
-                      <p className="title">{data.title}</p>
-                    </a>
+                    <a><p className="title">{data.title}</p></a>
                   </Link>
                 </dt>
                 <dd>
