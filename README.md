@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 将軍の年間、年代を追記 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 天皇家の年間、年代を追記 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - カテゴリリンクを追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
