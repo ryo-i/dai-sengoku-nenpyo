@@ -59,7 +59,7 @@ function About() {
                 <h2>進捗</h2>
                 <ul>
                     <li>「全般」「年間」を削除 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
-                    <li>タグclass名などを整理 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
+                    <li>年月日の項目に空欄があれば非表示に <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
             <section>
