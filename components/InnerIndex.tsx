@@ -250,10 +250,13 @@ function InnerIndex() {
                     <a><p className="category">{data.category}</p></a>
                   </Link>
                   <p className="date">
-                    {data.waYear && data.waYear + "年"}
-                    {data.adYear && "（" + data.adYear + "）"}
-                    {data.waMonth && data.waMonth + "月"}
-                    {data.waDay && data.waDay + "日"}
+                    {data.waYear && data.waYear + data.waYearUnit}
+                    {data.adYear && data.adYearUnit === "年" ?
+                     "（" + data.adYear + "）" :
+                     "（" + data.adYear + data.adYearUnit + "）"
+                    }
+                    {data.waMonth && data.waMonth + data.waMonthUnit}
+                    {data.waDay && data.waDay + data.waDayUnit}
                   </p>
                   <Link href={hierarchy + "nenpyo/" + data.id}>
                     <a><p className="title">{data.title}</p></a>
@@ -268,7 +271,7 @@ function InnerIndex() {
                           hierarchy + "category/" + data.path + "?waYear=" + data.waYear :
                           hierarchy + "?waYear=" + data.waYear
                         }>
-                          <a className="waYear">{data.waYear}年</a>
+                          <a className="waYear">{data.waYear + data.waYearUnit}</a>
                         </Link> :
                         <Link href={
                           isCategory ?
@@ -287,7 +290,7 @@ function InnerIndex() {
                           hierarchy + "category/" + data.path + "?adYear=" + data.adYear :
                           hierarchy + "?adYear=" + data.adYear
                         }>
-                          <a className="adYear">{data.adYear}年</a>
+                          <a className="adYear">{data.adYear + data.adYearUnit}</a>
                         </Link> :
                         <Link href={
                           isCategory ?

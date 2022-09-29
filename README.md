@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 年月日に単位を追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- APIレスポンス、年月日のズレを修正2 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- 年月日の表示を定型文字ではなくレスポンスに変更 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 
