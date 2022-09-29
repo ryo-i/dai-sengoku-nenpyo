@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 年月日に単位を追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- カテゴリリンクを追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- APIレスポンスに年月日の単位を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 
