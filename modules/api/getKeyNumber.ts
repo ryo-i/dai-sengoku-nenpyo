@@ -4,29 +4,29 @@ const getKeyNumber = (data, keyNumbers) => {
     if (data[i] === 'adAge') {
       keyNumbers.adAge = i;
     } else if (data[i] === 'adYear') {
-      keyNumbers.adYear = i;
+      keyNumbers.adYearUnit = i;
     } else if (data[i] === 'adYearUnit') {
       keyNumbers.adYear = i;
     } else if (data[i] === 'adMonth') {
-      keyNumbers.adMonth = i;
+      keyNumbers.adMonthUnit = i;
     } else if (data[i] === 'adMonthUnit') {
       keyNumbers.adMonth = i;
     } else if (data[i] === 'adDay') {
-      keyNumbers.adDay = i;
+      keyNumbers.adDayUnit = i;
     } else if (data[i] === 'adDayUnit') {
       keyNumbers.adDay = i;
     } else if (data[i] === 'waGengo') {
       keyNumbers.waGengo = i;
     } else if (data[i] === 'waYear') {
-      keyNumbers.waYear = i;
+      keyNumbers.waYearUnit = i;
     } else if (data[i] === 'waYearUnit') {
       keyNumbers.waYear = i;
     } else if (data[i] === 'waMonth') {
-      keyNumbers.waMonth = i;
+      keyNumbers.waMonthUnit = i;
     } else if (data[i] === 'waMonthUnit') {
       keyNumbers.waMonth = i;
     } else if (data[i] === 'waDay') {
-      keyNumbers.waDay = i;
+      keyNumbers.waDayUnit = i;
     } else if (data[i] === 'waDayUnit') {
       keyNumbers.waDay = i;
     } else if (data[i] === 'category') {
