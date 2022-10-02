@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 年代、年間のテキスト一部削除 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- titleAPI設定テスト [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- API無効化 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 
