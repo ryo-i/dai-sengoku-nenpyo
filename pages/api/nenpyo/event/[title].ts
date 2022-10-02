@@ -9,13 +9,13 @@ getKeyNumber(nenpyoData.values[0], keyNumbers);
 
 // Get Track Obj Data
 const getTrackObjData = (event) => {
-  const keyArray = nenpyoData.values[keyNumbers.category];
+  const keyArray = nenpyoData.values[keyNumbers.title];
   const valArray = nenpyoData.values[event];
   let thisObj = {};
 
   console.log('keyArray', keyArray);
 
-  const test = getFilterData(nenpyoData, 'event', event, 'exact');
+  const test = getFilterData(nenpyoData, 'title', event, 'exact');
   console.log('test', test);
 
   /* for (let i = 0; i < keyArray.length; i++) {
