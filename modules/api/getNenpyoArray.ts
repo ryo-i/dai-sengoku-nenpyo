@@ -2,8 +2,8 @@
 const getNenpyoArray = (dataLength, pageInfo, data, keyNumbers) => {
   let startNum = dataLength -1;
   let addLength = 50;
-  if ((startNum + addLength) > pageInfo.trackLength) {
-    addLength = pageInfo.trackRemainder;
+  if ((startNum + addLength) > pageInfo.nenpyoLength) {
+    addLength = pageInfo.nenpyoRemainder;
   }
 
   const nenpyoArray = [];

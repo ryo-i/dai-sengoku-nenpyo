@@ -6,11 +6,11 @@ const getPageSegmentation = (pageParam, data) => {
   }
 
   const pageSegmentation = {};
-  pageSegmentation['trackLength'] = data.length;
+  pageSegmentation['nenpyoLength'] = data.length;
   pageSegmentation['pageUnit'] = 50;
-  pageSegmentation['pageLength'] = Math.ceil(pageSegmentation['trackLength'] / pageSegmentation['pageUnit']);
+  pageSegmentation['pageLength'] = Math.ceil(pageSegmentation['nenpyoLength'] / pageSegmentation['pageUnit']);
   pageSegmentation['thisPage'] = thisPage;
-  pageSegmentation['trackRemainder'] = pageSegmentation['trackLength'] % pageSegmentation['pageUnit'];
+  pageSegmentation['nenpyoRemainder'] = pageSegmentation['nenpyoLength'] % pageSegmentation['pageUnit'];
 
   return pageSegmentation;
 };

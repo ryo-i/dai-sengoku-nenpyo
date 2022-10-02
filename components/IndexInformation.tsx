@@ -26,7 +26,7 @@ const Information = () => {
             <Div>
                 <p className="queryInfo">{queryInfo !== "" && queryInfo}</p>
                 <p className="pageInfo">
-                    全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）
+                    全{pageInfo['nenpyoLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）
                 </p>
             </Div>
         </>
