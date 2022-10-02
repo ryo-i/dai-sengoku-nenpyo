@@ -1,19 +1,29 @@
 import nenpyoData from '../../data/nenpyo.json';
+import { keyNumbers } from '../../../../modules/api/keyNumbers';
+import { getKeyNumber }from '../../../../modules/api/getKeyNumber';
+import { getFilterData }from '../../../../modules/api/getFilterData';
+
+getKeyNumber(nenpyoData.values[0], keyNumbers);
+
 
 
 // Get Track Obj Data
 const getTrackObjData = (event) => {
-  const keyArray = nenpyoData.values[0];
+  const keyArray = nenpyoData.values[keyNumbers.category];
   const valArray = nenpyoData.values[event];
-  const thisObj = {};
+  let thisObj = {};
 
   console.log('keyArray', keyArray);
 
-  if (keyArray.length === valArray.length) {
-    for (var i = 0; i < keyArray.length; i++) {
-      thisObj[keyArray[i]] = valArray[i];
+  const test = getFilterData(nenpyoData, 'event', event, 'exact');
+  console.log('test', test);
+
+  /* for (let i = 0; i < keyArray.length; i++) {
+    if (nenpyoData[i].keyArray === valArray) {
+      thisObj[keyArray[i]] = nenpyoData[i];
     }
-  }
+  } */
+
   return thisObj;
 };
 
