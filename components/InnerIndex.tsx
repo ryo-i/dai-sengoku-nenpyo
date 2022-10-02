@@ -393,7 +393,7 @@ function InnerIndex() {
                     {data.waMonth && data.waMonth + data.waMonthUnit}
                     {data.waDay && data.waDay + data.waDayUnit}
                   </p>
-                  <Link href={hierarchy + "nenpyo/" + data.id}>
+                  <Link href={hierarchy + "event/" + data.title}>
                     <a><p className="title">{data.title}</p></a>
                   </Link>
                 </dt>

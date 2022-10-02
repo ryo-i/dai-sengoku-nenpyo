@@ -8,14 +8,14 @@ import Data from '../../data/data.json';
 
 
 // Component
-const Track = ({ trackInfo }) => {
-    const [trackNumber, setTrackNumber] = useState(trackInfo.id);
-    const [trackName, setTrackName] = useState(trackInfo.track);
+const Track = ({ eventInfo }) => {
+    const [trackNumber, setTrackNumber] = useState(eventInfo.id);
+    const [trackName, setTrackName] = useState(eventInfo.track);
 
     const headerTitle = Data.header.title;
     const pageTitle = trackName;
     const headTitle = pageTitle + ' | ' + headerTitle;
-    const pageText = trackInfo.artist + 'の楽曲「' + trackName + '」の詳細情報です。';
+    const pageText = eventInfo.artist + 'の楽曲「' + trackName + '」の詳細情報です。';
 
     return (
         <>
@@ -40,9 +40,9 @@ const Track = ({ trackInfo }) => {
 
 // Get Path
 export async function getStaticPaths() {
-    const res = await fetch(`https://beatles-db.vercel.app/api/beatles/tracklist`);
+    const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/tracklist`);
     const track = await res.json();
-    const paths = track.trackList.map((track) => `/track/${track.id}`);
+    const paths = track.trackList.map((track) => `/event/${track.id}`);
     // console.log('track', track);
     // console.log('paths', paths);
     return { paths, fallback: false };
@@ -51,12 +51,12 @@ export async function getStaticPaths() {
 
 // Get TrackInfo
 export async function getStaticProps({ params }) {
-    const number = params.number;
-    const res = await fetch(`https://beatles-db.vercel.app/api/beatles/track/${number}`);
-    const trackInfo = await res.json();
+    const number = params.event;
+    const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/event/${title}`);
+    const eventInfo = await res.json();
     // console.log('number', number);
     // console.log('trackInfo', trackInfo);
-    return { props: { trackInfo } };
+    return { props: { eventInfo } };
 }
 
 export default Track;
