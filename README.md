@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 年代、年間のテキスト一部削除 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- カテゴリ絞り込みを実装 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- head情報の「楽曲」を「年表」に [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

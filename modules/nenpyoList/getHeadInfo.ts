@@ -19,16 +19,16 @@ const getHeadInfo = (isCategory, queryInfo, categoryName) => {
       resultHeadText = headerText;
       // console.log('!isCategory && !queryInfo');
     } else if (!isCategory && queryInfo) {
-      resultHeadTitle = queryInfo + ' の楽曲一覧 | ' + headerTitle;
-      resultHeadText = queryInfo + ' の楽曲一覧です。';
+      resultHeadTitle = queryInfo + ' の年表一覧 | ' + headerTitle;
+      resultHeadText = queryInfo + ' の年表一覧です。';
       // console.log('!isCategory && queryInfo');
     } else if (isCategory && !queryInfo) {
-      resultHeadTitle = categoryName + 'の楽曲一覧 | ' + headerTitle;
-      resultHeadText= categoryName + 'の楽曲一覧です。';
+      resultHeadTitle = categoryName + 'の年表一覧 | ' + headerTitle;
+      resultHeadText= categoryName + 'の年表一覧です。';
       // console.log('isCategory && !queryInfo');
     } else if (isCategory && queryInfo) {
-      resultHeadTitle = queryInfo + '（' + categoryName + '）' + 'の楽曲一覧 | ' + headerTitle;
-      resultHeadText = queryInfo + '（' + categoryName + '）' + 'の楽曲一覧です。';
+      resultHeadTitle = queryInfo + '（' + categoryName + '）' + 'の年表一覧 | ' + headerTitle;
+      resultHeadText = queryInfo + '（' + categoryName + '）' + 'の年表一覧です。';
       // console.log('isCategory && queryInfo');
     }
 
