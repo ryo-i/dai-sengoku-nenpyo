@@ -19,6 +19,7 @@ import { getQueryInfo } from '../modules/nenpyoList/getQueryInfo';
 import { getPageKey } from '../modules/nenpyoList/getPageKey';
 import { deleteParam } from '../modules/nenpyoList/deleteParam';
 import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
+import { getCaterogyInfo } from '../modules/nenpyoList/getCaterogyInfo';
 
 const headerTitle = Data.header.title;
 const headerText = Data.header.text;
@@ -138,6 +139,7 @@ function InnerIndex() {
     const thisQueryInfo = getQueryInfo(queryParam);
     setQueryInfo(thisQueryInfo);
 
+
     if (category) {
       queryParam.category = category;
       setHierarchy('../');
@@ -215,14 +217,28 @@ function InnerIndex() {
   };
 
 
+  // Category Icon
+  function CategoryIcon (props) {
+    desplayError(props, "category");
+    const category = getCaterogyInfo(props.category);
+
+    return (
+      <Link href={hierarchy + "category/" + category.path}>
+        <a><p className="category">{props.category}</p></a>
+      </Link>
+    );
+  }
+
+
   // Wa Year Tag
   function WaYearTag (props) {
     desplayError(props, "waYear");
+    const category = getCaterogyInfo(props.category);
 
     return (
       <Link href={
         isCategory ?
-        hierarchy + "category/" + props.path + "?waYear=" + props.waYear :
+        hierarchy + "category/" + category.path + "?waYear=" + props.waYear :
         hierarchy + "?waYear=" + props.waYear
       }>
         <a className="waYear">{props.waYear + props.waYearUnit}</a>
@@ -235,13 +251,14 @@ function InnerIndex() {
   function WaGengoTag (props) {
     desplayError(props, "waGengo");
     const resultArray = getDividedArray(props.waGengo);
+    const category = getCaterogyInfo(props.category);
 
     return (
       <>
         {resultArray.map((data, index) =>
           <Link href={
               isCategory ?
-              hierarchy + "category/" + props.path + "?waGengo=" + data :
+              hierarchy + "category/" + category.path + "?waGengo=" + data :
               hierarchy + "?waGengo=" + data
             }
             key={index}
@@ -257,11 +274,12 @@ function InnerIndex() {
   // AD Year Tag
   function AdYearTag (props) {
     desplayError(props, "adYear");
+    const category = getCaterogyInfo(props.category);
 
     return (
       <Link href={
         isCategory ?
-        hierarchy + "category/" + props.path + "?adYear=" + props.adYear :
+        hierarchy + "category/" + category.path + "?adYear=" + props.adYear :
         hierarchy + "?adYear=" + props.adYear
       }>
         <a className="adYear">{props.adYear + props.adYearUnit}</a>
@@ -275,13 +293,14 @@ function InnerIndex() {
   function AdAgeTag (props) {
     desplayError(props, "adAge");
     const resultArray = getDividedArray(props.adAge);
+    const category = getCaterogyInfo(props.category);
 
     return (
       <>
         {resultArray.map((data, index) =>
           <Link href={
               isCategory ?
-              hierarchy + "category/" + data.path + "?adAge=" + data :
+              hierarchy + "category/" + category.path + "?adAge=" + data :
               hierarchy + "?adAge=" + data
             }
             key={index}
@@ -297,11 +316,12 @@ function InnerIndex() {
   // Country Tag
   function CountryTag (props) {
     desplayError(props, "country");
+    const category = getCaterogyInfo(props.category);
 
     return (
       <Link href={
         isCategory ?
-        hierarchy + "category/" + props.path + "?country=" + props.country :
+        hierarchy + "category/" + category.path + "?country=" + props.country :
         hierarchy + "?country=" + props.country
       }>
         <a className="country">{props.country}</a>
@@ -313,11 +333,12 @@ function InnerIndex() {
   // Region Tag
   function RegionTag (props) {
     desplayError(props, "region");
+    const category = getCaterogyInfo(props.category);
 
     return (
       <Link href={
         isCategory ?
-        hierarchy + "category/" + props.path + "?region=" + props.region :
+        hierarchy + "category/" + category.path + "?region=" + props.region :
         hierarchy + "?region=" + props.region
       }>
         <a className="region">{props.region}</a>
@@ -329,13 +350,14 @@ function InnerIndex() {
   function InfluenceTag (props) {
     desplayError(props, "influence");
     const resultArray = getDividedArray(props.influence);
+    const category = getCaterogyInfo(props.category);
 
     return (
       <>
         {resultArray.map((data, index) =>
           <Link href={
               isCategory ?
-              hierarchy + "category/" + props.path + "?influence=" + data :
+              hierarchy + "category/" + category.path + "?influence=" + data :
               hierarchy + "?influence=" + data
             }
             key={index}
@@ -361,9 +383,7 @@ function InnerIndex() {
             <li key={index} data-order={data.order}>
               <dl>
                 <dt>
-                  <Link href={hierarchy + "category/" + data.path}>
-                    <a><p className="category">{data.category}</p></a>
-                  </Link>
+                  <CategoryIcon category={data.category} />
                   <p className="date">
                     {data.waYear && data.waYear + data.waYearUnit}
                     {data.adYear && data.adYearUnit === "年" ?
@@ -385,11 +405,13 @@ function InnerIndex() {
                           waYear={data.waYear}
                           waYearUnit={data.waYearUnit}
                           path={data.path}
+                          category={data.category}
                         /> :
                         <WaGengoTag
                           waGengo={data.waGengo}
                           waYearUnit={data.waYearUnit}
                           path={data.path}
+                          category={data.category}
                         />
                       }
                     </span>
@@ -399,18 +421,35 @@ function InnerIndex() {
                           adYear={data.adYear}
                           adYearUnit={data.adYearUnit}
                           path={data.path}
+                          category={data.category}
                         /> :
-                        <AdAgeTag adAge={data.adAge} path={data.path} />
+                        <AdAgeTag
+                          adAge={data.adAge}
+                          path={data.path}
+                          category={data.category}
+                        />
                       }
                     </span>
                     <span className="place-area">
                       {data.country ?
-                        <CountryTag country={data.country} path={data.path} /> :
-                        <RegionTag region={data.region} path={data.path} />
+                        <CountryTag
+                          country={data.country}
+                          path={data.path}
+                          category={data.category}
+                        /> :
+                        <RegionTag
+                          region={data.region}
+                          path={data.path}
+                          category={data.category}
+                        />
                       }
                     </span>
                     <span className="influence-area">
-                      <InfluenceTag influence={data.influence} path={data.path} />
+                      <InfluenceTag
+                        influence={data.influence}
+                        path={data.path}
+                        category={data.category}
+                      />
                     </span>
                   </p>
                 </dd>

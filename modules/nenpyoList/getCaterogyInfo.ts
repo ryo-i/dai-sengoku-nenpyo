@@ -5,10 +5,10 @@ const getCaterogyInfo = (category) => {
     name: ''
   };
 
-  if (category === 'seireki') {
+  if (category === 'seireki' || category === '西暦') {
     categoryInfo.path = 'seireki';
     categoryInfo.name = '西暦';
-  } else if (category === 'wareki') {
+  } else if (category === 'wareki' || category === "和暦") {
     categoryInfo.path = 'wareki';
     categoryInfo.name = '和暦';
   }
