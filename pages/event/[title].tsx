@@ -40,7 +40,7 @@ const Track = ({ eventInfo }) => {
 
 // Get Path
 export async function getStaticPaths() {
-   /*  const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/nenpyolist`);
+   /* const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/nenpyolist`);
     const event = await res.json();
     const paths = event.trackList.map((data) => `/event/${data.title}`);
     console.log('event', event);
@@ -50,7 +50,8 @@ export async function getStaticPaths() {
 
 
 // Get TrackInfo
-export async function getStaticProps({ params }) {
+// export async function getStaticProps({ params }) {
+export async function getStaticProps() {
     // const title = params.event;
     const title = '1390年代：明徳2年(1392)〜応永6年(1399)';
     const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/event/${title}`);
