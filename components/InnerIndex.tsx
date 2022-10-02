@@ -220,15 +220,13 @@ function InnerIndex() {
     desplayError(props, "waYear");
 
     return (
-      <span className="wa-area">
-        <Link href={
-          isCategory ?
-          hierarchy + "category/" + props.path + "?waYear=" + props.waYear :
-          hierarchy + "?waYear=" + props.waYear
-        }>
-          <a className="waYear">{props.waYear + props.waYearUnit}</a>
-        </Link>
-      </span>
+      <Link href={
+        isCategory ?
+        hierarchy + "category/" + props.path + "?waYear=" + props.waYear :
+        hierarchy + "?waYear=" + props.waYear
+      }>
+        <a className="waYear">{props.waYear + props.waYearUnit}</a>
+      </Link>
     );
   }
 
@@ -241,15 +239,51 @@ function InnerIndex() {
     return (
       <>
         {resultArray.map((data, index) =>
-          <span className="wa-area" key={index}>
-              <Link href={
-                isCategory ?
-                hierarchy + "category/" + props.path + "?waGengo=" + data :
-                hierarchy + "?waGengo=" + data
-              }>
-                <a className="waGengo">{data + props.waYearUnit}</a>
-              </Link>
-          </span>
+          <Link href={
+            isCategory ?
+            hierarchy + "category/" + props.path + "?waGengo=" + data :
+            hierarchy + "?waGengo=" + data
+          }>
+            <a className="waGengo" key={index}>{data + props.waYearUnit}</a>
+          </Link>
+        )}
+      </>
+    );
+  }
+
+
+  // AD Year Tag
+  function AdYearTag (props) {
+    desplayError(props, "adYear");
+
+    return (
+      <Link href={
+        isCategory ?
+        hierarchy + "category/" + props.path + "?adYear=" + props.adYear :
+        hierarchy + "?adYear=" + props.adYear
+      }>
+        <a className="adYear">{props.adYear + props.adYearUnit}</a>
+      </Link>
+    );
+  }
+
+
+
+  // AD Age Tag
+  function AdAgeTag (props) {
+    desplayError(props, "adAge");
+    const resultArray = getDividedArray(props.adAge);
+
+    return (
+      <>
+        {resultArray.map((data, index) =>
+          <Link href={
+            isCategory ?
+            hierarchy + "category/" + data.path + "?adAge=" + data :
+            hierarchy + "?adAge=" + data
+          }>
+            <a className="adAge" key={index}>{data}</a>
+          </Link>
         )}
       </>
     );
@@ -310,37 +344,30 @@ function InnerIndex() {
                 </dt>
                 <dd>
                   <p className="tag-area">
-                    {data.waYearUnit === "年" ?
-                      <WaYearTag
-                        waYear={data.waYear}
-                        waYearUnit={data.waYearUnit}
-                        path={data.path}
-                      /> :
-                      <WaGengoTag
-                        waGengo={data.waGengo}
-                        waYearUnit={data.waYearUnit}
-                        path={data.path}
-                      />
-                    }
-                    <span className="ad-area">
-                      {
-                      data.adYearUnit === "年" ?
-                        <Link href={
-                          isCategory ?
-                          hierarchy + "category/" + data.path + "?adYear=" + data.adYear :
-                          hierarchy + "?adYear=" + data.adYear
-                        }>
-                          <a className="adYear">{data.adYear + data.adYearUnit}</a>
-                        </Link> :
-                        <Link href={
-                          isCategory ?
-                          hierarchy + "category/" + data.path + "?adAge=" + data.adAge :
-                          hierarchy + "?adAge=" + data.adAge
-                        }>
-                          <a className="adAge">{data.adAge}</a>
-                        </Link>
+                    <span className="wa-area">
+                      {data.waYearUnit === "年" ?
+                        <WaYearTag
+                          waYear={data.waYear}
+                          waYearUnit={data.waYearUnit}
+                          path={data.path}
+                        /> :
+                        <WaGengoTag
+                          waGengo={data.waGengo}
+                          waYearUnit={data.waYearUnit}
+                          path={data.path}
+                        />
                       }
-                     </span>
+                    </span>
+                    <span className="ad-area">
+                      {data.adYearUnit === "年" ?
+                        <AdYearTag
+                          adYear={data.adYear}
+                          adYearUnit={data.adYearUnit}
+                          path={data.path}
+                        /> :
+                        <AdAgeTag adAge={data.adAge} path={data.path} />
+                      }
+                    </span>
                     <span className="place-area">
                       {data.country ?
                         <Link href={
