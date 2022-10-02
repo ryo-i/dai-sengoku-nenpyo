@@ -51,11 +51,10 @@ export async function getStaticPaths() {
 
 // Get TrackInfo
 export async function getStaticProps({ params }) {
-    const number = params.event;
-    const res = await fetch(`https://beatles-db.vercel.app/api/beatles/track/${number}`);
-    // const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/event/${title}`);
+    const title = params.event;
+    const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/event/${title}`);
     const eventInfo = await res.json();
-    // console.log('number', number);
+    console.log('title', title);
     // console.log('trackInfo', trackInfo);
     return { props: { eventInfo } };
 }
