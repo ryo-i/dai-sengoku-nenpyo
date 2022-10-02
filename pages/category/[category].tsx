@@ -6,8 +6,8 @@ import Footer from '../../components/Footer';
 import { getCaterogyInfo } from '../../modules/nenpyoList/getCaterogyInfo';
 
 
-const pageTitle = '楽曲一覧';
-const pageText = 'アーティスト名、アルバム名、人名などで絞り込みができます。';
+const pageTitle = '年表一覧';
+const pageText = 'xxxx、xxxx、xxxxなどで絞り込みができます。';
 
 
 function Home({ categoryInfo }) {
@@ -45,12 +45,8 @@ function Home({ categoryInfo }) {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { category: 'beatles' } },
-      { params: { category: 'john-yoko' } },
-      { params: { category: 'paul' } },
-      { params: { category: 'george' } },
-      { params: { category: 'ringo' } },
-      { params: { category: 'tony-beatles' } }
+      { params: { category: 'seireki' } },
+      { params: { category: 'wareki' } }
     ],
     fallback: false
   };

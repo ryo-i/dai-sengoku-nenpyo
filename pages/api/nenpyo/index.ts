@@ -8,6 +8,7 @@ import { getDataLength }from '../../../modules/api/getDataLength';
 import { getYearsArray }from '../../../modules/api/getYearsArray';
 import { getFormatsArray }from '../../../modules/api/getFormatsArray';
 import { getNenpyoArray }from '../../../modules/api/getNenpyoArray';
+import { getCaterogyInfo } from '../../../modules/nenpyoList/getCaterogyInfo';
 
 
 getKeyNumber(nenpyoData.values[0], keyNumbers);
@@ -20,7 +21,8 @@ export default (req, res) => {
 
   // category
   if (query.category) {
-    resultData = getFilterData(resultData, 'path', query.category, 'exact');
+    const categoryInfo = getCaterogyInfo(query.category);
+    resultData = getFilterData(resultData, 'category', categoryInfo.name, 'exact');
   } else {
     resultData = getNoCategoryData(resultData, keyNumbers);
   }

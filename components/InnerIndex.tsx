@@ -240,11 +240,13 @@ function InnerIndex() {
       <>
         {resultArray.map((data, index) =>
           <Link href={
-            isCategory ?
-            hierarchy + "category/" + props.path + "?waGengo=" + data :
-            hierarchy + "?waGengo=" + data
-          }>
-            <a className="waGengo" key={index}>{data + props.waYearUnit}</a>
+              isCategory ?
+              hierarchy + "category/" + props.path + "?waGengo=" + data :
+              hierarchy + "?waGengo=" + data
+            }
+            key={index}
+          >
+            <a className="waGengo">{data + props.waYearUnit}</a>
           </Link>
         )}
       </>
@@ -278,11 +280,13 @@ function InnerIndex() {
       <>
         {resultArray.map((data, index) =>
           <Link href={
-            isCategory ?
-            hierarchy + "category/" + data.path + "?adAge=" + data :
-            hierarchy + "?adAge=" + data
-          }>
-            <a className="adAge" key={index}>{data}</a>
+              isCategory ?
+              hierarchy + "category/" + data.path + "?adAge=" + data :
+              hierarchy + "?adAge=" + data
+            }
+            key={index}
+          >
+            <a className="adAge">{data}</a>
           </Link>
         )}
       </>
@@ -330,11 +334,13 @@ function InnerIndex() {
       <>
         {resultArray.map((data, index) =>
           <Link href={
-            isCategory ?
-            hierarchy + "category/" + props.path + "?influence=" + data :
-            hierarchy + "?influence=" + data
-          }>
-            <a className="influence" key={index}>{data}</a>
+              isCategory ?
+              hierarchy + "category/" + props.path + "?influence=" + data :
+              hierarchy + "?influence=" + data
+            }
+            key={index}
+          >
+            <a className="influence">{data}</a>
           </Link>
         )}
       </>
