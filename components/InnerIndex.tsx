@@ -290,6 +290,37 @@ function InnerIndex() {
   }
 
 
+  // Country Tag
+  function CountryTag (props) {
+    desplayError(props, "country");
+
+    return (
+      <Link href={
+        isCategory ?
+        hierarchy + "category/" + props.path + "?country=" + props.country :
+        hierarchy + "?country=" + props.country
+      }>
+        <a className="country">{props.country}</a>
+      </Link>
+    );
+  }
+
+
+  // Region Tag
+  function RegionTag (props) {
+    desplayError(props, "region");
+
+    return (
+      <Link href={
+        isCategory ?
+        hierarchy + "category/" + props.path + "?region=" + props.region :
+        hierarchy + "?region=" + props.region
+      }>
+        <a className="region">{props.region}</a>
+      </Link>
+    );
+  }
+
   // Influence Tag
   function InfluenceTag (props) {
     desplayError(props, "influence");
@@ -298,15 +329,13 @@ function InnerIndex() {
     return (
       <>
         {resultArray.map((data, index) =>
-          <span className="influence-area" key={index}>
-            <Link href={
-              isCategory ?
-              hierarchy + "category/" + props.path + "?influence=" + data :
-              hierarchy + "?influence=" + data
-            }>
-              <a className="influence">{data}</a>
-            </Link>
-          </span>
+          <Link href={
+            isCategory ?
+            hierarchy + "category/" + props.path + "?influence=" + data :
+            hierarchy + "?influence=" + data
+          }>
+            <a className="influence" key={index}>{data}</a>
+          </Link>
         )}
       </>
     );
@@ -370,23 +399,13 @@ function InnerIndex() {
                     </span>
                     <span className="place-area">
                       {data.country ?
-                        <Link href={
-                          isCategory ?
-                          hierarchy + "category/" + data.path + "?country=" + data.country :
-                          hierarchy + "?country=" + data.country
-                        }>
-                          <a className="country">{data.country}</a>
-                        </Link> :
-                        <Link href={
-                          isCategory ?
-                          hierarchy + "category/" + data.path + "?region=" + data.region :
-                          hierarchy + "?region=" + data.region
-                        }>
-                          <a className="region">{data.region}</a>
-                        </Link>
+                        <CountryTag country={data.country} path={data.path} /> :
+                        <RegionTag region={data.region} path={data.path} />
                       }
                     </span>
-                    <InfluenceTag influence={data.influence} path={data.path} />
+                    <span className="influence-area">
+                      <InfluenceTag influence={data.influence} path={data.path} />
+                    </span>
                   </p>
                 </dd>
               </dl>
