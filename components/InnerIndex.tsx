@@ -203,16 +203,24 @@ function InnerIndex() {
   }, [router, queryParam, categoryName]);
 
 
-  // Influence Array
-  function InfluenceArray (props) {
+  // Desplay error
+  const desplayError = (props, key) => {
     if (error) {
-      return <p>エラー: {error.influence}</p>;
-    } else if (props.influence === '-' || props.influence === '') {
+      console.log('error[key]', error[key]);
+      return <p>エラー: {error[key]}</p>;
+    } else if (props[key] === '-' || props[key] === '') {
+      console.log('props[key]',props[key]);
       return null;
-    } else if (!props.influence) {
+    } else if (!props[key]) {
+      console.log('読み込み中');
       return <p>読み込み中...</p>;
     }
+  };
 
+
+  // Influence Array
+  function InfluenceArray (props) {
+    desplayError(props, "influence");
     const resultArray = getDividedArray(props.influence);
 
     return (
