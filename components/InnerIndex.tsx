@@ -95,7 +95,7 @@ const Section = styled.section`
           .artist a {
             color: #666;
           }
-          .tab-area a,
+          .tag-area a,
           .format a ${tagStyle}
         }
       }
@@ -203,16 +203,62 @@ function InnerIndex() {
   }, [router, queryParam, categoryName]);
 
 
-  // Influence Array
-  function InfluenceArray (props) {
+  // Desplay error
+  const desplayError = (props, key) => {
     if (error) {
-      return <p>エラー: {error.influence}</p>;
-    } else if (props.influence === '-' || props.influence === '') {
+      return <p>エラー: {error[key]}</p>;
+    } else if (props[key] === '-' || props[key] === '') {
       return null;
-    } else if (!props.influence) {
+    } else if (!props[key]) {
       return <p>読み込み中...</p>;
     }
+  };
 
+
+  // Wa Year Tag
+  function WaYearTag (props) {
+    desplayError(props, "waYear");
+
+    return (
+      <span className="wa-area">
+        <Link href={
+          isCategory ?
+          hierarchy + "category/" + props.path + "?waYear=" + props.waYear :
+          hierarchy + "?waYear=" + props.waYear
+        }>
+          <a className="waYear">{props.waYear + props.waYearUnit}</a>
+        </Link>
+      </span>
+    );
+  }
+
+
+  // Wa Gengo Tag
+  function WaGengoTag (props) {
+    desplayError(props, "waGengo");
+    const resultArray = getDividedArray(props.waGengo);
+
+    return (
+      <>
+        {resultArray.map((data, index) =>
+          <span className="wa-area" key={index}>
+              <Link href={
+                isCategory ?
+                hierarchy + "category/" + props.path + "?waGengo=" + data :
+                hierarchy + "?waGengo=" + data
+              }>
+                <a className="waGengo">{data + props.waYearUnit}</a>
+              </Link>
+          </span>
+        )}
+      </>
+    );
+  }
+
+
+  // Influence Tag
+  function InfluenceTag (props) {
+    desplayError(props, "influence");
     const resultArray = getDividedArray(props.influence);
 
     return (
@@ -263,28 +309,22 @@ function InnerIndex() {
                   </Link>
                 </dt>
                 <dd>
-                  <p className="tab-area">
-                    <span className="wa-area">
-                      {data.waYear ?
-                        <Link href={
-                          isCategory ?
-                          hierarchy + "category/" + data.path + "?waYear=" + data.waYear :
-                          hierarchy + "?waYear=" + data.waYear
-                        }>
-                          <a className="waYear">{data.waYear + data.waYearUnit}</a>
-                        </Link> :
-                        <Link href={
-                          isCategory ?
-                          hierarchy + "category/" + data.path + "?waGengo=" + data.waGengo :
-                          hierarchy + "?waGengo=" + data.waGengo
-                        }>
-                          <a className="waGengo">{data.waGengo}</a>
-                        </Link>
-                      }
-                    </span>
+                  <p className="tag-area">
+                    {data.waYearUnit === "年" ?
+                      <WaYearTag
+                        waYear={data.waYear}
+                        waYearUnit={data.waYearUnit}
+                        path={data.path}
+                      /> :
+                      <WaGengoTag
+                        waGengo={data.waGengo}
+                        waYearUnit={data.waYearUnit}
+                        path={data.path}
+                      />
+                    }
                     <span className="ad-area">
                       {
-                      data.adYear ?
+                      data.adYearUnit === "年" ?
                         <Link href={
                           isCategory ?
                           hierarchy + "category/" + data.path + "?adYear=" + data.adYear :
@@ -319,7 +359,7 @@ function InnerIndex() {
                         </Link>
                       }
                     </span>
-                    <InfluenceArray influence={data.influence} />
+                    <InfluenceTag influence={data.influence} path={data.path} />
                   </p>
                 </dd>
               </dl>
