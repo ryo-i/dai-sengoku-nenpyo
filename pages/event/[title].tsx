@@ -54,9 +54,9 @@ const Track = () => {
 /* export async function getStaticPaths() {
     const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/nenpyolist`);
     const event = await res.json();
-    const paths = event.trackList.map((data) => `/event/${data.title}`);
-    // console.log('event', event);
-    // console.log('paths', paths);
+    console.log('event', event);
+    const paths = event.nenpyoList.map((data) => `/event/${data.title}`);
+    console.log('paths', paths);
     return { paths, fallback: false };
 } */
 

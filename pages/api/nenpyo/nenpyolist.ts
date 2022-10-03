@@ -1,4 +1,3 @@
-// import beatlesData from '../data/beatles.json';
 import nenpyoData from '../data/nenpyo.json';
 
 
@@ -46,7 +45,7 @@ export default (req, res) => {
 
   const nenpyoData = {};
   nenpyoData['pageInfo'] = pageInfo;
-  nenpyoData['trackList'] = nenpyoArray;
+  nenpyoData['nenpyoList'] = nenpyoArray;
   // console.log('nenpyoData', nenpyoData);
   res.status(200).json(nenpyoData);
 }

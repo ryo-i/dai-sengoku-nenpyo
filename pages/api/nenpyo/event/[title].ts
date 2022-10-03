@@ -6,9 +6,8 @@ import { getFilterData }from '../../../../modules/api/getFilterData';
 getKeyNumber(nenpyoData.values[0], keyNumbers);
 
 
-
-// Get Track Obj Data
-const getTrackObjData = (title) => {
+// Get Nenpyo Obj Data
+const getNenpyoObjData = (title) => {
   const keyArray = nenpyoData.values[keyNumbers.title];
   const valArray = nenpyoData.values[title];
   let thisObj = {};
@@ -36,7 +35,7 @@ export default (req, res) => {
   } = req;
 
   console.log('req.query', req.query);
-  const trackObjData = getTrackObjData(event);
-  console.log('trackObjData', trackObjData);
-  res.status(200).json(trackObjData);
+  const nenpyoObjData = getNenpyoObjData(event);
+  console.log('nenpyoObjData', nenpyoObjData);
+  res.status(200).json(nenpyoObjData);
 }
