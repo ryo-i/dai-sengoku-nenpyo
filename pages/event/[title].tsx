@@ -54,9 +54,10 @@ const Track = () => {
 /* export async function getStaticPaths() {
     const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/nenpyolist`);
     const event = await res.json();
-    console.log('event', event);
+    // console.log('event', event);
+
     const paths = event.nenpyoList.map((data) => `/event/${data.title}`);
-    console.log('paths', paths);
+    // console.log('paths', paths);
     return { paths, fallback: false };
 } */
 
@@ -64,10 +65,15 @@ const Track = () => {
 // Get TrackInfo
 /* export async function getStaticProps({ params }) {
     const title = params.title;
+    // console.log('params', params);
+    // console.log('title', title);
+
     const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/event/${title}`);
+    // console.log('res', res);
+
     const eventInfo = await res.json();
-    console.log('title', title);
-    console.log('eventInfo', eventInfo);
+    // console.log('eventInfo', eventInfo);
+
     return { props: { eventInfo } };
 } */
 

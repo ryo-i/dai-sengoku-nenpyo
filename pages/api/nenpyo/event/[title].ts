@@ -35,7 +35,8 @@ export default (req, res) => {
   } = req;
 
   console.log('req.query', req.query);
-  const nenpyoObjData = getNenpyoObjData(event);
-  console.log('nenpyoObjData', nenpyoObjData);
-  res.status(200).json(nenpyoObjData);
+  // const nenpyoObjData = getNenpyoObjData(event);
+  // console.log('nenpyoObjData', nenpyoObjData);
+  // res.status(200).json(nenpyoObjData);
+  res.status(200).json('{"aaa": "iii"}');
 }
