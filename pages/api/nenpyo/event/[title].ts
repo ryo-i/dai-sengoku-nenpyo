@@ -15,16 +15,18 @@ const getNenpyoObjData = (title) => {
   console.log('keyArray', keyArray);
   console.log('valArray', valArray);
 
-  const eventData = getFilterData(nenpyoData, 'title', title, 'exact');
+  /* const eventData = getFilterData(nenpyoData, 'title', title, 'exact');
   console.log('eventData', eventData);
 
-  thisObj["event"] = eventData;
+  thisObj["event"] = eventData; */
 
-  /* for (let i = 0; i < keyArray.length; i++) {
+  for (let i = 0; i < keyArray.length; i++) {
     if (nenpyoData[i].keyArray === valArray) {
       thisObj[keyArray[i]] = nenpyoData[i];
     }
-  } */
+  }
+
+  console.log('thisObj', thisObj);
 
   return thisObj;
 };
@@ -33,11 +35,11 @@ const getNenpyoObjData = (title) => {
 // Response
 export default (req, res) => {
   const {
-      query: { event }
+      query: { title }
   } = req;
 
   console.log('req.query', req.query);
-  const nenpyoObjData = getNenpyoObjData(event);
+  const nenpyoObjData = getNenpyoObjData(title);
   console.log('nenpyoObjData', nenpyoObjData);
   res.status(200).json(nenpyoObjData);
 }
