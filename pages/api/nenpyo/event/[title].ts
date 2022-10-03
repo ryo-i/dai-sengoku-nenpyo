@@ -39,11 +39,12 @@ export default (req, res) => {
   } = req; */
   // const { title } = req.query;
   // console.log('req.query', req.query);
+  const title = req.query.title;
 
   // const nenpyoObjData = getNenpyoObjData(title);
   // console.log('nenpyoObjData', nenpyoObjData);
 
   // res.status(200).json(nenpyoObjData);
   // res.status(200).json(`{"title": ${title}}`);
-  res.status(200).json({ title: req.query.title  });
+  res.status(200).json({ title: title  });
 }
