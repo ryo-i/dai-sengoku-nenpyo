@@ -15,8 +15,10 @@ const getNenpyoObjData = (title) => {
   console.log('keyArray', keyArray);
   console.log('valArray', valArray);
 
-  thisObj = getFilterData(nenpyoData, 'title', title, 'exact');
-  console.log('thisObj', thisObj);
+  const eventData = getFilterData(nenpyoData, 'title', title, 'exact');
+  console.log('eventData', eventData);
+
+  thisObj["event"] = eventData;
 
   /* for (let i = 0; i < keyArray.length; i++) {
     if (nenpyoData[i].keyArray === valArray) {
@@ -35,8 +37,7 @@ export default (req, res) => {
   } = req;
 
   console.log('req.query', req.query);
-  // const nenpyoObjData = getNenpyoObjData(event);
-  // console.log('nenpyoObjData', nenpyoObjData);
-  // res.status(200).json(nenpyoObjData);
-  res.status(200).json('{"aaa": "iii"}');
+  const nenpyoObjData = getNenpyoObjData(event);
+  console.log('nenpyoObjData', nenpyoObjData);
+  res.status(200).json(nenpyoObjData);
 }

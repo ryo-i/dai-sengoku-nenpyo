@@ -72,7 +72,7 @@ const Track = () => {
     // console.log('res', res);
 
     const eventInfo = await res.json();
-    // console.log('eventInfo', eventInfo);
+    console.log('eventInfo', eventInfo);
 
     return { props: { eventInfo } };
 } */
