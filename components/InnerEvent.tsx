@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext }  from 'react';
-import { numberContext } from '../context/numberContext';
+import { eventContext } from '../context/eventContext';
 import { trackContext } from '../context/trackContext';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -66,18 +66,18 @@ const Section = styled.section`
 
 
 // Component
-function InnerTrack() {
+function InnerEvent() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const {trackNumber, setTrackNumber} = useContext(numberContext);
-  const {trackName, setTrackName} = useContext(numberContext);
+  const {eventData, setEventData} = useContext(eventContext);
+  const {eventTitle, setEventTitle} = useContext(eventContext);
   const [trackData, setTrackData] = useState<{[key: string]: string}>({});
 
 
   //  Get Tracks Data
   useEffect(() => {
-    const url: string = '../api/nenpyo/track/' + trackNumber;
+    const url: string = '../api/nenpyo/track/' + eventTitle;
 
     async function getTracksData (url: string) {
       try {
@@ -86,7 +86,7 @@ function InnerTrack() {
         const data = resJson;
         // console.log('data', data);
         setTrackData(data);
-        setTrackName(data.track);
+        setEventTitle(data.track);
         setIsLoaded(true);
       } catch(error) {
         setError(error);
@@ -95,7 +95,7 @@ function InnerTrack() {
       }
     };
 
-    if (trackNumber) {
+    if (eventData) {
       // console.log('trackNumber', trackNumber);
       getTracksData(url);
     }
@@ -346,11 +346,11 @@ function InnerTrack() {
         </trackContext.Provider>
       </Nav>
       <Section>
-        <h2>{trackName}</h2>
-        <TrackInfo />
+        <h2>{eventTitle}</h2>
+        {/* <TrackInfo /> */}
       </Section>
     </>
   );
 }
 
-export default InnerTrack;
+export default InnerEvent;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext }  from 'react';
-import { numberContext } from '../context/numberContext';
+import { eventContext } from '../context/eventContext';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -24,7 +24,7 @@ const Nav = styled.nav`
 // PrevNextNav
 function PrevNextNav() {
     // Hooks
-    const {trackNumber, setTrackNumber} = useContext(numberContext);
+    const {eventData, setEventData} = useContext(eventContext);
     const [prevNumber, setPrevNumber] = useState(0);
     const [nextNumber, setNextNumber] = useState(0);
     const [allTracksLength, setAllTracksLength] = useState(0);
@@ -48,22 +48,22 @@ function PrevNextNav() {
 
         getAllTracksLength(url);
 
-        if (trackNumber) {
-            setNextNumber(Number(trackNumber) + 1);
-            setPrevNumber(Number(trackNumber) - 1);
+        if (eventData) {
+            setNextNumber(Number(eventData) + 1);
+            setPrevNumber(Number(eventData) - 1);
           }
     }, []);
 
 
     function PrevNextLink () {
-        if (Number(trackNumber) <= 1) {
+        if (Number(eventData) <= 1) {
             return (
                 <>
                     <li className="non">◀︎ 前の曲</li>
                     <li><Link href="/track/[nextNumber]" as={`/track/${nextNumber}`}><a>次の曲</a></Link> ▶︎</li>
                 </>
             );
-          } else if (Number(trackNumber) >= allTracksLength) {
+          } else if (Number(eventData) >= allTracksLength) {
             return (
                 <>
                     <li>◀︎ <Link href="/track/[prevNumber]" as={`/track/${prevNumber}`}><a>前の曲</a></Link></li>
