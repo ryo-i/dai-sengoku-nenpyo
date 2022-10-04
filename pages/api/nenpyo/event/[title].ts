@@ -47,9 +47,10 @@ const getNenpyoObjData = (title) => {
 export default (req, res) => {
   const title = req.query.title;
 
-  const nenpyoObjData = getNenpyoObjData(title);
-  console.log('nenpyoObjData', nenpyoObjData);
+  // const nenpyoObjData = getNenpyoObjData(title);
+  // console.log('nenpyoObjData', nenpyoObjData);
 
   // res.status(200).json(nenpyoObjData);
-  res.status(200).json({ title: nenpyoObjData });
+  // res.status(200).json({ title: nenpyoObjData });
+  res.status(200).json({ title: nenpyoData.values[0] });
 }
