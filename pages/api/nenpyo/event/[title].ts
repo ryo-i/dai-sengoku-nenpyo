@@ -26,17 +26,19 @@ const getNenpyoObjData = (title) => {
     }
   } */
 
-  const result = nenpyoData.values.filter((item, index) => {
+  /* const result = nenpyoData.values.filter((item, index) => {
     if (item[keyNumbers.title] === title) {
       return item;
     }
-  });
+  }); */
+
+  const test = nenpyoData.values[3];
 
   // console.log('thisObj', thisObj);
 
   // return thisObj;
 
-  return result; // test
+  return test; // test
 };
 
 
