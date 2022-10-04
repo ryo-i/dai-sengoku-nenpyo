@@ -32,13 +32,13 @@ const getNenpyoObjData = (title) => {
     }
   }); */
 
-  const test = nenpyoData.values[3];
+  const test = JSON.stringify(nenpyoData.values[3]);
 
   // console.log('thisObj', thisObj);
 
   // return thisObj;
 
-  return JSON.stringify({ test: test }); // test
+  return { "test": test }; // test
 };
 
 
