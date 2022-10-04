@@ -3,7 +3,8 @@ import { keyNumbers } from '../../../../modules/api/keyNumbers';
 import { getKeyNumber }from '../../../../modules/api/getKeyNumber';
 import { getFilterData }from '../../../../modules/api/getFilterData';
 
-getKeyNumber(nenpyoData.values[0], keyNumbers);
+const data = nenpyoData.values;
+getKeyNumber(data[0], keyNumbers);
 
 
 // Get Nenpyo Obj Data
@@ -54,9 +55,9 @@ export default (req, res) => {
   // res.status(200).json(nenpyoObjData);
   // res.status(200).json({ title: nenpyoObjData });
 
-  for (let i = 0; i < nenpyoData.values.length; i++) {
-    if (nenpyoData[i][keyNumbers.title] === title) {
-      thisObj[title] = nenpyoData[i];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i][keyNumbers.title] === title) {
+      thisObj[title] = data[i];
     }
   }
 
