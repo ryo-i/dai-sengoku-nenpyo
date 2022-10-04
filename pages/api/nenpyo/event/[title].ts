@@ -46,11 +46,19 @@ const getNenpyoObjData = (title) => {
 // Response
 export default (req, res) => {
   const title = req.query.title;
+  let thisObj = {};
 
   // const nenpyoObjData = getNenpyoObjData(title);
   // console.log('nenpyoObjData', nenpyoObjData);
 
   // res.status(200).json(nenpyoObjData);
   // res.status(200).json({ title: nenpyoObjData });
-  res.status(200).json({ title: nenpyoData.values[0][keyNumbers.title] });
+
+  for (let i = 0; i < nenpyoData.values.length; i++) {
+    if (nenpyoData[i][keyNumbers.title] === title) {
+      thisObj[title] = nenpyoData[i];
+    }
+  }
+
+  res.status(200).json({ thisObj });
 }
