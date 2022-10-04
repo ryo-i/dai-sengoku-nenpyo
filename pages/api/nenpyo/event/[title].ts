@@ -7,12 +7,12 @@ getKeyNumber(data[0], keyNumbers);
 
 
 // Get Data Obj
-const getDataObj = (data) => {
+const getDataObj = (currentData) => {
   const keyArray = data[0];
   const resultObj = {};
 
   for (var i = 0; i < keyArray.length; i++) {
-    resultObj[keyArray[i]] = data[i];
+    resultObj[keyArray[i]] = currentData[i];
   }
 
   return resultObj;

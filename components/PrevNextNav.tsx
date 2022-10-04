@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext }  from 'react';
-import { eventContext } from '../context/eventContext';
+// import { eventContext } from '../context/eventContext';
 import Link from 'next/link';
 import styled from 'styled-components';
 
