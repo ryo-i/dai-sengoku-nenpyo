@@ -33,7 +33,7 @@ const getNenpyoObjData = (title) => {
   }); */
 
   // const test = JSON.stringify(nenpyoData.values[3]);
-  const test = JSON.stringify([1, 2, 3, "a", "b", "c"]);
+  const test = JSON.stringify(["a", "b", "c"]);
 
   // console.log('thisObj', thisObj);
 
