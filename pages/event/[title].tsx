@@ -8,21 +8,9 @@ import Data from '../../data/data.json';
 
 
 // Component
-/* const Track = () => {
-    return (
-        <>
-        <Header />
-        <main>
-            <h1>てすと</h1>
-        </main>
-        <Footer />
-        </>
-    );
-} */
-
 const Track = ({ eventInfo }) => {
-    const [eventTitle, setEventTitle] = useState(eventInfo.event.title);
-    const [eventData, setEventData] = useState(eventInfo.event.data);
+    console.log('eventInfo', eventInfo);
+    const [eventTitle, setEventTitle] = useState(eventInfo.eventData.title);
 
     const headerTitle = Data.header.title;
     const pageTitle = eventTitle;
@@ -40,7 +28,7 @@ const Track = ({ eventInfo }) => {
         <Header />
         <main>
             <h1>出来事</h1>
-            <eventContext.Provider value={{eventTitle, setEventTitle, eventData, setEventData}} >
+            <eventContext.Provider value={{eventTitle, setEventTitle}} >
                 <InnerEvent />
             </eventContext.Provider>
         </main>

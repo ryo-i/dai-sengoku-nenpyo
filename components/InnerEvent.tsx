@@ -70,23 +70,22 @@ function InnerEvent() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const {eventData, setEventData} = useContext(eventContext);
   const {eventTitle, setEventTitle} = useContext(eventContext);
-  const [trackData, setTrackData] = useState<{[key: string]: string}>({});
+  const [eventData, setEventData] = useState([]);
 
 
-  //  Get Tracks Data
+  //  Get Event Data
   useEffect(() => {
-    const url: string = '../api/nenpyo/track/' + eventTitle;
+    const url: string = '../api/nenpyo/event/' + eventTitle;
 
-    async function getTracksData (url: string) {
+    async function getEventData (url: string) {
       try {
         const res = await fetch(url);
         const resJson = await res.json();
-        const data = resJson;
+        const data = resJson.eventData;
         // console.log('data', data);
-        setTrackData(data);
-        setEventTitle(data.track);
+        setEventData(data);
+        setEventTitle(data.title);
         setIsLoaded(true);
       } catch(error) {
         setError(error);
@@ -95,9 +94,9 @@ function InnerEvent() {
       }
     };
 
-    if (eventData) {
-      // console.log('trackNumber', trackNumber);
-      getTracksData(url);
+    if (eventTitle) {
+      // console.log('eventTitle', eventTitle);
+      getEventData(url);
     }
   }, []);
 
@@ -208,27 +207,27 @@ function InnerEvent() {
 
 
   // Track Info
-  const TrackInfo = () => {
+  /* const TrackInfo = () => {
     if (error) {
       return <p>エラー: {error.message}</p>;
     } else if (!isLoaded) {
       return <p>読み込み中...</p>;
     } else {
-      const isCover = trackData.artist !== trackData.original;
+      const isCover = eventData.artist !== eventData.original;
       return (
         <>
           <dl>
             <dt>アーティスト</dt>
             <dd>
               <ul>
-                <PeapleArray name={trackData.artist} paramKey={'artist'} />
+                <PeapleArray name={eventData.artist} paramKey={'artist'} />
               </ul>
             </dd>
             {isCover && <>
               <dt>オリジナル</dt>
               <dd>
                 <ul>
-                  <PeapleArray name={trackData.original} paramKey={'original'} />
+                  <PeapleArray name={eventData.original} paramKey={'original'} />
                 </ul>
               </dd>
             </>}
@@ -237,23 +236,23 @@ function InnerEvent() {
             <dt>作者</dt>
             <dd>
               <ul>
-                <PeapleArray name={trackData.songwriter} paramKey={'songwriter'} />
+                <PeapleArray name={eventData.songwriter} paramKey={'songwriter'} />
               </ul>
             </dd>
             <dt>リードボーカル</dt>
             <dd>
               <ul>
-                <PeapleArray name={trackData.vocal} paramKey={'vocal'} />
+                <PeapleArray name={eventData.vocal} paramKey={'vocal'} />
               </ul>
             </dd>
             <dt>演奏</dt>
             <dd>
               <ul>
-                <Playing part={trackData.john} paramKey={'John Lennon'} />
-                <Playing part={trackData.paul} paramKey={'Paul McCartney'} />
-                <Playing part={trackData.george} paramKey={'George Harrison'} />
-                <Playing part={trackData.ringo} paramKey={'Ringo Starr'} />
-                <PeapleArray name={trackData.musician} paramKey={'musician'} />
+                <Playing part={eventData.john} paramKey={'John Lennon'} />
+                <Playing part={eventData.paul} paramKey={'Paul McCartney'} />
+                <Playing part={eventData.george} paramKey={'George Harrison'} />
+                <Playing part={eventData.ringo} paramKey={'Ringo Starr'} />
+                <PeapleArray name={eventData.musician} paramKey={'musician'} />
               </ul>
             </dd>
           </dl>
@@ -261,90 +260,90 @@ function InnerEvent() {
             <dt>プロデューサー</dt>
             <dd>
               <ul>
-                <PeapleArray name={trackData.producer} paramKey={'producer'} />
+                <PeapleArray name={eventData.producer} paramKey={'producer'} />
               </ul>
             </dd>
             <dt>エンジニア</dt>
             <dd>
               <ul>
-                <PeapleArray name={trackData.engineer} paramKey={'engineer'} />
+                <PeapleArray name={eventData.engineer} paramKey={'engineer'} />
               </ul>
             </dd>
             <dt>アートワーク</dt>
             <dd>
               <ul>
-                <PeapleArray name={trackData.artwork} paramKey={'artwork'} />
+                <PeapleArray name={eventData.artwork} paramKey={'artwork'} />
               </ul>
             </dd>
             <dt>ディレクター（映画）</dt>
             <dd>
               <ul>
-                <PeapleArray name={trackData.film} paramKey={'film'} />
+                <PeapleArray name={eventData.film} paramKey={'film'} />
               </ul>
             </dd>
             <dt>ディレクター（MV）</dt>
             <dd>
               <ul>
-                <PeapleArray name={trackData.mv} paramKey={'mv'} />
+                <PeapleArray name={eventData.mv} paramKey={'mv'} />
               </ul>
             </dd>
           </dl>
           <dl>
             <dt>収録作品</dt>
             <dd>
-              <Link href={"../?order=" + trackData.order + "&title=" + trackData.title}>
-                <a>{trackData.title}</a>
+              <Link href={"../?order=" + eventData.order + "&title=" + eventData.title}>
+                <a>{eventData.title}</a>
               </Link>
-              （<Link href={"../?format=" + trackData.format}>
-                <a>{trackData.format}</a>
+              （<Link href={"../?format=" + eventData.format}>
+                <a>{eventData.format}</a>
               </Link>）
             </dd>
             <dt>曲順</dt>
             <dd>
-            No. {trackData.number} (Disc {trackData.disc}, Side {trackData.side})
+            No. {eventData.number} (Disc {eventData.disc}, Side {eventData.side})
             </dd>
             <dt>発売日</dt>
             <dd>
-              <Link href={"../?date=" + trackData.date}>
-                <a>{trackData.date}</a>
+              <Link href={"../?date=" + eventData.date}>
+                <a>{eventData.date}</a>
               </Link>
-              （<Link href={"../?year=" + trackData.year}>
-                <a>{trackData.year}年</a>
+              （<Link href={"../?year=" + eventData.year}>
+                <a>{eventData.year}年</a>
               </Link>）
             </dd>
             <dt>レーベル</dt>
             <dd>
-              <Link href={"../?label=" + trackData.label}>
-                <a>{trackData.label}</a>
+              <Link href={"../?label=" + eventData.label}>
+                <a>{eventData.label}</a>
               </Link>
-              （<Link href={"../?country=" + trackData.country}>
-                <a>{trackData.country}</a>
+              （<Link href={"../?country=" + eventData.country}>
+                <a>{eventData.country}</a>
               </Link>）
             </dd>
           </dl>
           <dl>
             <dt>備考</dt>
-            <dd><RemarkArray text={trackData.remarks} /></dd>
+            <dd><RemarkArray text={eventData.remarks} /></dd>
           </dl>
           <dl>
             <dt>出典</dt>
-            <dd><SourceArray source={trackData.source} /></dd>
+            <dd><SourceArray source={eventData.source} /></dd>
           </dl>
           <PrevNextNav />
         </>
       );
     }
-  };
+  }; */
 
 
   // JSX
   return (
     <>
-      <Nav>
-        <trackContext.Provider value={{trackData, setTrackData}} >
+      {/* <Nav>
+        <trackContext.Provider value={{eventData, setEventData}} >
           <TrackBreadcrumb />
         </trackContext.Provider>
-      </Nav>
+      </Nav> */}
       <Section>
         <h2>{eventTitle}</h2>
         {/* <TrackInfo /> */}
