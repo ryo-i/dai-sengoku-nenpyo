@@ -8,19 +8,19 @@ getKeyNumber(nenpyoData.values[0], keyNumbers);
 
 // Get Nenpyo Obj Data
 const getNenpyoObjData = (title) => {
-  const keyArray = nenpyoData.values[keyNumbers.title];
+  /* const keyArray = nenpyoData.values[keyNumbers.title];
   const valArray = nenpyoData.values[title];
   let thisObj = {};
 
   console.log('keyArray', keyArray);
-  console.log('valArray', valArray);
+  console.log('valArray', valArray); */
 
   /* const eventData = getFilterData(nenpyoData, 'title', title, 'exact');
   console.log('eventData', eventData);
 
   thisObj["event"] = eventData; */
 
-  for (let i = 0; i < keyArray.length; i++) {
+  /* for (let i = 0; i < keyArray.length; i++) {
     if (nenpyoData[i].keyArray === valArray) {
       thisObj[keyArray[i]] = nenpyoData[i];
     }
@@ -28,7 +28,9 @@ const getNenpyoObjData = (title) => {
 
   console.log('thisObj', thisObj);
 
-  return thisObj;
+  return thisObj; */
+
+  return title; // test
 };
 
 
