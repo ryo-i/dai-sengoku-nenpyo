@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 年代、年間のテキスト一部削除 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- 出来事ページでデータを表示 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- eventDataを連想配列に [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 
