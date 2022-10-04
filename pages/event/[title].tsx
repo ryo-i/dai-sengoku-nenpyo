@@ -8,7 +8,7 @@ import Data from '../../data/data.json';
 
 
 // Component
-const Track = () => {
+/* const Track = () => {
     return (
         <>
         <Header />
@@ -18,9 +18,9 @@ const Track = () => {
         <Footer />
         </>
     );
-}
+} */
 
-/* const Track = ({ eventInfo }) => {
+const Track = ({ eventInfo }) => {
     const [trackNumber, setTrackNumber] = useState(eventInfo.id);
     const [trackName, setTrackName] = useState(eventInfo.track);
 
@@ -39,7 +39,7 @@ const Track = () => {
         </Head>
         <Header />
         <main>
-            <h1>楽曲情報</h1>
+            <h1>出来事</h1>
             <numberContext.Provider value={{trackNumber, setTrackNumber, trackName, setTrackName}} >
                 <InnerTrack />
             </numberContext.Provider>
@@ -47,7 +47,7 @@ const Track = () => {
         <Footer />
         </>
     );
-} */
+}
 
 
 // Get Path
