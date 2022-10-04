@@ -69,7 +69,7 @@ const Track = () => {
     // console.log('title', title);
 
     const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/event/${title}`);
-    console.log('res', res);
+    // console.log('res', res);
 
     const eventInfo = await res.json();
     console.log('eventInfo', eventInfo);

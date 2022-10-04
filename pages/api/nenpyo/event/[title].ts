@@ -8,13 +8,17 @@ getKeyNumber(data[0], keyNumbers);
 // Response
 export default (req, res) => {
   const title = req.query.title;
-  let thisObj = {};
+  const event = {
+    title: '',
+    data: []
+  };
 
   for (let i = 0; i < data.length; i++) {
     if (data[i][keyNumbers.title] === title) {
-      thisObj["title"] = data[i];
+      event.title = data[i][keyNumbers.title];
+      event.data = data[i];
     }
   }
 
-  res.status(200).json({ thisObj });
+  res.status(200).json({ event });
 }
