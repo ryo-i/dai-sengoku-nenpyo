@@ -208,7 +208,7 @@ function InnerEvent() {
 
   // Track Info
   const TrackInfo = () => {
-    return <p>{eventData}</p>;
+    return <p>{String(eventData)}</p>;
 
     /* if (error) {
       return <p>エラー: {error.message}</p>;

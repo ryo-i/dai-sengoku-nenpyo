@@ -10,7 +10,7 @@ import Data from '../../data/data.json';
 // Component
 const Track = ({ eventInfo }) => {
     console.log('eventInfo', eventInfo);
-    const [eventTitle, setEventTitle] = useState(eventInfo.eventData.title);
+    const [eventTitle, setEventTitle] = useState(eventInfo.title);
 
     const headerTitle = Data.header.title;
     const pageTitle = eventTitle;

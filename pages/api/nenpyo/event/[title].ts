@@ -24,11 +24,10 @@ export default (req, res) => {
   const title = req.query.title;
   const keyArray = data[0];
 
-  const eventData = {};
+  let eventData = {};
   for (let i = 0; i < data.length; i++) {
     if (data[i][keyNumbers.title] === title) {
-      eventData['title'] = data[i][keyNumbers.title];
-      eventData['data'] = getDataObj(data[i]);
+      eventData = getDataObj(data[i]);
     }
   }
 
