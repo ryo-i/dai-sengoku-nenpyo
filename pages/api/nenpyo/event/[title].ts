@@ -38,7 +38,7 @@ const getNenpyoObjData = (title) => {
 
   // return thisObj;
 
-  return { test: test }; // test
+  return JSON.stringify({ test: test }); // test
 };
 
 
