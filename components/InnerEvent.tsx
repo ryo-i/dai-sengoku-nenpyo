@@ -4,7 +4,7 @@ import { trackContext } from '../context/trackContext';
 import Link from 'next/link';
 import styled from 'styled-components';
 import TrackBreadcrumb from './TrackBreadcrumb';
-import PrevNextNav from './PrevNextNav';
+// import PrevNextNav from './PrevNextNav';
 import Nav from './style/Nav';
 import { getPeopleArray } from '../modules/nenpyoInfo/getPeopleArray';
 import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
@@ -83,8 +83,8 @@ function InnerEvent() {
         const res = await fetch(url);
         const resJson = await res.json();
         const data = resJson.eventData;
-        // console.log('data', data);
-        setEventData(data);
+        console.log('data', data);
+        setEventData(data.data);
         setEventTitle(data.title);
         setIsLoaded(true);
       } catch(error) {
@@ -207,8 +207,10 @@ function InnerEvent() {
 
 
   // Track Info
-  /* const TrackInfo = () => {
-    if (error) {
+  const TrackInfo = () => {
+    return <p>{eventData}</p>;
+
+    /* if (error) {
       return <p>エラー: {error.message}</p>;
     } else if (!isLoaded) {
       return <p>読み込み中...</p>;
@@ -329,11 +331,10 @@ function InnerEvent() {
             <dt>出典</dt>
             <dd><SourceArray source={eventData.source} /></dd>
           </dl>
-          <PrevNextNav />
         </>
       );
-    }
-  }; */
+    } */
+  };
 
 
   // JSX
@@ -346,7 +347,7 @@ function InnerEvent() {
       </Nav> */}
       <Section>
         <h2>{eventTitle}</h2>
-        {/* <TrackInfo /> */}
+        <TrackInfo />
       </Section>
     </>
   );

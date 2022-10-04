@@ -24,7 +24,8 @@ const Nav = styled.nav`
 // PrevNextNav
 function PrevNextNav() {
     // Hooks
-    const {eventData, setEventData} = useContext(eventContext);
+    // const {eventData, setEventData} = useContext(eventContext);
+    const [eventData, setEventData] = useState(0);
     const [prevNumber, setPrevNumber] = useState(0);
     const [nextNumber, setNextNumber] = useState(0);
     const [allTracksLength, setAllTracksLength] = useState(0);
