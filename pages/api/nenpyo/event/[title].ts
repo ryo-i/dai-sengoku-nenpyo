@@ -52,5 +52,5 @@ export default (req, res) => {
 
   // res.status(200).json(nenpyoObjData);
   // res.status(200).json({ title: nenpyoObjData });
-  res.status(200).json({ title: nenpyoData.values[0] });
+  res.status(200).json({ title: nenpyoData.values[0][keyNumbers.title] });
 }
