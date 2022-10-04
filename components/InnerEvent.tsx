@@ -71,7 +71,7 @@ function InnerEvent() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const {eventTitle, setEventTitle} = useContext(eventContext);
-  const [eventData, setEventData] = useState([]);
+  const [eventData, setEventData] = useState({});
 
 
   //  Get Event Data
@@ -84,8 +84,7 @@ function InnerEvent() {
         const resJson = await res.json();
         const data = resJson.eventData;
         console.log('data', data);
-        setEventData(data.data);
-        setEventTitle(data.title);
+        setEventData(data);
         setIsLoaded(true);
       } catch(error) {
         setError(error);
@@ -208,7 +207,8 @@ function InnerEvent() {
 
   // Track Info
   const TrackInfo = () => {
-    return <p>{String(eventData)}</p>;
+
+    return <p>将軍：{eventData['syogun']}</p>;
 
     /* if (error) {
       return <p>エラー: {error.message}</p>;
