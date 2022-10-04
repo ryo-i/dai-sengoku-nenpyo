@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 年代、年間のテキスト一部削除 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- getNenpyoObjData関数の動作テスト9 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- getNenpyoObjData関数の動作テスト10 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

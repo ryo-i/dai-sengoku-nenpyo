@@ -39,7 +39,7 @@ const getNenpyoObjData = (title) => {
 
   // return thisObj;
 
-  return { "test": test }; // test
+  return test; // test
 };
 
 
