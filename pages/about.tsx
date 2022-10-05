@@ -59,7 +59,7 @@ function About() {
                 <h2>進捗</h2>
                 <ul>
                     <li>年代、年間のテキスト一部削除 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
-                    <li>nenpyoListのpageInfo、pageからpageLengthに <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
+                    <li>出来事ページに各項目を表示（絞り込みはまだ） <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
             <section>

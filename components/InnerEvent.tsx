@@ -100,8 +100,34 @@ function InnerEvent() {
   }, []);
 
 
+  // Common Info Array
+  function CommonInfoArray (props) {
+    if (error) {
+      return <p>エラー: {error.array}</p>;
+    } else if (props.array === '-' || props.array === '') {
+      return null;
+    } else if (!props.array) {
+      return <p>読み込み中...</p>;
+    }
+
+    const infoArray = getDividedArray(props.array);
+
+    return (
+      <ul className={props.paramKey}>
+        {infoArray.map((data, index) =>
+          <li key={index}>
+            <Link href={"../?" + props.paramKey + "=" + data}>
+              <a>{data + props.unit}</a>
+            </Link>
+          </li>
+        )}
+      </ul>
+    );
+  }
+
+
   // PeapleArray
-  function PeapleArray (props) {
+  /* function PeapleArray (props) {
     if (error) {
       return <p>エラー: {error.message}</p>;
     } else if (props.name === '-' || props.name === '') {
@@ -144,11 +170,11 @@ function InnerEvent() {
         )}
       </>
     );
-  }
+  } */
 
 
   // Playing
-  function Playing (props) {
+  /* function Playing (props) {
     return (
       props.part !== '-' && <>
         <li className="peapleList">
@@ -158,7 +184,7 @@ function InnerEvent() {
         </li>
       </>
     );
-  }
+  } */
 
 
   // Remark Array
@@ -174,7 +200,7 @@ function InnerEvent() {
     let remarksArray = getDividedArray(props.text);
 
     return (
-      <ul>
+      <ul className={props.paramKey}>
         {remarksArray.map((data, index) =>
           <li key={index}>{data}</li>
         )}
@@ -183,8 +209,8 @@ function InnerEvent() {
   }
 
 
-  // Source Array
-  function SourceArray (props) {
+  // Url Array
+  function UrlArray (props) {
     if (error) {
       return <p>エラー: {error.source}</p>;
     } else if (props.source === '-' || props.source === '') {
@@ -196,7 +222,7 @@ function InnerEvent() {
     const sourceArray = getDividedArray(props.source);
 
     return (
-      <ul>
+      <ul className={"source"}>
         {sourceArray.map((data, index) =>
           <li key={index}><a href={data} target="_blank">{data}</a></li>
         )}
@@ -205,135 +231,157 @@ function InnerEvent() {
   }
 
 
-  // Track Info
-  const TrackInfo = () => {
+  // Event Info
+  const EventInfo = () => {
 
-    return <p>将軍：{eventData['syogun']}</p>;
+    // return <p>将軍：{eventData['syogun']}</p>;
 
-    /* if (error) {
+    if (error) {
       return <p>エラー: {error.message}</p>;
     } else if (!isLoaded) {
       return <p>読み込み中...</p>;
     } else {
-      const isCover = eventData.artist !== eventData.original;
       return (
         <>
           <dl>
-            <dt>アーティスト</dt>
+            <dt>概要</dt>
             <dd>
-              <ul>
-                <PeapleArray name={eventData.artist} paramKey={'artist'} />
-              </ul>
+              <RemarkArray text={eventData['remarks']} paramKey={'remarks'} />
             </dd>
-            {isCover && <>
-              <dt>オリジナル</dt>
-              <dd>
-                <ul>
-                  <PeapleArray name={eventData.original} paramKey={'original'} />
-                </ul>
+            <dt>カテゴリー</dt>
+            <dd>
+              <CommonInfoArray array={eventData['category']} paramKey={'category'} unit={''} />
               </dd>
-            </>}
           </dl>
           <dl>
-            <dt>作者</dt>
+            <dt>年月日</dt>
             <dd>
-              <ul>
-                <PeapleArray name={eventData.songwriter} paramKey={'songwriter'} />
-              </ul>
+              <p>
+                <Link href={
+                  "../?waYear=" + eventData['waYear'] +
+                  "../?waYear=" + eventData['waYearUnit']
+                }>
+                  <a>{eventData['waYear']}</a>
+                </Link>
+                {eventData['waYearUnit']}
+                <Link href={
+                  "../?waYear=" + eventData['waYear'] +
+                  "../?waYear=" + eventData['waYearUnit'] +
+                  "&waMonth=" + eventData['waMonth'] +
+                  "&waMonth=" + eventData['waMonthUnit']
+                }>
+                  <a>{eventData['waMonth']}</a>
+                </Link>
+                {eventData['waMonthUnit']}
+                <Link href={
+                  "../?waYear=" + eventData['waYear'] +
+                  "../?waYear=" + eventData['waYearUnit'] +
+                  "&waMonth=" + eventData['waMonth'] +
+                  "&waMonth=" + eventData['waMonthUnit'] +
+                  "&waDay=" + eventData['waDay'] +
+                  "&waDay=" + eventData['waDayUnit']
+                }>
+                  <a>{eventData['waDay']}</a>
+                </Link>
+                {eventData['waDayUnit']}
+                （<Link href={
+                  "../?adYear=" + eventData['adYear'] +
+                  "../?adYear=" + eventData['adYearUnit']
+                }>
+                  <a>{eventData['adYear']}</a>
+                </Link>
+                {eventData['adYearUnit']}
+                <Link href={
+                  "../?adYear=" + eventData['adYear'] +
+                  "../?adYear=" + eventData['adYearUnit'] +
+                  "&adMonth=" + eventData['adMonth'] +
+                  "&adMonth=" + eventData['adMonthUnit']
+                }>
+                  <a>{eventData['adMonth']}</a>
+                </Link>
+                {eventData['adMonthUnit']}
+                <Link href={
+                  "../?adYear=" + eventData['adYear'] +
+                  "../?adYear=" + eventData['adYearUnit'] +
+                  "&adMonth=" + eventData['adMonth'] +
+                  "&adMonth=" + eventData['adMonthUnit'] +
+                  "&adDay=" + eventData['adDay'] +
+                  "&adDay=" + eventData['adDayUnit']
+                }>
+                  <a>{eventData['adDay']}</a>
+                </Link>
+                {eventData['adDayUnit']}）
+                {eventData['time']}
+              </p>
             </dd>
-            <dt>リードボーカル</dt>
+            <dt>年間(和暦)</dt>
             <dd>
-              <ul>
-                <PeapleArray name={eventData.vocal} paramKey={'vocal'} />
-              </ul>
+              <CommonInfoArray array={eventData['waGengo']} paramKey={'waGengo'} unit={'年間'} />
             </dd>
-            <dt>演奏</dt>
+            <dt>年代(西暦)</dt>
             <dd>
-              <ul>
-                <Playing part={eventData.john} paramKey={'John Lennon'} />
-                <Playing part={eventData.paul} paramKey={'Paul McCartney'} />
-                <Playing part={eventData.george} paramKey={'George Harrison'} />
-                <Playing part={eventData.ringo} paramKey={'Ringo Starr'} />
-                <PeapleArray name={eventData.musician} paramKey={'musician'} />
-              </ul>
-            </dd>
-          </dl>
-          <dl>
-            <dt>プロデューサー</dt>
-            <dd>
-              <ul>
-                <PeapleArray name={eventData.producer} paramKey={'producer'} />
-              </ul>
-            </dd>
-            <dt>エンジニア</dt>
-            <dd>
-              <ul>
-                <PeapleArray name={eventData.engineer} paramKey={'engineer'} />
-              </ul>
-            </dd>
-            <dt>アートワーク</dt>
-            <dd>
-              <ul>
-                <PeapleArray name={eventData.artwork} paramKey={'artwork'} />
-              </ul>
-            </dd>
-            <dt>ディレクター（映画）</dt>
-            <dd>
-              <ul>
-                <PeapleArray name={eventData.film} paramKey={'film'} />
-              </ul>
-            </dd>
-            <dt>ディレクター（MV）</dt>
-            <dd>
-              <ul>
-                <PeapleArray name={eventData.mv} paramKey={'mv'} />
-              </ul>
-            </dd>
-          </dl>
-          <dl>
-            <dt>収録作品</dt>
-            <dd>
-              <Link href={"../?order=" + eventData.order + "&title=" + eventData.title}>
-                <a>{eventData.title}</a>
-              </Link>
-              （<Link href={"../?format=" + eventData.format}>
-                <a>{eventData.format}</a>
-              </Link>）
-            </dd>
-            <dt>曲順</dt>
-            <dd>
-            No. {eventData.number} (Disc {eventData.disc}, Side {eventData.side})
-            </dd>
-            <dt>発売日</dt>
-            <dd>
-              <Link href={"../?date=" + eventData.date}>
-                <a>{eventData.date}</a>
-              </Link>
-              （<Link href={"../?year=" + eventData.year}>
-                <a>{eventData.year}年</a>
-              </Link>）
-            </dd>
-            <dt>レーベル</dt>
-            <dd>
-              <Link href={"../?label=" + eventData.label}>
-                <a>{eventData.label}</a>
-              </Link>
-              （<Link href={"../?country=" + eventData.country}>
-                <a>{eventData.country}</a>
-              </Link>）
+              <CommonInfoArray array={eventData['adAge']} paramKey={'adAge'} unit={''}  />
             </dd>
           </dl>
           <dl>
-            <dt>備考</dt>
-            <dd><RemarkArray text={eventData.remarks} /></dd>
+            <dt>地方</dt>
+            <dd>
+              <CommonInfoArray array={eventData['region']} paramKey={'region'} unit={''}  />
+            </dd>
+            <dt>国(令制国)</dt>
+            <dd>
+              <CommonInfoArray array={eventData['country']} paramKey={'country'} unit={''}  />
+            </dd>
+            <dt>地域</dt>
+            <dd>
+              <CommonInfoArray array={eventData['area']} paramKey={'area'} unit={''}  />
+            </dd>
+          </dl>
+          <dl>
+            <dt>勢力</dt>
+            <dd>
+              <CommonInfoArray array={eventData['influence']} paramKey={'influence'} unit={''}  />
+            </dd>
+            <dt>人物</dt>
+            <dd>
+              <CommonInfoArray array={eventData['person']} paramKey={'person'} unit={''}  />
+            </dd>
+          </dl>
+          <dl>
+            <dt>天皇</dt>
+            <dd>
+              <CommonInfoArray array={eventData['tenNou']} paramKey={'tenNou'} unit={''}  />
+            </dd>
+            <dt>関白</dt>
+            <dd>
+              <CommonInfoArray array={eventData['kanpaku']} paramKey={'kanpaku'} unit={''}  />
+            </dd>
+            <dt>将軍</dt>
+            <dd>
+              <CommonInfoArray array={eventData['syogun']} paramKey={'syogun'} unit={''}  />
+            </dd>
+            <dt>管領</dt>
+            <dd>
+              <CommonInfoArray array={eventData['kanrei']} paramKey={'kanrei'} unit={''}  />
+            </dd>
+            <dt>関東公方</dt>
+            <dd>
+              <CommonInfoArray array={eventData['kantoKubo']} paramKey={'kantoKubo'} unit={''}  />
+            </dd>
+            <dt>関東管領</dt>
+            <dd>
+              <CommonInfoArray array={eventData['kantoKanrei']} paramKey={'kantoKanrei'} unit={''}  />
+            </dd>
           </dl>
           <dl>
             <dt>出典</dt>
-            <dd><SourceArray source={eventData.source} /></dd>
+            <dd><RemarkArray text={eventData['reference']} paramKey={'reference'} /></dd>
+            <dt>url</dt>
+            <dd><UrlArray source={eventData['url']} /></dd>
           </dl>
         </>
       );
-    } */
+    }
   };
 
 
@@ -347,7 +395,7 @@ function InnerEvent() {
       </Nav> */}
       <Section>
         <h2>{eventTitle}</h2>
-        <TrackInfo />
+        <EventInfo />
       </Section>
     </>
   );
