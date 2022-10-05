@@ -1,6 +1,9 @@
 import nenpyoData from '../data/nenpyo.json';
 
 
+const dataValues = nenpyoData.values;
+
+
 // KeyNumbers
 const keyNumbers = {
   title: 0
@@ -15,13 +18,15 @@ const setKeyNumber = (data) => {
     }
   }
 }
-setKeyNumber(nenpyoData.values[0]);
+setKeyNumber(dataValues[0]);
 
 
 // Get Page Info
 const getPageInfo = () => {
   const pageInfo= {};
-  pageInfo['title'] = nenpyoData.values.length -1;
+
+  pageInfo['titleLength'] = dataValues.length -1;
+
   return pageInfo;
 };
 
@@ -29,11 +34,14 @@ const getPageInfo = () => {
 // Get Nenpyo Array
 const getNenpyoArray = () => {
   const resultArray = [];
-  for (var i = 1; i < nenpyoData.values.length; i++) {
+  const startCount = 1;
+
+  for (var i = startCount; i < dataValues.length; i++) {
     const thisObj = {};
-    thisObj['title'] = nenpyoData.values[i][keyNumbers.title];
+    thisObj['title'] = dataValues[i][keyNumbers.title];
     resultArray.push(thisObj);
   }
+
   return resultArray;
 };
 
