@@ -21,7 +21,7 @@ const FooterTag = styled.footer`
 function Footer() {
   return (
     <FooterTag>
-        <p dangerouslySetInnerHTML={{ __html: text }}></p>
+      <p dangerouslySetInnerHTML={{ __html: text }}></p>
     </FooterTag>
   );
 }

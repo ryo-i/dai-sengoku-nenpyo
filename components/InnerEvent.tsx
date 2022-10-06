@@ -126,67 +126,6 @@ function InnerEvent() {
   }
 
 
-  // PeapleArray
-  /* function PeapleArray (props) {
-    if (error) {
-      return <p>エラー: {error.message}</p>;
-    } else if (props.name === '-' || props.name === '') {
-      return null;
-    } else if (!props.name) {
-      return <p>読み込み中...</p>;
-    }
-
-    const delimiterColon = ' : ';
-    const isMultipleColon = props.name.indexOf(delimiterColon) !== -1;
-    const peopleArray = getPeopleArray(props);
-
-    return (
-      <>
-        {peopleArray.map((data, index) =>
-          <li key={index} className="peapleList">
-            {
-              isMultipleColon && Array.isArray(data[0]) ? <>
-                <ul className="peaples">
-                  {data[0].map((data, index) => <>
-                    <li key={index}>
-                      <Link href={"../?" + props.paramKey + "=" + data}>
-                        <a>{data}</a>
-                      </Link>
-                    </li>
-                  </>)}{": " + data[1]}
-                </ul>
-              </> :
-              isMultipleColon ? <>
-                <Link href={"../?" + props.paramKey + "=" + data[0]}>
-                  <a>{data[0]}</a>
-                </Link>{": " + data[1]}
-              </> : <>
-                <Link href={"../?" + props.paramKey + "=" + data}>
-                  <a>{data}</a>
-                </Link>
-              </>
-            }
-          </li>
-        )}
-      </>
-    );
-  } */
-
-
-  // Playing
-  /* function Playing (props) {
-    return (
-      props.part !== '-' && <>
-        <li className="peapleList">
-          <Link href={"../?playing=" + props.paramKey}>
-            <a>{props.paramKey}</a>
-          </Link> : {props.part}
-        </li>
-      </>
-    );
-  } */
-
-
   // Remark Array
   function RemarkArray (props) {
     if (error) {
@@ -196,7 +135,6 @@ function InnerEvent() {
     } else if (!props.text) {
       return <p>読み込み中...</p>;
     }
-
     let remarksArray = getDividedArray(props.text);
 
     return (
@@ -218,7 +156,6 @@ function InnerEvent() {
     } else if (!props.source) {
       return <p>読み込み中...</p>;
     }
-
     const sourceArray = getDividedArray(props.source);
 
     return (
@@ -231,10 +168,74 @@ function InnerEvent() {
   }
 
 
+  // Data
+  function Data (props) {
+    return (
+      <ul>
+        <li>
+          <Link href={
+            "../?waYear=" + eventData['waYear'] +
+            "../?waYear=" + eventData['waYearUnit']
+          }>
+            <a>{eventData['waYear']}</a>
+          </Link>
+          {eventData['waYearUnit']}
+          <Link href={
+            "../?waYear=" + eventData['waYear'] +
+            "../?waYear=" + eventData['waYearUnit'] +
+            "&waMonth=" + eventData['waMonth'] +
+            "&waMonth=" + eventData['waMonthUnit']
+          }>
+            <a>{eventData['waMonth']}</a>
+          </Link>
+          {eventData['waMonthUnit']}
+          <Link href={
+            "../?waYear=" + eventData['waYear'] +
+            "../?waYear=" + eventData['waYearUnit'] +
+            "&waMonth=" + eventData['waMonth'] +
+            "&waMonth=" + eventData['waMonthUnit'] +
+            "&waDay=" + eventData['waDay'] +
+            "&waDay=" + eventData['waDayUnit']
+          }>
+            <a>{eventData['waDay']}</a>
+          </Link>
+          {eventData['waDayUnit']}
+          （<Link href={
+            "../?adYear=" + eventData['adYear'] +
+            "../?adYear=" + eventData['adYearUnit']
+          }>
+            <a>{eventData['adYear']}</a>
+          </Link>
+          {eventData['adYearUnit']}
+          <Link href={
+            "../?adYear=" + eventData['adYear'] +
+            "../?adYear=" + eventData['adYearUnit'] +
+            "&adMonth=" + eventData['adMonth'] +
+            "&adMonth=" + eventData['adMonthUnit']
+          }>
+            <a>{eventData['adMonth']}</a>
+          </Link>
+          {eventData['adMonthUnit']}
+          <Link href={
+            "../?adYear=" + eventData['adYear'] +
+            "../?adYear=" + eventData['adYearUnit'] +
+            "&adMonth=" + eventData['adMonth'] +
+            "&adMonth=" + eventData['adMonthUnit'] +
+            "&adDay=" + eventData['adDay'] +
+            "&adDay=" + eventData['adDayUnit']
+          }>
+            <a>{eventData['adDay']}</a>
+          </Link>
+          {eventData['adDayUnit']}）
+          {eventData['time']}
+        </li>
+      </ul>
+    );
+  }
+
+
   // Event Info
   const EventInfo = () => {
-
-    // return <p>将軍：{eventData['syogun']}</p>;
 
     if (error) {
       return <p>エラー: {error.message}</p>;
@@ -243,76 +244,12 @@ function InnerEvent() {
     } else {
       return (
         <>
-          <dl>
-            <dt>概要</dt>
-            <dd>
-              <RemarkArray text={eventData['remarks']} paramKey={'remarks'} />
-            </dd>
-            <dt>カテゴリー</dt>
-            <dd>
-              <CommonInfoArray array={eventData['category']} paramKey={'category'} unit={''} />
-              </dd>
-          </dl>
+          <RemarkArray text={eventData['remarks']} paramKey={'remarks'} />
+          <hr />
           <dl>
             <dt>年月日</dt>
             <dd>
-              <p>
-                <Link href={
-                  "../?waYear=" + eventData['waYear'] +
-                  "../?waYear=" + eventData['waYearUnit']
-                }>
-                  <a>{eventData['waYear']}</a>
-                </Link>
-                {eventData['waYearUnit']}
-                <Link href={
-                  "../?waYear=" + eventData['waYear'] +
-                  "../?waYear=" + eventData['waYearUnit'] +
-                  "&waMonth=" + eventData['waMonth'] +
-                  "&waMonth=" + eventData['waMonthUnit']
-                }>
-                  <a>{eventData['waMonth']}</a>
-                </Link>
-                {eventData['waMonthUnit']}
-                <Link href={
-                  "../?waYear=" + eventData['waYear'] +
-                  "../?waYear=" + eventData['waYearUnit'] +
-                  "&waMonth=" + eventData['waMonth'] +
-                  "&waMonth=" + eventData['waMonthUnit'] +
-                  "&waDay=" + eventData['waDay'] +
-                  "&waDay=" + eventData['waDayUnit']
-                }>
-                  <a>{eventData['waDay']}</a>
-                </Link>
-                {eventData['waDayUnit']}
-                （<Link href={
-                  "../?adYear=" + eventData['adYear'] +
-                  "../?adYear=" + eventData['adYearUnit']
-                }>
-                  <a>{eventData['adYear']}</a>
-                </Link>
-                {eventData['adYearUnit']}
-                <Link href={
-                  "../?adYear=" + eventData['adYear'] +
-                  "../?adYear=" + eventData['adYearUnit'] +
-                  "&adMonth=" + eventData['adMonth'] +
-                  "&adMonth=" + eventData['adMonthUnit']
-                }>
-                  <a>{eventData['adMonth']}</a>
-                </Link>
-                {eventData['adMonthUnit']}
-                <Link href={
-                  "../?adYear=" + eventData['adYear'] +
-                  "../?adYear=" + eventData['adYearUnit'] +
-                  "&adMonth=" + eventData['adMonth'] +
-                  "&adMonth=" + eventData['adMonthUnit'] +
-                  "&adDay=" + eventData['adDay'] +
-                  "&adDay=" + eventData['adDayUnit']
-                }>
-                  <a>{eventData['adDay']}</a>
-                </Link>
-                {eventData['adDayUnit']}）
-                {eventData['time']}
-              </p>
+              <Data />
             </dd>
             <dt>年間(和暦)</dt>
             <dd>
@@ -388,11 +325,11 @@ function InnerEvent() {
   // JSX
   return (
     <>
-      {/* <Nav>
+      <Nav>
         <trackContext.Provider value={{eventData, setEventData}} >
           <TrackBreadcrumb />
         </trackContext.Provider>
-      </Nav> */}
+      </Nav>
       <Section>
         <h2>{eventTitle}</h2>
         <EventInfo />
