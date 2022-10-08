@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 天皇家を朝廷、足利家を足利氏に [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- waYearとwaYearUnitの絞り込み設定 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- 和暦西暦の月、日、時間も絞り込み [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

@@ -38,6 +38,40 @@ export default (req, res) => {
   if (query.waYearUnit) {
     resultData = getFilterData(resultData, 'waYearUnit', query.waYearUnit, 'exact');
   }
+  if (query.waMonth) {
+    resultData = getFilterData(resultData, 'waMonth', query.waMonth, 'exact');
+  }
+  if (query.waMonthUnit) {
+    resultData = getFilterData(resultData, 'waMonthUnit', query.waMonthUnit, 'exact');
+  }
+  if (query.waDay) {
+    resultData = getFilterData(resultData, 'waDay', query.waDay, 'exact');
+  }
+  if (query.waDayUnit) {
+    resultData = getFilterData(resultData, 'waDayUnit', query.waDayUnit, 'exact');
+  }
+  if (query.adYear) {
+    resultData = getFilterData(resultData, 'adYear', query.adYear, 'exact');
+  }
+  if (query.adYearUnit) {
+    resultData = getFilterData(resultData, 'adYearUnit', query.adYearUnit, 'exact');
+  }
+  if (query.adMonth) {
+    resultData = getFilterData(resultData, 'adMonth', query.adMonth, 'exact');
+  }
+  if (query.adMonthUnit) {
+    resultData = getFilterData(resultData, 'adMonthUnit', query.adMonthUnit, 'exact');
+  }
+  if (query.adDay) {
+    resultData = getFilterData(resultData, 'adDay', query.adDay, 'exact');
+  }
+  if (query.adDayUnit) {
+    resultData = getFilterData(resultData, 'adDayUnit', query.adDayUnit, 'exact');
+  }
+  if (query.time) {
+    resultData = getFilterData(resultData, 'time', query.time, 'exact');
+  }
+
   /* if (query.original) {
     resultData = getFilterData(resultData, 'original', query.original, 'partial');
   } */
