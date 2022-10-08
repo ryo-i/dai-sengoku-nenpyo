@@ -6,15 +6,15 @@ const dataValues = nenpyoData.values;
 
 // KeyNumbers
 const keyNumbers = {
-  title: 0
+  path: 0
 };
 
 
 // Set Key Numbers
 const setKeyNumber = (data) => {
   for (let i = 0; i < data.length; i++) {
-    if (data[i] === 'title') {
-      keyNumbers.title = i;
+    if (data[i] === 'path') {
+      keyNumbers.path = i;
     }
   }
 }
@@ -25,7 +25,7 @@ setKeyNumber(dataValues[0]);
 const getPageInfo = () => {
   const pageInfo= {};
 
-  pageInfo['titleLength'] = dataValues.length -1;
+  pageInfo['pathLength'] = dataValues.length -1;
 
   return pageInfo;
 };
@@ -38,7 +38,7 @@ const getNenpyoArray = () => {
 
   for (var i = startCount; i < dataValues.length; i++) {
     const thisObj = {};
-    thisObj['title'] = dataValues[i][keyNumbers.title];
+    thisObj['path'] = dataValues[i][keyNumbers.path];
     resultArray.push(thisObj);
   }
 

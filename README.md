@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 項目の順序入れ替え [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- 出来事ページのレスポンスのtitleをpathに [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- nenpyolistのtitleをpathに [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 
