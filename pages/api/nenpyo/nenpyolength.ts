@@ -13,7 +13,7 @@ export default (req, res) => {
   const nenpyoLength = getNenpyoLength();
 
   const nenpyosData = {};
-  nenpyosData['nenpyoInfo'] = nenpyoLength;
+  nenpyosData['nenpyoLength'] = nenpyoLength;
   // console.log('nenpyosData', nenpyosData);
   res.status(200).json(nenpyosData);
 }

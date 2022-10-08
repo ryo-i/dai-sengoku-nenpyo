@@ -32,41 +32,16 @@ export default (req, res) => {
   const formatsArray = getFormatsArray(resultData, keyNumbers);
 
   // Get Filter Data
-  if (query.year) {
-    resultData = getFilterData(resultData, 'year', query.year, 'exact');
-  } else if (query.format) {
-    resultData = getFilterData(resultData, 'format', query.format, 'exact');
-  } else if (query.order) {
-    resultData = getFilterData(resultData, 'order', query.order, 'exact');
-  } else if (query.artist) {
-    resultData = getFilterData(resultData, 'artist', query.artist, 'exact');
-  } else if (query.original) {
+  if (query.waYear) {
+    resultData = getFilterData(resultData, 'waYear', query.waYear, 'exact');
+  }
+  if (query.waYearUnit) {
+    resultData = getFilterData(resultData, 'waYearUnit', query.waYearUnit, 'exact');
+  }
+  /* if (query.original) {
     resultData = getFilterData(resultData, 'original', query.original, 'partial');
-  } else if (query.songwriter) {
-    resultData = getFilterData(resultData, 'songwriter', query.songwriter, 'partial');
-  } else if (query.vocal) {
-    resultData = getFilterData(resultData, 'vocal', query.vocal, 'partial');
-  } else if (query.playing) {
-    resultData = getFilterData(resultData, 'playing', query.playing, 'partial');
-  } else if (query.musician) {
-    resultData = getFilterData(resultData, 'musician', query.musician, 'partial');
-  } else if (query.producer) {
-    resultData = getFilterData(resultData, 'producer', query.producer, 'partial');
-  } else if (query.engineer) {
-    resultData = getFilterData(resultData, 'engineer', query.engineer, 'partial');
-  } else if (query.artwork) {
-    resultData = getFilterData(resultData, 'artwork', query.artwork, 'partial');
-  } else if (query.film) {
-    resultData = getFilterData(resultData, 'film', query.film, 'partial');
-  } else if (query.mv) {
-    resultData = getFilterData(resultData, 'mv', query.mv, 'partial');
-  } else if (query.date) {
-    resultData = getFilterData(resultData, 'date', query.date, 'exact');
-  } else if (query.label) {
-    resultData = getFilterData(resultData, 'label', query.label, 'exact');
-  } else if (query.country) {
-    resultData = getFilterData(resultData, 'country', query.country, 'exact');
-  } else if (query.search) {
+  } */
+  if (query.search) {
     resultData = getFilterData(resultData, 'search', query.search, 'search');
   }
 

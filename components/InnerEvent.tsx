@@ -175,54 +175,54 @@ function InnerEvent() {
         <li>
           <Link href={
             "../?waYear=" + eventData['waYear'] +
-            "../?waYear=" + eventData['waYearUnit']
+            "&waYearUnit=" + eventData['waYearUnit']
           }>
             <a>{eventData['waYear']}</a>
           </Link>
           {eventData['waYearUnit']}
           <Link href={
             "../?waYear=" + eventData['waYear'] +
-            "../?waYear=" + eventData['waYearUnit'] +
+            "&waYearUnit=" + eventData['waYearUnit'] +
             "&waMonth=" + eventData['waMonth'] +
-            "&waMonth=" + eventData['waMonthUnit']
+            "&waMonthUnit=" + eventData['waMonthUnit']
           }>
             <a>{eventData['waMonth']}</a>
           </Link>
           {eventData['waMonthUnit']}
           <Link href={
             "../?waYear=" + eventData['waYear'] +
-            "../?waYear=" + eventData['waYearUnit'] +
+            "&waYearUnit=" + eventData['waYearUnit'] +
             "&waMonth=" + eventData['waMonth'] +
-            "&waMonth=" + eventData['waMonthUnit'] +
+            "&waMonthUnit=" + eventData['waMonthUnit'] +
             "&waDay=" + eventData['waDay'] +
-            "&waDay=" + eventData['waDayUnit']
+            "&waDayUnit=" + eventData['waDayUnit']
           }>
             <a>{eventData['waDay']}</a>
           </Link>
           {eventData['waDayUnit']}
           （<Link href={
             "../?adYear=" + eventData['adYear'] +
-            "../?adYear=" + eventData['adYearUnit']
+            "&waYearUnit=" + eventData['waYearUnit']
           }>
             <a>{eventData['adYear']}</a>
           </Link>
           {eventData['adYearUnit']}
           <Link href={
             "../?adYear=" + eventData['adYear'] +
-            "../?adYear=" + eventData['adYearUnit'] +
+            "&adYearUnit=" + eventData['adYearUnit'] +
             "&adMonth=" + eventData['adMonth'] +
-            "&adMonth=" + eventData['adMonthUnit']
+            "&adMonthUnit=" + eventData['adMonthUnit']
           }>
             <a>{eventData['adMonth']}</a>
           </Link>
           {eventData['adMonthUnit']}
           <Link href={
             "../?adYear=" + eventData['adYear'] +
-            "../?adYear=" + eventData['adYearUnit'] +
+            "&adYearUnit=" + eventData['adYearUnit'] +
             "&adMonth=" + eventData['adMonth'] +
-            "&adMonth=" + eventData['adMonthUnit'] +
+            "&adMonthUnit=" + eventData['adMonthUnit'] +
             "&adDay=" + eventData['adDay'] +
-            "&adDay=" + eventData['adDayUnit']
+            "&adDayUnit=" + eventData['adDayUnit']
           }>
             <a>{eventData['adDay']}</a>
           </Link>
