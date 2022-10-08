@@ -21,12 +21,12 @@ const getDataObj = (currentData) => {
 
 // Response
 export default (req, res) => {
-  const title = req.query.title;
+  const path = req.query.path;
   const keyArray = data[0];
 
   let eventData = {};
   for (let i = 0; i < data.length; i++) {
-    if (data[i][keyNumbers.title] === title) {
+    if (data[i][keyNumbers.path] === path) {
       eventData = getDataObj(data[i]);
     }
   }
