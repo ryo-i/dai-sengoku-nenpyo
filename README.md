@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- adDate、waDate追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- pathを追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - 出来事ページにパンくずリンク追加などリファクタ [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
