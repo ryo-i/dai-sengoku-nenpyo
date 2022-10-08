@@ -16,6 +16,7 @@ const keyNumbers = {
   waDayUnit: 0,
   category: 0,
   title: 0,
+  path: 0,
   region: 0,
   country: 0,
   influence: 0

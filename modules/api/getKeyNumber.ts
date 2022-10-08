@@ -33,6 +33,8 @@ const getKeyNumber = (data, keyNumbers) => {
       keyNumbers.category = i;
     } else if (data[i] === 'title') {
       keyNumbers.title = i;
+    } else if (data[i] === 'path') {
+      keyNumbers.path = i;
     } else if (data[i] === 'region') {
       keyNumbers.region = i;
     } else if (data[i] === 'country') {
