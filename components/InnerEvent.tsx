@@ -70,13 +70,13 @@ function InnerEvent() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const {eventTitle, setEventTitle} = useContext(eventContext);
+  const {eventPath, setEventPath} = useContext(eventContext);
   const [eventData, setEventData] = useState({});
 
 
   //  Get Event Data
   useEffect(() => {
-    const url: string = '../api/nenpyo/event/' + eventTitle;
+    const url: string = '../api/nenpyo/event/' + eventPath;
 
     async function getEventData (url: string) {
       try {
@@ -93,8 +93,8 @@ function InnerEvent() {
       }
     };
 
-    if (eventTitle) {
-      // console.log('eventTitle', eventTitle);
+    if (eventPath) {
+      // console.log('eventPath', eventPath);
       getEventData(url);
     }
   }, []);
@@ -331,7 +331,7 @@ function InnerEvent() {
         </trackContext.Provider>
       </Nav>
       <Section>
-        <h2>{eventTitle}</h2>
+        <h2>{eventData['title']}</h2>
         <EventInfo />
       </Section>
     </>

@@ -9,10 +9,11 @@ import Data from '../../data/data.json';
 
 // Component
 const Track = ({ eventInfo }) => {
-    const [eventTitle, setEventTitle] = useState(eventInfo.eventData.title);
+    console.log('eventInfo', eventInfo);
+    const [eventPath, setEventPath] = useState(eventInfo.eventData.path);
 
     const headerTitle = Data.header.title;
-    const pageTitle = eventTitle;
+    const pageTitle = eventPath;
     const headTitle = pageTitle + ' | ' + headerTitle;
     const pageText =  '「' + pageTitle + '」の詳細情報です。';
 
@@ -27,7 +28,7 @@ const Track = ({ eventInfo }) => {
         <Header />
         <main>
             <h1>出来事</h1>
-            <eventContext.Provider value={{eventTitle, setEventTitle}} >
+            <eventContext.Provider value={{eventPath, setEventPath}} >
                 <InnerEvent />
             </eventContext.Provider>
         </main>
@@ -43,7 +44,7 @@ export async function getStaticPaths() {
     const event = await res.json();
     // console.log('event', event);
 
-    const paths = event.nenpyoList.map((data) => `/event/${data.title}`);
+    const paths = event.nenpyoList.map((data) => `/event/${data.path}`);
     // console.log('paths', paths);
     return { paths, fallback: false };
 }
@@ -51,11 +52,11 @@ export async function getStaticPaths() {
 
 // Get TrackInfo
 export async function getStaticProps({ params }) {
-    const title = params.title;
+    const path = params.path;
     // console.log('params', params);
-    // console.log('title', title);
+    // console.log('path', path);
 
-    const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/event/${title}`);
+    const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/event/${path}`);
     // console.log('res', res);
 
     const eventInfo = await res.json();
