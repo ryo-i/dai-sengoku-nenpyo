@@ -71,10 +71,51 @@ export default (req, res) => {
   if (query.time) {
     resultData = getFilterData(resultData, 'time', query.time, 'exact');
   }
-
-  /* if (query.original) {
-    resultData = getFilterData(resultData, 'original', query.original, 'partial');
-  } */
+  if (query.waGengo) {
+    resultData = getFilterData(resultData, 'waGengo', query.waGengo, 'partial');
+  }
+  if (query.adAge) {
+    resultData = getFilterData(resultData, 'adAge', query.adAge, 'partial');
+  }
+  if (query.region) {
+    resultData = getFilterData(resultData, 'region', query.region, 'partial');
+  }
+  if (query.country) {
+    resultData = getFilterData(resultData, 'country', query.country, 'partial');
+  }
+  if (query.area) {
+    resultData = getFilterData(resultData, 'area', query.area, 'partial');
+  }
+  if (query.influence) {
+    resultData = getFilterData(resultData, 'influence', query.influence, 'partial');
+  }
+  if (query.person) {
+    resultData = getFilterData(resultData, 'person', query.person, 'partial');
+  }
+  if (query.tenNou) {
+    resultData = getFilterData(resultData, 'tenNou', query.tenNou, 'partial');
+  }
+  if (query.kanpaku) {
+    resultData = getFilterData(resultData, 'kanpaku', query.kanpaku, 'partial');
+  }
+  if (query.syogun) {
+    resultData = getFilterData(resultData, 'syogun', query.syogun, 'partial');
+  }
+  if (query.kanrei) {
+    resultData = getFilterData(resultData, 'kanrei', query.kanrei, 'partial');
+  }
+  if (query.kantoKubo) {
+    resultData = getFilterData(resultData, 'kantoKubo', query.kantoKubo, 'partial');
+  }
+  if (query.kantoKanrei) {
+    resultData = getFilterData(resultData, 'kantoKanrei', query.kantoKanrei, 'partial');
+  }
+  if (query.reference) {
+    resultData = getFilterData(resultData, 'reference', query.reference, 'partial');
+  }
+  if (query.url) {
+    resultData = getFilterData(resultData, 'url', query.url, 'partial');
+  }
   if (query.search) {
     resultData = getFilterData(resultData, 'search', query.search, 'search');
   }

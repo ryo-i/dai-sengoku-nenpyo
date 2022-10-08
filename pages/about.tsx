@@ -59,7 +59,7 @@ function About() {
                 <h2>進捗</h2>
                 <ul>
                     <li>天皇家を朝廷、足利家を足利氏に <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
-                    <li>和暦西暦の月、日、時間も絞り込み <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
+                    <li>他の絞り込みも追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
             <section>
