@@ -29,6 +29,8 @@ const getKeyNumber = (data, keyNumbers) => {
       keyNumbers.waDay = i;
     } else if (data[i] === 'waDayUnit') {
       keyNumbers.waDayUnit = i;
+    } else if (data[i] === 'time') {
+      keyNumbers.time = i;
     } else if (data[i] === 'category') {
       keyNumbers.category = i;
     } else if (data[i] === 'title') {
@@ -39,8 +41,28 @@ const getKeyNumber = (data, keyNumbers) => {
       keyNumbers.region = i;
     } else if (data[i] === 'country') {
       keyNumbers.country = i;
+    } else if (data[i] === 'area') {
+      keyNumbers.area = i;
     } else if (data[i] === 'influence') {
       keyNumbers.influence = i;
+    } else if (data[i] === 'person') {
+      keyNumbers.person = i;
+    } else if (data[i] === 'reference') {
+      keyNumbers.reference = i;
+    } else if (data[i] === 'url') {
+      keyNumbers.url = i;
+    } else if (data[i] === 'tenNou') {
+      keyNumbers.tenNou = i;
+    } else if (data[i] === 'kanpaku') {
+      keyNumbers.kanpaku = i;
+    } else if (data[i] === 'syogun') {
+      keyNumbers.syogun = i;
+    } else if (data[i] === 'kanrei') {
+      keyNumbers.kanrei = i;
+    } else if (data[i] === 'kantoKubo') {
+      keyNumbers.kantoKubo = i;
+    } else if (data[i] === 'kantoKanrei') {
+      keyNumbers.kantoKanrei = i;
     }
   }
 }

@@ -14,12 +14,23 @@ const keyNumbers = {
   waMonthUnit: 0,
   waDay: 0,
   waDayUnit: 0,
+  time: 0,
   category: 0,
   title: 0,
   path: 0,
   region: 0,
   country: 0,
-  influence: 0
+  area: 0,
+  influence: 0,
+  person: 0,
+  reference: 0,
+  url: 0,
+  tenNou: 0,
+  kanpaku: 0,
+  syogun: 0,
+  kanrei: 0,
+  kantoKubo: 0,
+  kantoKanrei: 0
 };
 
 export { keyNumbers };
