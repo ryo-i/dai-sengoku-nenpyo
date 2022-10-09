@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 南北方合一、改元、グレゴリオ歴の概要を追記 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 出来事1件（南北朝合一）追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - waTimeをページにも反映 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
