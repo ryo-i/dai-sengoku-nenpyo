@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 天皇家を朝廷、足利家を足利氏に [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- commonDate追加、pathの年月日もommonDateに [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - 年月日の絞り込み項目を統合して完結に [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
