@@ -33,9 +33,9 @@ const TagList = () => {
   // Hooks
   const {isCategory, setIsCategory} = useContext(categoryContext);
   const {categoryPath, setCategoryPath} = useContext(categoryContext);
-  const {yearList, setYearList} = useContext(indexContext);
+  // const {yearList, setYearList} = useContext(indexContext);
   const {hierarchy, setHierarchy} = useContext(indexContext);
-  const {formatList, setFormatList} = useContext(indexContext);
+  // const {formatList, setFormatList} = useContext(indexContext);
   const {currentYear, setCurrentYear} = useContext(indexContext);
   const {currentFormat, setCurrentFormat} = useContext(indexContext);
   const [tagListPath, setTagListPath] = useState('');
@@ -44,7 +44,7 @@ const TagList = () => {
   const [isSettings, setIsSettings] = useState(false);
 
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (isCategory) {
       setTagListPath('category/' + categoryPath);
     } else {
@@ -58,14 +58,14 @@ const TagList = () => {
     setFormatTagList(getFormatTagList);
 
     setIsSettings(true);
-  }, [isCategory, yearList, formatList]);
+  }, [isCategory, yearList, formatList]); */
 
 
   return (
     isSettings &&
     <Nav>
       <ul className="tag">
-        {yearList.map((data, index) =>
+        {/* yearList.map((data, index) =>
           <li key={index} className="year">
             <Link href={hierarchy + tagListPath + "?year=" + data}>
               <a className={yearTagList[index]}>{data}</a>
@@ -78,7 +78,7 @@ const TagList = () => {
               <a className={formatTagList[index]}>{data}</a>
             </Link>
           </li>
-        )}
+        ) */}
       </ul>
     </Nav>
   );
