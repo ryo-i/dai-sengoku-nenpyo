@@ -5,8 +5,8 @@ import { getFilterData }from '../../../modules/api/getFilterData';
 import { getNoCategoryData }from '../../../modules/api/getNoCategoryData';
 import { getPageSegmentation }from '../../../modules/api/getPageSegmentation';
 import { getDataLength }from '../../../modules/api/getDataLength';
-import { getYearsArray }from '../../../modules/api/getYearsArray';
-import { getFormatsArray }from '../../../modules/api/getFormatsArray';
+// import { getYearsArray }from '../../../modules/api/getYearsArray';
+// import { getFormatsArray }from '../../../modules/api/getFormatsArray';
 import { getNenpyoArray }from '../../../modules/api/getNenpyoArray';
 import { getCaterogyInfo } from '../../../modules/nenpyoList/getCaterogyInfo';
 
@@ -28,8 +28,8 @@ export default (req, res) => {
   }
 
   // yars & formats array
-  const yearsArray = getYearsArray(resultData, keyNumbers);
-  const formatsArray = getFormatsArray(resultData, keyNumbers);
+  // const yearsArray = getYearsArray(resultData, keyNumbers);
+  // const formatsArray = getFormatsArray(resultData, keyNumbers);
 
   // Get Filter Data
   if (query.waYear) {
@@ -127,8 +127,8 @@ export default (req, res) => {
 
   const resNenpyoData = {};
   resNenpyoData['pageInfo'] = pageInfo;
-  resNenpyoData['yearList'] = yearsArray;
-  resNenpyoData['formatList'] = formatsArray;
+  // resNenpyoData['yearList'] = yearsArray;
+  // resNenpyoData['formatList'] = formatsArray;
   resNenpyoData['nenpyoList'] = nenpyoArray;
   res.status(200).json(resNenpyoData);
 }
