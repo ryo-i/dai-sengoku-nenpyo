@@ -9,7 +9,7 @@ import Data from '../../data/data.json';
 
 // Component
 const Track = ({ eventInfo }) => {
-    console.log('eventInfo', eventInfo);
+    // console.log('eventInfo', eventInfo);
     const [eventPath, setEventPath] = useState(eventInfo.eventData.path);
 
     const headerTitle = Data.header.title;

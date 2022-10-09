@@ -4,9 +4,7 @@ import { trackContext } from '../context/trackContext';
 import Link from 'next/link';
 import styled from 'styled-components';
 import TrackBreadcrumb from './TrackBreadcrumb';
-// import PrevNextNav from './PrevNextNav';
 import Nav from './style/Nav';
-import { getPeopleArray } from '../modules/nenpyoInfo/getPeopleArray';
 import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
 
 
@@ -16,11 +14,15 @@ const Section = styled.section`
     margin-bottom: 1.5em;
     color: #333;
   }
+  h3 {
+    background: #eee;
+    margin: 0 0 20px;
+    padding: 10px;
+    border-radius: 3px;
+  }
   dl {
     display: flex;
     flex-wrap: wrap;
-    padding: 1em 0;
-    border-bottom : 1px solid #ccc;
     @media(max-width: 600px) {
       display: block;
     }
@@ -83,12 +85,12 @@ function InnerEvent() {
         const res = await fetch(url);
         const resJson = await res.json();
         const data = resJson.eventData;
-        console.log('data', data);
+        // console.log('data', data);
         setEventData(data);
         setIsLoaded(true);
       } catch(error) {
         setError(error);
-        console.log('err', error);
+        // console.log('err', error);
         setIsLoaded(true);
       }
     };
@@ -245,77 +247,91 @@ function InnerEvent() {
       return (
         <>
           <RemarkArray text={eventData['remarks']} paramKey={'remarks'} />
-          <hr />
-          <dl>
-            <dt>年月日</dt>
-            <dd>
-              <Data />
-            </dd>
-            <dt>年間(和暦)</dt>
-            <dd>
-              <CommonInfoArray array={eventData['waGengo']} paramKey={'waGengo'} unit={'年間'} />
-            </dd>
-            <dt>年代(西暦)</dt>
-            <dd>
-              <CommonInfoArray array={eventData['adAge']} paramKey={'adAge'} unit={''}  />
-            </dd>
-          </dl>
-          <dl>
-            <dt>地方</dt>
-            <dd>
-              <CommonInfoArray array={eventData['region']} paramKey={'region'} unit={''}  />
-            </dd>
-            <dt>国(令制国)</dt>
-            <dd>
-              <CommonInfoArray array={eventData['country']} paramKey={'country'} unit={''}  />
-            </dd>
-            <dt>地域</dt>
-            <dd>
-              <CommonInfoArray array={eventData['area']} paramKey={'area'} unit={''}  />
-            </dd>
-          </dl>
-          <dl>
-            <dt>勢力</dt>
-            <dd>
-              <CommonInfoArray array={eventData['influence']} paramKey={'influence'} unit={''}  />
-            </dd>
-            <dt>人物</dt>
-            <dd>
-              <CommonInfoArray array={eventData['person']} paramKey={'person'} unit={''}  />
-            </dd>
-          </dl>
-          <dl>
-            <dt>天皇</dt>
-            <dd>
-              <CommonInfoArray array={eventData['tenNou']} paramKey={'tenNou'} unit={''}  />
-            </dd>
-            <dt>関白</dt>
-            <dd>
-              <CommonInfoArray array={eventData['kanpaku']} paramKey={'kanpaku'} unit={''}  />
-            </dd>
-            <dt>将軍</dt>
-            <dd>
-              <CommonInfoArray array={eventData['syogun']} paramKey={'syogun'} unit={''}  />
-            </dd>
-            <dt>管領</dt>
-            <dd>
-              <CommonInfoArray array={eventData['kanrei']} paramKey={'kanrei'} unit={''}  />
-            </dd>
-            <dt>関東公方</dt>
-            <dd>
-              <CommonInfoArray array={eventData['kantoKubo']} paramKey={'kantoKubo'} unit={''}  />
-            </dd>
-            <dt>関東管領</dt>
-            <dd>
-              <CommonInfoArray array={eventData['kantoKanrei']} paramKey={'kantoKanrei'} unit={''}  />
-            </dd>
-          </dl>
-          <dl>
-            <dt>出典</dt>
-            <dd><RemarkArray text={eventData['reference']} paramKey={'reference'} /></dd>
-            <dt>url</dt>
-            <dd><UrlArray source={eventData['url']} /></dd>
-          </dl>
+          <section>
+            <h3>時期</h3>
+            <dl>
+              <dt>年月日</dt>
+              <dd>
+                <Data />
+              </dd>
+              <dt>年間(和暦)</dt>
+              <dd>
+                <CommonInfoArray array={eventData['waGengo']} paramKey={'waGengo'} unit={'年間'} />
+              </dd>
+              <dt>年代(西暦)</dt>
+              <dd>
+                <CommonInfoArray array={eventData['adAge']} paramKey={'adAge'} unit={''}  />
+              </dd>
+            </dl>
+          </section>
+          <section>
+            <h3>場所</h3>
+            <dl>
+              <dt>地方</dt>
+              <dd>
+                <CommonInfoArray array={eventData['region']} paramKey={'region'} unit={''}  />
+              </dd>
+              <dt>国(令制国)</dt>
+              <dd>
+                <CommonInfoArray array={eventData['country']} paramKey={'country'} unit={''}  />
+              </dd>
+              <dt>地域</dt>
+              <dd>
+                <CommonInfoArray array={eventData['area']} paramKey={'area'} unit={''}  />
+              </dd>
+            </dl>
+          </section>
+          <section>
+            <h3>勢力・人物</h3>
+            <dl>
+              <dt>勢力</dt>
+              <dd>
+                <CommonInfoArray array={eventData['influence']} paramKey={'influence'} unit={''}  />
+              </dd>
+              <dt>人物</dt>
+              <dd>
+                <CommonInfoArray array={eventData['person']} paramKey={'person'} unit={''}  />
+              </dd>
+            </dl>
+          </section>
+          <section>
+            <h3>権力者</h3>
+            <dl>
+              <dt>天皇</dt>
+              <dd>
+                <CommonInfoArray array={eventData['tenNou']} paramKey={'tenNou'} unit={''}  />
+              </dd>
+              <dt>関白</dt>
+              <dd>
+                <CommonInfoArray array={eventData['kanpaku']} paramKey={'kanpaku'} unit={''}  />
+              </dd>
+              <dt>将軍</dt>
+              <dd>
+                <CommonInfoArray array={eventData['syogun']} paramKey={'syogun'} unit={''}  />
+              </dd>
+              <dt>管領</dt>
+              <dd>
+                <CommonInfoArray array={eventData['kanrei']} paramKey={'kanrei'} unit={''}  />
+              </dd>
+              <dt>関東公方</dt>
+              <dd>
+                <CommonInfoArray array={eventData['kantoKubo']} paramKey={'kantoKubo'} unit={''}  />
+              </dd>
+              <dt>関東管領</dt>
+              <dd>
+                <CommonInfoArray array={eventData['kantoKanrei']} paramKey={'kantoKanrei'} unit={''}  />
+              </dd>
+            </dl>
+          </section>
+          <section>
+            <h3>その他</h3>
+            <dl>
+              <dt>出典</dt>
+              <dd><RemarkArray text={eventData['reference']} paramKey={'reference'} /></dd>
+              <dt>url</dt>
+              <dd><UrlArray source={eventData['url']} /></dd>
+            </dl>
+          </section>
         </>
       );
     }
