@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 天皇家を朝廷、足利家を足利氏に [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- イベントページにh3追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- 絞り込み結果の項目名を日本語に [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

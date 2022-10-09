@@ -1,3 +1,6 @@
+import { getQueryName } from './getQueryName';
+
+
 // Get Query Info
 const getQueryInfo = (queryParam) => {
     let queryInfoText: string = '';
@@ -7,12 +10,13 @@ const getQueryInfo = (queryParam) => {
         return queryInfoText;
     } else {
         for (const property in queryParam) {
-            queryParamObject[property] = queryParam[property];
+            const queryName = getQueryName(property);
+            queryParamObject[queryName] = queryParam[property];
         }
 
-        delete queryParamObject["category"];
-        delete queryParamObject["order"];
-        delete queryParamObject["page"];
+        delete queryParamObject["カテゴリー"];
+        delete queryParamObject["ページ"];
+        // console.log('queryParamObject', queryParamObject);
 
         queryInfoText = Object.entries(queryParamObject).map( x => x.join(": ")).join(", ");
         return queryInfoText;

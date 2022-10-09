@@ -1,7 +1,6 @@
 import Data from '../../data/data.json';
 
 
-
 // getHeadInfo
 const getHeadInfo = (isCategory, queryInfo, categoryName) => {
     const headerTitle = Data.header.title;
