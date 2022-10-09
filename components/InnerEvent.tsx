@@ -10,8 +10,11 @@ import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
 
 // CSS in JS
 const Section = styled.section`
+  margin: 40px 0;
   .date {
     margin: 0 0 5px;
+    font-weight: bold;
+    color: #777;
   }
   h2 {
     margin-bottom: 1.75em;
@@ -232,7 +235,7 @@ function InnerEvent() {
             <a>{eventData['adDay']}</a>
           </Link>
           {eventData['adDayUnit']}）
-          {eventData['time']}
+          {eventData['waTime']}
         </li>
       </ul>
     );
