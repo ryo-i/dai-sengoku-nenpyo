@@ -5,10 +5,10 @@ export const indexContext = createContext({} as {
     setQueryInfo: React.Dispatch<React.SetStateAction<string>>;
     hierarchy: string;
     setHierarchy: React.Dispatch<React.SetStateAction<string>>;
-    yearList: string[];
-    setYearList: React.Dispatch<React.SetStateAction<string[]>>;
-    formatList: string[];
-    setFormatList: React.Dispatch<React.SetStateAction<string[]>>;
+    // yearList: string[];
+    // setYearList: React.Dispatch<React.SetStateAction<string[]>>;
+    // formatList: string[];
+    // setFormatList: React.Dispatch<React.SetStateAction<string[]>>;
     currentYear: string;
     setCurrentYear: React.Dispatch<React.SetStateAction<string>>;
     currentFormat: string;

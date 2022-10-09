@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - commonDate追加、pathの年月日もommonDateに [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- API処理からgetYearsArrayとgetFormatsArrayを削除 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- 他の場所のgetYearsArrayとgetFormatsArrayも削除 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

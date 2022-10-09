@@ -7,7 +7,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import CategoryNav from './CategoryNav';
 import IndexBreadcrumb from './IndexBreadcrumb';
-import TagList from './IndexTagList';
+// import TagList from './IndexTagList';
 import Information from './IndexInformation';
 import Pagination from './IndexPagination';
 import Nav from './style/Nav';
@@ -115,8 +115,8 @@ function InnerIndex() {
   const [headText, setHeadText] = useState(headerText);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [yearList, setYearList] = useState([]);
-  const [formatList, setFormatList] = useState([]);
+  // const [yearList, setYearList] = useState([]);
+  // const [formatList, setFormatList] = useState([]);
   const [pageInfo, setPageInfo] = useState({});
   const [nenpyoData, setNenpyoData] = useState([]);
   const {isCategory, setIsCategory} = useContext(categoryContext);
@@ -188,8 +188,8 @@ function InnerIndex() {
         const data = resJson;
         // console.log('data', data);
         setNenpyoData(data.nenpyoList);
-        setYearList(data.yearList);
-        setFormatList(data.formatList);
+        // setYearList(data.yearList);
+        // setFormatList(data.formatList);
         setPageInfo(data.pageInfo);
         setIsLoaded(true);
       } catch(error) {
@@ -475,8 +475,6 @@ function InnerIndex() {
       <indexContext.Provider value={{
         queryInfo, setQueryInfo,
         hierarchy, setHierarchy,
-        yearList, setYearList,
-        formatList, setFormatList,
         currentYear, setCurrentYear,
         currentFormat, setCurrentFormat,
         pageInfo, setPageInfo,
@@ -488,7 +486,6 @@ function InnerIndex() {
         </Nav>
         <Section>
           <h2>{categoryName}</h2>
-          <TagList />
           <Information />
           <Pagination />
           <NenpyoList />
