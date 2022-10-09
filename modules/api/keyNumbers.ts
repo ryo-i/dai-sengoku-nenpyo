@@ -15,6 +15,7 @@ const keyNumbers = {
   waDay: 0,
   waDayUnit: 0,
   time: 0,
+  commonDate: 0,
   category: 0,
   title: 0,
   path: 0,

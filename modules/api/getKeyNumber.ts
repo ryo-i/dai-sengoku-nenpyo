@@ -31,6 +31,8 @@ const getKeyNumber = (data, keyNumbers) => {
       keyNumbers.waDayUnit = i;
     } else if (data[i] === 'time') {
       keyNumbers.time = i;
+    } else if (data[i] === 'commonDate') {
+      keyNumbers.commonDate = i;
     } else if (data[i] === 'category') {
       keyNumbers.category = i;
     } else if (data[i] === 'title') {

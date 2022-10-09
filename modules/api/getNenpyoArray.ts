@@ -23,6 +23,8 @@ const getNenpyoArray = (dataLength, pageInfo, data, keyNumbers) => {
     thisObj['waMonthUnit'] = data[i][keyNumbers.waMonthUnit];
     thisObj['waDay'] = data[i][keyNumbers.waDay];
     thisObj['waDayUnit'] = data[i][keyNumbers.waDayUnit];
+    thisObj['time'] = data[i][keyNumbers.time];
+    thisObj['commonDate'] = data[i][keyNumbers.commonDate];
     thisObj['category'] = data[i][keyNumbers.category];
     thisObj['title'] = data[i][keyNumbers.title];
     thisObj['path'] = data[i][keyNumbers.path];
