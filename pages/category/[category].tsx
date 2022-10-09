@@ -45,6 +45,11 @@ function Home({ categoryInfo }) {
 export async function getStaticPaths() {
   return {
     paths: [
+      { params: { category: 'senso' } },
+      { params: { category: 'gaiko' } },
+      { params: { category: 'naisei' } },
+      { params: { category: 'nairan' } },
+      { params: { category: 'bunka' } },
       { params: { category: 'seireki' } },
       { params: { category: 'wareki' } }
     ],

@@ -44,8 +44,13 @@ function CategoryNav() {
     <Nav className="cagterogyNav">
       <ul className="categoryTab">
         <li className={!categoryName ? 'current' : ''}><Link href="/"><a>すべて</a></Link></li>
-        <li className={categoryName === 'seireki' ? 'current' : ''}><Link href="/category/[category]" as="/category/seireki"><a>西暦</a></Link></li>
+        <li className={categoryName === 'senso' ? 'current' : ''}><Link href="/category/[category]" as="/category/senso"><a>戦争</a></Link></li>
+        <li className={categoryName === 'gaiko' ? 'current' : ''}><Link href="/category/[category]" as="/category/gaiko"><a>外交</a></Link></li>
+        <li className={categoryName === 'naisei' ? 'current' : ''}><Link href="/category/[category]" as="/category/naisei"><a>内政</a></Link></li>
+        <li className={categoryName === 'nairan' ? 'current' : ''}><Link href="/category/[category]" as="/category/nairan"><a>内乱</a></Link></li>
+        <li className={categoryName === 'bunka' ? 'current' : ''}><Link href="/category/[category]" as="/category/bunka"><a>文化</a></Link></li>
         <li className={categoryName === 'wareki' ? 'current' : ''}><Link href="/category/[category]" as="/category/wareki"><a>和暦</a></Link></li>
+        <li className={categoryName === 'seireki' ? 'current' : ''}><Link href="/category/[category]" as="/category/seireki"><a>西暦</a></Link></li>
       </ul>
     </Nav>
   );
