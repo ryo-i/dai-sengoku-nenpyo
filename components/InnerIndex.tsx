@@ -7,7 +7,6 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import CategoryNav from './CategoryNav';
 import IndexBreadcrumb from './IndexBreadcrumb';
-// import TagList from './IndexTagList';
 import Information from './IndexInformation';
 import Pagination from './IndexPagination';
 import Nav from './style/Nav';
@@ -74,7 +73,11 @@ const Section = styled.section`
           }
           .date {
             display: inline-block;
-            font-size: 0.75em;
+            font-size: 0.85em;
+          }
+          .title {
+            font-size: 1.25em;
+            margin: 5px 0;
           }
           .song {
             font-size: 18px;
@@ -82,6 +85,7 @@ const Section = styled.section`
             flex: 1;
             text-decoration: underline;
           }
+
         }
         dd {
           font-size: 12px;
@@ -115,8 +119,6 @@ function InnerIndex() {
   const [headText, setHeadText] = useState(headerText);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  // const [yearList, setYearList] = useState([]);
-  // const [formatList, setFormatList] = useState([]);
   const [pageInfo, setPageInfo] = useState({});
   const [nenpyoData, setNenpyoData] = useState([]);
   const {isCategory, setIsCategory} = useContext(categoryContext);
@@ -188,8 +190,6 @@ function InnerIndex() {
         const data = resJson;
         // console.log('data', data);
         setNenpyoData(data.nenpyoList);
-        // setYearList(data.yearList);
-        // setFormatList(data.formatList);
         setPageInfo(data.pageInfo);
         setIsLoaded(true);
       } catch(error) {
@@ -385,13 +385,7 @@ function InnerIndex() {
                 <dt>
                   <CategoryIcon category={data.category} />
                   <p className="date">
-                    {data.waYear && data.waYear + data.waYearUnit}
-                    {data.adYear && data.adYearUnit === "年" ?
-                     "（" + data.adYear + "）" :
-                     "（" + data.adYear + data.adYearUnit + "）"
-                    }
-                    {data.waMonth && data.waMonth + data.waMonthUnit}
-                    {data.waDay && data.waDay + data.waDayUnit}
+                    {data.commonDate}
                   </p>
                   <Link href={hierarchy + "event/" + data.path}>
                     <a><p className="title">{data.title}</p></a>

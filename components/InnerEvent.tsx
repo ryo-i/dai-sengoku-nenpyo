@@ -10,8 +10,11 @@ import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
 
 // CSS in JS
 const Section = styled.section`
+  .date {
+    margin: 0 0 5px;
+  }
   h2 {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.75em;
     color: #333;
   }
   h3 {
@@ -347,6 +350,7 @@ function InnerEvent() {
         </trackContext.Provider>
       </Nav>
       <Section>
+        <p className="date">{eventData['commonDate']}</p>
         <h2>{eventData['title']}</h2>
         <EventInfo />
       </Section>
