@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- commonDate追加、pathの年月日もommonDateに [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- adDate、waDateを削除、time設定を変更 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - ページ上とpathの年月日をcommonDateに差し替え [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
