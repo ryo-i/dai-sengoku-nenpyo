@@ -12,12 +12,9 @@ const getCaterogyInfo = (category) => {
   } else if (category === 'gaiko' || category === "外交") {
     categoryInfo.path = 'gaiko';
     categoryInfo.name = '外交';
-  } else if (category === 'naisei' || category === "内政") {
-    categoryInfo.path = 'naisei';
-    categoryInfo.name = '内政';
-  } else if (category === 'nairan' || category === "内乱") {
-    categoryInfo.path = 'nairan';
-    categoryInfo.name = '内乱';
+  } else if (category === 'seiji' || category === "政治") {
+    categoryInfo.path = 'seiji';
+    categoryInfo.name = '政治';
   } else if (category === 'bunka' || category === "文化") {
     categoryInfo.path = 'bunka';
     categoryInfo.name = '文化';
