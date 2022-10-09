@@ -3,7 +3,7 @@ import { eventContext } from '../context/eventContext';
 import { trackContext } from '../context/trackContext';
 import Link from 'next/link';
 import styled from 'styled-components';
-import TrackBreadcrumb from './TrackBreadcrumb';
+import EventBreadcrumb from './EventBreadcrumb';
 import Nav from './style/Nav';
 import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
 
@@ -204,7 +204,7 @@ function InnerEvent() {
           {eventData['waDayUnit']}
           （<Link href={
             "../?adYear=" + eventData['adYear'] +
-            "&waYearUnit=" + eventData['waYearUnit']
+            "&adYearUnit=" + eventData['adYearUnit']
           }>
             <a>{eventData['adYear']}</a>
           </Link>
@@ -250,10 +250,6 @@ function InnerEvent() {
           <section>
             <h3>時期</h3>
             <dl>
-              <dt>年月日</dt>
-              <dd>
-                <Data />
-              </dd>
               <dt>年間(和暦)</dt>
               <dd>
                 <CommonInfoArray array={eventData['waGengo']} paramKey={'waGengo'} unit={'年間'} />
@@ -261,6 +257,10 @@ function InnerEvent() {
               <dt>年代(西暦)</dt>
               <dd>
                 <CommonInfoArray array={eventData['adAge']} paramKey={'adAge'} unit={''}  />
+              </dd>
+              <dt>年月日</dt>
+              <dd>
+                <Data />
               </dd>
             </dl>
           </section>
@@ -343,7 +343,7 @@ function InnerEvent() {
     <>
       <Nav>
         <trackContext.Provider value={{eventData, setEventData}} >
-          <TrackBreadcrumb />
+          <EventBreadcrumb />
         </trackContext.Provider>
       </Nav>
       <Section>

@@ -238,8 +238,8 @@ function InnerIndex() {
     return (
       <Link href={
         isCategory ?
-        hierarchy + "category/" + category.path + "?waYear=" + props.waYear :
-        hierarchy + "?waYear=" + props.waYear
+        hierarchy + "category/" + category.path + "?waYear=" + props.waYear + "&waYearUnit=" + props.waYearUnit :
+        hierarchy + "?waYear=" + props.waYear + "&waYearUnit=" + props.waYearUnit
       }>
         <a className="waYear">{props.waYear + props.waYearUnit}</a>
       </Link>
@@ -279,8 +279,8 @@ function InnerIndex() {
     return (
       <Link href={
         isCategory ?
-        hierarchy + "category/" + category.path + "?adYear=" + props.adYear :
-        hierarchy + "?adYear=" + props.adYear
+        hierarchy + "category/" + category.path + "?adYear=" + props.adYear + "&adYearUnit=" + props.adYearUnit :
+        hierarchy + "?adYear=" + props.adYear + "&adYearUnit=" + props.adYearUnit
       }>
         <a className="adYear">{props.adYear + props.adYearUnit}</a>
       </Link>

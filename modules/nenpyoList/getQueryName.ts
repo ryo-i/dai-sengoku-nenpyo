@@ -30,8 +30,6 @@ const getQueryName = (queryKey) => {
     queryName = '月単位(和暦)';
   } else if (queryKey === 'waDay') {
     queryName = '日(和暦)';
-  } else if (queryKey === 'waMonthUnit') {
-    queryName = '月単位(和暦)';
   } else if (queryKey === 'waDayUnit') {
     queryName = '日単位(和暦)';
   } else if (queryKey === 'time') {

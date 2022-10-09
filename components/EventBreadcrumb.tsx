@@ -4,8 +4,8 @@ import { trackContext } from '../context/trackContext';
 import { getCaterogyInfo } from '../modules/nenpyoList/getCaterogyInfo';
 
 
-// Track Bread Crumb
-const TrackBreadcrumb = () => {
+// Enenvt Bread Crumb
+const EventBreadcrumb = () => {
   // Hooks
   const {eventData, setEventData} = useContext(trackContext);
   const category = getCaterogyInfo(eventData['category']);
@@ -19,4 +19,4 @@ const TrackBreadcrumb = () => {
   );
 };
 
-export default TrackBreadcrumb;
+export default EventBreadcrumb;
