@@ -16,6 +16,7 @@ const getNenpyoArray = (dataLength, pageInfo, data, keyNumbers) => {
     thisObj['adMonthUnit'] = data[i][keyNumbers.adMonthUnit];
     thisObj['adDay'] = data[i][keyNumbers.adDay];
     thisObj['adDayUnit'] = data[i][keyNumbers.adDayUnit];
+    thisObj['adTime'] = data[i][keyNumbers.adTime];
     thisObj['waGengo'] = data[i][keyNumbers.waGengo];
     thisObj['waYear'] = data[i][keyNumbers.waYear];
     thisObj['waYearUnit'] = data[i][keyNumbers.waYearUnit];
@@ -23,7 +24,7 @@ const getNenpyoArray = (dataLength, pageInfo, data, keyNumbers) => {
     thisObj['waMonthUnit'] = data[i][keyNumbers.waMonthUnit];
     thisObj['waDay'] = data[i][keyNumbers.waDay];
     thisObj['waDayUnit'] = data[i][keyNumbers.waDayUnit];
-    thisObj['time'] = data[i][keyNumbers.time];
+    thisObj['waTime'] = data[i][keyNumbers.waTime];
     thisObj['commonDate'] = data[i][keyNumbers.commonDate];
     thisObj['category'] = data[i][keyNumbers.category];
     thisObj['title'] = data[i][keyNumbers.title];

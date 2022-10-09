@@ -44,6 +44,9 @@ export default (req, res) => {
   if (query.waDayUnit) {
     resultData = getFilterData(resultData, 'waDayUnit', query.waDayUnit, 'exact');
   }
+  if (query.waTtime) {
+    resultData = getFilterData(resultData, 'waTtime', query.waTtime, 'exact');
+  }
   if (query.adYear) {
     resultData = getFilterData(resultData, 'adYear', query.adYear, 'exact');
   }
@@ -62,8 +65,8 @@ export default (req, res) => {
   if (query.adDayUnit) {
     resultData = getFilterData(resultData, 'adDayUnit', query.adDayUnit, 'exact');
   }
-  if (query.time) {
-    resultData = getFilterData(resultData, 'time', query.time, 'exact');
+  if (query.adTtime) {
+    resultData = getFilterData(resultData, 'adTtime', query.adTtime, 'exact');
   }
   if (query.waGengo) {
     resultData = getFilterData(resultData, 'waGengo', query.waGengo, 'partial');

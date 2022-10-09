@@ -16,6 +16,8 @@ const getQueryName = (queryKey) => {
     queryName = '日(西暦)';
   } else if (queryKey === 'adDayUnit') {
     queryName = '日単位(西暦)';
+  } else if (queryKey === 'adTime') {
+    queryName = '時間(西暦)';
   } else if (queryKey === 'waGengo') {
     queryName = '年間(和暦)';
   } else if (queryKey === 'waYear') {
@@ -30,8 +32,8 @@ const getQueryName = (queryKey) => {
     queryName = '日(和暦)';
   } else if (queryKey === 'waDayUnit') {
     queryName = '日単位(和暦)';
-  } else if (queryKey === 'time') {
-    queryName = '時間';
+  } else if (queryKey === 'waTime') {
+    queryName = '時間(和暦)';
   } else if (queryKey === 'commonDate') {
     queryName = '年月日';
   } else if (queryKey === 'category') {

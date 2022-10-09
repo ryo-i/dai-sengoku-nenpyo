@@ -15,6 +15,8 @@ const getKeyNumber = (data, keyNumbers) => {
       keyNumbers.adDay = i;
     } else if (data[i] === 'adDayUnit') {
       keyNumbers.adDayUnit = i;
+    } else if (data[i] === 'adTime') {
+      keyNumbers.adTime = i;
     } else if (data[i] === 'waGengo') {
       keyNumbers.waGengo = i;
     } else if (data[i] === 'waYear') {
@@ -29,8 +31,8 @@ const getKeyNumber = (data, keyNumbers) => {
       keyNumbers.waDay = i;
     } else if (data[i] === 'waDayUnit') {
       keyNumbers.waDayUnit = i;
-    } else if (data[i] === 'time') {
-      keyNumbers.time = i;
+    } else if (data[i] === 'waTime') {
+      keyNumbers.waTime = i;
     } else if (data[i] === 'commonDate') {
       keyNumbers.commonDate = i;
     } else if (data[i] === 'category') {
