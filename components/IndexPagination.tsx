@@ -8,9 +8,11 @@ import { getPagination } from '../modules/nenpyoList/getPagination';
 
 // CSS in JS
 const Ul = styled.ul`
+    margin: 0;
+    padding: 0 0 20px;
     display: flex;
     list-style: none;
-    padding: 0;
+    overflow: scroll;
     li {
         border: none;
         margin: 0 10px 0 0;
