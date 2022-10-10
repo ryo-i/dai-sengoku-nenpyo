@@ -316,16 +316,23 @@ function InnerIndex() {
   // Country Tag
   function CountryTag (props) {
     desplayError(props, "country");
+    const resultArray = getDividedArray(props.country);
     const category = getCaterogyInfo(props.category);
 
     return (
-      <Link href={
-        isCategory ?
-        hierarchy + "category/" + category.path + "?country=" + props.country :
-        hierarchy + "?country=" + props.country
-      }>
-        <a className="country">{props.country}</a>
-      </Link>
+      <>
+        {resultArray.map((data, index) =>
+          <Link href={
+            isCategory ?
+            hierarchy + "category/" + category.path + "?country=" + data :
+            hierarchy + "?country=" + data
+            }
+            key={index}
+          >
+            <a className="country">{props.country}</a>
+          </Link>
+        )}
+      </>
     );
   }
 
@@ -333,16 +340,23 @@ function InnerIndex() {
   // Region Tag
   function RegionTag (props) {
     desplayError(props, "region");
+    const resultArray = getDividedArray(props.region);
     const category = getCaterogyInfo(props.category);
 
     return (
-      <Link href={
-        isCategory ?
-        hierarchy + "category/" + category.path + "?region=" + props.region :
-        hierarchy + "?region=" + props.region
-      }>
-        <a className="region">{props.region}</a>
-      </Link>
+      <>
+        {resultArray.map((data, index) =>
+          <Link href={
+              isCategory ?
+              hierarchy + "category/" + category.path + "?region=" + data :
+              hierarchy + "?region=" + data
+            }
+            key={index}
+          >
+            <a className="region">{props.region}</a>
+          </Link>
+        )}
+      </>
     );
   }
 
