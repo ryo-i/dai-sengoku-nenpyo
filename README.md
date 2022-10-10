@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- pathから月、日、時間を削除 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- pathから年月日全てを削除 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - Indexの地域を複数件対応 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
