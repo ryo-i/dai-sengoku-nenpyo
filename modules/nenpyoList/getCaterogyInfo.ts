@@ -18,6 +18,9 @@ const getCaterogyInfo = (category) => {
   } else if (category === 'bunka' || category === "文化") {
     categoryInfo.path = 'bunka';
     categoryInfo.name = '文化';
+  } else if (category === 'jinbutsu' || category === "人物") {
+    categoryInfo.path = 'jinbutsu';
+    categoryInfo.name = '人物';
   } else if (category === 'seireki' || category === '西暦') {
     categoryInfo.path = 'seireki';
     categoryInfo.name = '西暦';

@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 1404年まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- カテゴリー「内政」を「政治」に、「内乱」を削除 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- カテゴリー「人物」を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 
