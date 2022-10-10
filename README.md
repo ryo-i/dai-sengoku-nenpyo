@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 家康死去までの出来事追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- 出来事ページのコンテキスト設定変更 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- Indexページの概要文を修正 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

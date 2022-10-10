@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 
 const pageTitle = '年表一覧';
-const pageText = 'xxxx、xxxx、xxxxなどで絞り込みができます。';
+const pageText = '和暦、西暦、地域、勢力などで絞り込みができます。';
 
 
 function Home() {
