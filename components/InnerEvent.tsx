@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext }  from 'react';
-import { eventContext } from '../context/eventContext';
-import { trackContext } from '../context/trackContext';
+import { eventPathContext } from '../context/eventPathContext';
+import { eventDataContext } from '../context/eventDataContext';
 import Link from 'next/link';
 import styled from 'styled-components';
 import EventBreadcrumb from './EventBreadcrumb';
@@ -78,7 +78,7 @@ function InnerEvent() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const {eventPath, setEventPath} = useContext(eventContext);
+  const {eventPath, setEventPath} = useContext(eventPathContext);
   const [eventData, setEventData] = useState({});
 
 
@@ -91,21 +91,21 @@ function InnerEvent() {
         const res = await fetch(url);
         const resJson = await res.json();
         const data = resJson.eventData;
-        // console.log('data', data);
+        console.log('data', data);
         setEventData(data);
         setIsLoaded(true);
       } catch(error) {
         setError(error);
-        // console.log('err', error);
+        console.log('err', error);
         setIsLoaded(true);
       }
     };
 
     if (eventPath) {
-      // console.log('eventPath', eventPath);
+      console.log('eventPath', eventPath);
       getEventData(url);
     }
-  }, []);
+  }, [eventPath]);
 
 
   // Common Info Array
@@ -348,9 +348,9 @@ function InnerEvent() {
   return (
     <>
       <Nav>
-        <trackContext.Provider value={{eventData, setEventData}} >
+        <eventDataContext.Provider value={{eventData, setEventData}} >
           <EventBreadcrumb />
-        </trackContext.Provider>
+        </eventDataContext.Provider>
       </Nav>
       <Section>
         <p className="date">{eventData['commonDate']}</p>

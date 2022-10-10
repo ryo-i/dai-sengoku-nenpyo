@@ -1,5 +1,5 @@
 import React, { useState }  from 'react';
-import { eventContext } from '../../context/eventContext';
+import { eventPathContext } from '../../context/eventPathContext';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import InnerEvent from '../../components/InnerEvent';
@@ -28,9 +28,9 @@ const Track = ({ eventInfo }) => {
         <Header />
         <main>
             <h1>出来事</h1>
-            <eventContext.Provider value={{eventPath, setEventPath}} >
+            <eventPathContext.Provider value={{eventPath, setEventPath}} >
                 <InnerEvent />
-            </eventContext.Provider>
+            </eventPathContext.Provider>
         </main>
         <Footer />
         </>

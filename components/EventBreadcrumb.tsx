@@ -1,13 +1,13 @@
 import React, { useState, useContext }  from 'react';
 import Link from 'next/link';
-import { trackContext } from '../context/trackContext';
+import { eventDataContext } from '../context/eventDataContext';
 import { getCaterogyInfo } from '../modules/nenpyoList/getCaterogyInfo';
 
 
 // Enenvt Bread Crumb
 const EventBreadcrumb = () => {
   // Hooks
-  const {eventData, setEventData} = useContext(trackContext);
+  const {eventData, setEventData} = useContext(eventDataContext);
   const category = getCaterogyInfo(eventData['category']);
 
   return (
