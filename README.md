@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 1599年までの出来事追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 本能寺までの出来事追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - ページネーションのCSS修正 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
