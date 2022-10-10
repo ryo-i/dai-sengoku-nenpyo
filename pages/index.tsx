@@ -3,10 +3,11 @@ import { categoryContext } from '../context/categoryContext';
 import Header from '../components/Header';
 import InnerIndex from '../components/InnerIndex';
 import Footer from '../components/Footer';
+import Data from '../data/data.json';
 
 
-const pageTitle = '年表一覧';
-const pageText = '和暦、西暦、地域、勢力などで絞り込みができます。';
+const pageTitle = Data.nenpyo.title;
+const pageText = Data.nenpyo.text;
 
 
 function Home() {

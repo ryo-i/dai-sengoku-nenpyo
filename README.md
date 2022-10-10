@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 家康死去までの出来事追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- Indexページの概要文を修正 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- IndexとCategoryの概要を共通化 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

@@ -4,10 +4,11 @@ import Header from '../../components/Header';
 import InnerIndex from '../../components/InnerIndex';
 import Footer from '../../components/Footer';
 import { getCaterogyInfo } from '../../modules/nenpyoList/getCaterogyInfo';
+import Data from '../../data/data.json';
 
 
-const pageTitle = '年表一覧';
-const pageText = 'xxxx、xxxx、xxxxなどで絞り込みができます。';
+const pageTitle = Data.nenpyo.title;
+const pageText = Data.nenpyo.text;
 
 
 function Home({ categoryInfo }) {
