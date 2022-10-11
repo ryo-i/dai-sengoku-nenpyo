@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - pathから年月日全てを削除 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- 元号、地域のデータを追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- タグ一覧ページを追加（中身はまだない） [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 
