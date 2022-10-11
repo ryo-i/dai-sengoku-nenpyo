@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext }  from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import EventBreadcrumb from './EventBreadcrumb';
 import Nav from './style/Nav';
 import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
 import Data from '../data/data.json';
@@ -77,12 +76,16 @@ function InnerTag() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [eventData, setEventData] = useState({});
+  const [piriod, setPiriod] = useState(Data.piriod);
+  const [place, setPlace] = useState(Data.place);
+  const [influence, setInfluence] = useState({});
 
 
   //  Get Event Data
   useEffect(() => {
-
+    if (piriod && place) {
+      setIsLoaded(true);
+    }
   }, []);
 
 
@@ -125,9 +128,15 @@ function InnerTag() {
           <section>
             <h3>時期</h3>
             <dl>
-              <dt>年間(和暦)</dt>
+              <dt>元号</dt>
               <dd>
-                <CommonInfoArray array={eventData['gengo']} paramKey={'gengo'} unit={''}  />
+                <ul>
+                  {piriod.map((data, index) =>
+                    <li key={index}>
+                      {data.gengo}
+                    </li>
+                  )}
+                </ul>
               </dd>
             </dl>
           </section>
@@ -136,7 +145,13 @@ function InnerTag() {
             <dl>
               <dt>国(令制国)</dt>
               <dd>
-                <CommonInfoArray array={eventData['country']} paramKey={'country'} unit={''}  />
+                <ul>
+                  {place.map((data, index) =>
+                    <li key={index}>
+                      {data.region}：{data.country}
+                    </li>
+                  )}
+                </ul>
               </dd>
             </dl>
           </section>
@@ -145,7 +160,7 @@ function InnerTag() {
             <dl>
               <dt>勢力</dt>
               <dd>
-                <CommonInfoArray array={eventData['influence']} paramKey={'influence'} unit={''}  />
+                作成中
               </dd>
             </dl>
           </section>
@@ -165,8 +180,6 @@ function InnerTag() {
         </ul>
       </Nav>
       <Section>
-        <p className="date">{eventData['commonDate']}</p>
-        <h2>{eventData['title']}</h2>
         <TagInfo />
       </Section>
     </>
