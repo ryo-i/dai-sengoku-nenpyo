@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState, useEffect }  from 'react';
 import { eventPathContext } from '../../context/eventPathContext';
 import Head from 'next/head';
 import Header from '../../components/Header';
@@ -8,14 +8,21 @@ import Data from '../../data/data.json';
 
 
 // Component
-const Track = ({ eventInfo }) => {
-    // console.log('eventInfo', eventInfo);
-    const [eventPath, setEventPath] = useState(eventInfo.eventData.path);
+const Path = ({ eventInfo }) => {
+    const [eventPath, setEventPath] = useState(eventInfo.path);
+    let headerTitle = '';
+    let pageTitle = '';
+    let headTitle = '';
+    let pageText =  '';
 
-    const headerTitle = Data.header.title;
-    const pageTitle = eventPath;
-    const headTitle = pageTitle + ' | ' + headerTitle;
-    const pageText =  '「' + pageTitle + '」の詳細情報です。';
+    // Set Event Info
+    useEffect(() => {
+        setEventPath(eventInfo.path);
+        headerTitle = Data.header.title;
+        pageTitle = eventPath;
+        headTitle = pageTitle + ' | ' + headerTitle;
+        pageText =  '「' + pageTitle + '」の詳細情報です。';
+    }, [eventInfo]);
 
     return (
         <>
@@ -53,16 +60,14 @@ export async function getStaticPaths() {
 // Get TrackInfo
 export async function getStaticProps({ params }) {
     const path = params.path;
-    // console.log('params', params);
-    // console.log('path', path);
+    const eventInfo = {
+        path: ''
+      };
+      eventInfo.path = path;
 
-    const res = await fetch(`https://dai-sengoku-nenpyo.vercel.app/api/nenpyo/event/${path}`);
-    // console.log('res', res);
-
-    const eventInfo = await res.json();
-    // console.log('eventInfo', eventInfo);
-
+    console.log('path', path);
+    console.log('pathInfo', eventInfo);
     return { props: { eventInfo } };
 }
 
-export default Track;
+export default Path;
