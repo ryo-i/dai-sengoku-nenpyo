@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - pathから年月日全てを削除 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- path取得設定を変更 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- 元号、地域のデータを追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 
