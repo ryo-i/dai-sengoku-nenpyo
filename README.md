@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - pathから年月日全てを削除 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- 時期、場所の一覧をテキストで表示 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- 年代データを追加、ページに表示 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

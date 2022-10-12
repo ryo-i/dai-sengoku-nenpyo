@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useContext }  from 'react';
 import Link from 'next/link';
-import styled from 'styled-components';
 import Nav from './style/Nav';
+import Section from './style/commonSection';
 import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
 import Data from '../data/data.json';
 
 
 // CSS in JS
-const Section = styled.section`
+/* const Section = styled.section`
   margin: 40px 0;
   .date {
     margin: 0 0 5px;
@@ -68,7 +68,7 @@ const Section = styled.section`
       }
     }
   }
-`;
+`; */
 
 
 // Component
@@ -76,14 +76,15 @@ function InnerTag() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [piriod, setPiriod] = useState(Data.piriod);
+  const [adAge, setAdAge] = useState(Data.piriod.adAge);
+  const [waGengo, setWaGengo] = useState(Data.piriod.waGengo);
   const [place, setPlace] = useState(Data.place);
   const [influence, setInfluence] = useState({});
 
 
   //  Get Event Data
   useEffect(() => {
-    if (piriod && place) {
+    if (adAge && waGengo && place) {
       setIsLoaded(true);
     }
   }, []);
@@ -128,10 +129,20 @@ function InnerTag() {
           <section>
             <h3>時期</h3>
             <dl>
-              <dt>元号</dt>
+              <dt>年代</dt>
               <dd>
                 <ul>
-                  {piriod.map((data, index) =>
+                  {adAge.map((data, index) =>
+                    <li key={index}>
+                      {data.age}
+                    </li>
+                  )}
+                </ul>
+              </dd>
+              <dt>元号</dt>
+              <dd>
+              <ul>
+                  {waGengo.map((data, index) =>
                     <li key={index}>
                       {data.gengo}
                     </li>
