@@ -1,74 +1,21 @@
 import React, { useState, useEffect, useContext }  from 'react';
 import Link from 'next/link';
+import styled from 'styled-components';
 import Nav from './style/Nav';
 import Section from './style/commonSection';
+import tagStyle from './style/tagStyle';
 import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
 import Data from '../data/data.json';
 
 
 // CSS in JS
-/* const Section = styled.section`
-  margin: 40px 0;
-  .date {
-    margin: 0 0 5px;
-    font-weight: bold;
-    color: #777;
-  }
-  h2 {
-    margin-bottom: 1.75em;
-    color: #333;
-  }
-  h3 {
-    background: #eee;
-    margin: 0 0 20px;
-    padding: 10px;
-    border-radius: 3px;
-  }
-  dl {
-    display: flex;
-    flex-wrap: wrap;
-    @media(max-width: 600px) {
-      display: block;
-    }
-    dt, dd {
-      padding: 0.5em 0;
-      margin: 0;
-      overflow-wrap: break-word;
-	    word-wrap: break-word;
-    }
-    dt {
-      width: 20%;
-      padding-right: 1em;
-      @media(max-width: 600px) {
-        width: 100%;
-        padding: 0;
-      }
-      ::after {
-        content: "："
-      }
-    }
-    dd {
-      width: 80%;
-      @media(max-width: 600px) {
-        width: 100%;
-        padding: 0 0 15px;
-      }
-      .peapleList {
-        margin: 0 0 5px;
-        .peaples {
-          margin: 0;
-          padding: 0;
-          li {
-            display: inline;
-            :not(:last-child)::after {
-              content: ", "
-            }
-          }
-        }
-      }
-    }
-  }
-`; */
+const Tag = styled.a`
+  ${tagStyle}
+  font-size: 12px !important;
+  margin: 4px 8px 4px 0 !important;
+  padding: 4px !important;
+  cursor: pointer;
+`;
 
 
 // Component
@@ -106,8 +53,8 @@ function InnerTag() {
       <ul className={props.paramKey}>
         {infoArray.map((data, index) =>
           <li key={index}>
-            <Link href={"../?" + props.paramKey + "=" + data}>
-              <a>{data + props.unit}</a>
+            <Link href={"/?" + props.paramKey + "=" + data}>
+              <Tag>{data + props.unit}</Tag>
             </Link>
           </li>
         )}
@@ -127,53 +74,45 @@ function InnerTag() {
       return (
         <>
           <section>
-            <h3>時期</h3>
+            <h2>時期</h2>
             <dl>
               <dt>年代</dt>
               <dd>
-                <ul>
-                  {adAge.map((data, index) =>
-                    <li key={index}>
-                      {data.age}
-                    </li>
-                  )}
-                </ul>
+                {adAge.map((data, index) =>
+                  <Link href={"/?adAge=" + data.age} key={index}>
+                    <Tag className="adAge">{data.age}</Tag>
+                  </Link>
+                )}
               </dd>
-              <dt>元号</dt>
+            </dl>
+            <dl>
+              <dt>年間</dt>
               <dd>
-              <ul>
-                  {waGengo.map((data, index) =>
-                    <li key={index}>
-                      {data.gengo}
-                    </li>
-                  )}
-                </ul>
+                {waGengo.map((data, index) =>
+                  <Link href={"/?waGengo=" + data.gengo} key={index}>
+                    <Tag className="waGengo">{data.gengo}年間</Tag>
+                  </Link>
+                )}
               </dd>
             </dl>
           </section>
           <section>
-            <h3>場所</h3>
-            <dl>
-              <dt>国(令制国)</dt>
-              <dd>
-                <ul>
-                  {place.map((data, index) =>
-                    <li key={index}>
-                      {data.region}：{data.country}
-                    </li>
+            <h2>場所</h2>
+            {place.map((data, index) =>
+              <dl key={index}>
+                <dt>{data.region}</dt>
+                <dd>
+                  <Link href={"/?region=" + data.region} key={index}>
+                    <Tag className="region">{data.region}</Tag>
+                  </Link>
+                  {data.country.map((data, index) =>
+                    <Link href={"/?country=" + data} key={index}>
+                    <Tag className="country">{data}</Tag>
+                  </Link>
                   )}
-                </ul>
-              </dd>
-            </dl>
-          </section>
-          <section>
-            <h3>勢力・人物</h3>
-            <dl>
-              <dt>勢力</dt>
-              <dd>
-                作成中
-              </dd>
-            </dl>
+                </dd>
+              </dl>
+            )}
           </section>
         </>
       );
