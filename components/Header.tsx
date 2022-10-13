@@ -112,6 +112,7 @@ function Header() {
           <span>MENU:</span>
           <Link href="/"><a>Home</a></Link>
           <Link href="/tag"><a>Tag</a></Link>
+          <Link href="/reference"><a>Reference</a></Link>
           <Link href="/about"><a>About</a></Link>
         </nav>
         <SearchForn />

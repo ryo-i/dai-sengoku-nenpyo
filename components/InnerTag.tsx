@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useContext }  from 'react';
+import React, { useState }  from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import Nav from './style/Nav';
 import Section from './style/commonSection';
 import tagStyle from './style/tagStyle';
-import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
 import Data from '../data/data.json';
 
 
