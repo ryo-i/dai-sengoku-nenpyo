@@ -33,33 +33,34 @@ function InnerTag() {
       <>
         <section>
           <h2>時期</h2>
-          <dl>
-            <dt>年代</dt>
-            <dd>
+          <section>
+            <h3>年代</h3>
+            <p>
               {adAge.map((data, index) =>
                 <Link href={"/?adAge=" + data.age} key={index}>
                   <Tag className="adAge">{data.age}</Tag>
                 </Link>
               )}
-            </dd>
-          </dl>
-          <dl>
-            <dt>年間</dt>
-            <dd>
+            </p>
+          </section>
+          <section>
+            <h3>年間</h3>
+            <p>
               {waGengo.map((data, index) =>
                 <Link href={"/?waGengo=" + data.gengo} key={index}>
                   <Tag className="waGengo">{data.gengo}年間</Tag>
                 </Link>
               )}
-            </dd>
-          </dl>
+            </p>
+          </section>
         </section>
+        <hr />
         <section>
           <h2>場所</h2>
           {place.map((data, index) =>
-            <dl key={index}>
-              <dt>{data.region}</dt>
-              <dd>
+            <section key={index}>
+              <h3>{data.region}</h3>
+              <p>
                 <Link href={"/?region=" + data.region} key={index}>
                   <Tag className="region">{data.region}</Tag>
                 </Link>
@@ -68,23 +69,24 @@ function InnerTag() {
                     <Tag className="country">{data}</Tag>
                   </Link>
                 )}
-              </dd>
-            </dl>
+              </p>
+            </section>
           )}
         </section>
+        <hr />
         <section>
           <h2>勢力</h2>
           {influence.map((data, index) =>
-            <dl key={index}>
-              <dt>{data.line}</dt>
-              <dd>
+            <section key={index}>
+              <h3>{data.line}</h3>
+              <p>
                 {data.influences.map((data, index) =>
-                  <Link href={"/?country=" + data} key={index}>
-                    <Tag className="country">{data}</Tag>
+                  <Link href={"/?influence=" + data} key={index}>
+                    <Tag className="influence">{data}</Tag>
                   </Link>
                 )}
-              </dd>
-            </dl>
+              </p>
+            </section>
           )}
         </section>
       </>
