@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - pathから年月日全てを削除 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- タグ一覧のスタイル修正、リンク修正 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- 勢力追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 
