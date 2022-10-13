@@ -24,6 +24,7 @@ function InnerTag() {
   const [adAge, setAdAge] = useState(Data.piriod.adAge);
   const [waGengo, setWaGengo] = useState(Data.piriod.waGengo);
   const [place, setPlace] = useState(Data.place);
+  const [influence, setInfluence] = useState(Data.influence);
 
 
   // Tag Info
@@ -64,8 +65,23 @@ function InnerTag() {
                 </Link>
                 {data.country.map((data, index) =>
                   <Link href={"/?country=" + data} key={index}>
-                  <Tag className="country">{data}</Tag>
-                </Link>
+                    <Tag className="country">{data}</Tag>
+                  </Link>
+                )}
+              </dd>
+            </dl>
+          )}
+        </section>
+        <section>
+          <h2>勢力</h2>
+          {influence.map((data, index) =>
+            <dl key={index}>
+              <dt>{data.line}</dt>
+              <dd>
+                {data.influences.map((data, index) =>
+                  <Link href={"/?country=" + data} key={index}>
+                    <Tag className="country">{data}</Tag>
+                  </Link>
                 )}
               </dd>
             </dl>
