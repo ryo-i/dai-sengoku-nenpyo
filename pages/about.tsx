@@ -59,12 +59,7 @@ function About() {
                 <h2>進捗</h2>
                 <ul>
                     <li>pathから年月日全てを削除 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
-                    <li>メニューのスタイルを変更 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
-                </ul>
-            </section>
-            <section>
-                <h2>今後の予定</h2>
-                <ul>
+                    <li>不要になったファイルを削除 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
             <section>
