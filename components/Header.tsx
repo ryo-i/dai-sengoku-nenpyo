@@ -24,7 +24,9 @@ const HeaderTag = styled.header`
     font-size: 2em;
   }
   nav span, nav a {
-    padding-right: 0.5em;
+    padding-right: 1em;
+    font-weight: bold;
+    text-decoration: none;
   }
   .search {
     margin: 15px 0 0;

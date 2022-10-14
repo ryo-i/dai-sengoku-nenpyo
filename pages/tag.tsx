@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 
 const pageTitle = "タグ一覧";
-const pageText = "元号、地域など、代表的なタグ一覧です";
+const pageText = "時期、場所、勢力などの代表的なタグ一覧です";
 
 
 function Home() {
