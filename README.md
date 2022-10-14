@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- pathから年月日全てを削除 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 参考文献の書式変更 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - title、discription情報追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）

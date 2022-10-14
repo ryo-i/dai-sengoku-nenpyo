@@ -57,7 +57,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>pathから年月日全てを削除 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
+                    <li>参考文献の書式変更 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
                     <li>title、discription情報追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
