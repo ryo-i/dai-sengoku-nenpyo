@@ -72,6 +72,8 @@ const getQueryName = (queryKey) => {
     queryName = '関東管領';
   } else if (queryKey === 'page') {
     queryName = 'ページ';
+  } else if (queryKey === 'search') {
+    queryName = '検索';
   } else {
     queryName = queryKey;
   }

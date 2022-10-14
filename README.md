@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 参考文献の書式変更 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- title、discription情報追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- getQueryNameに「検索」追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 
