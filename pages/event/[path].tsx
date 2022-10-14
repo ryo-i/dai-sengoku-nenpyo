@@ -1,37 +1,16 @@
 import React, { useState, useEffect }  from 'react';
 import { eventPathContext } from '../../context/eventPathContext';
-import Head from 'next/head';
 import Header from '../../components/Header';
 import InnerEvent from '../../components/InnerEvent';
 import Footer from '../../components/Footer';
-import Data from '../../data/data.json';
 
 
 // Component
 const Path = ({ eventInfo }) => {
     const [eventPath, setEventPath] = useState(eventInfo.path);
-    let headerTitle = '';
-    let pageTitle = '';
-    let headTitle = '';
-    let pageText =  '';
-
-    // Set Event Info
-    useEffect(() => {
-        setEventPath(eventInfo.path);
-        headerTitle = Data.header.title;
-        pageTitle = eventPath;
-        headTitle = pageTitle + ' | ' + headerTitle;
-        pageText =  '「' + pageTitle + '」の詳細情報です。';
-    }, [eventInfo]);
 
     return (
         <>
-        <Head>
-            <title>{ headTitle }</title>
-            <meta name="description" content={ pageText } />
-            <meta property="og:title" content={ headTitle } />
-            <meta property="og:description" content={ pageText } />
-        </Head>
         <Header />
         <main>
             <h1>出来事</h1>

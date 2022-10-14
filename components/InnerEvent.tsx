@@ -1,11 +1,15 @@
 import React, { useState, useEffect, useContext }  from 'react';
 import { eventPathContext } from '../context/eventPathContext';
 import { eventDataContext } from '../context/eventDataContext';
+import Head from 'next/head';
 import Link from 'next/link';
 import EventBreadcrumb from './EventBreadcrumb';
 import Nav from './style/Nav';
 import Section from './style/commonSection';
 import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
+import Data from '../data/data.json';
+
+const headerTitle = Data.header.title;
 
 
 // Component
@@ -15,6 +19,8 @@ function InnerEvent() {
   const [isLoaded, setIsLoaded] = useState(false);
   const {eventPath, setEventPath} = useContext(eventPathContext);
   const [eventData, setEventData] = useState({});
+  const [headTitle, setHeadTitle] = useState('');
+  const [headText, setHeadText] = useState('');
 
 
   //  Get Event Data
@@ -38,6 +44,10 @@ function InnerEvent() {
 
     if (eventPath) {
       console.log('eventPath', eventPath);
+      const pageTitle = eventPath + ' | ' + headerTitle;
+      const pageText =  '「' + eventPath + '」の詳細情報です。';
+      setHeadTitle(pageTitle);
+      setHeadText(pageText);
       getEventData(url);
     }
   }, [eventPath]);
@@ -282,6 +292,12 @@ function InnerEvent() {
   // JSX
   return (
     <>
+      <Head>
+        <title>{ headTitle }</title>
+        <meta name="description" content={ headText } />
+        <meta property="og:title" content={ headTitle } />
+        <meta property="og:description" content={ headText } />
+      </Head>
       <Nav>
         <eventDataContext.Provider value={{eventData, setEventData}} >
           <EventBreadcrumb />
