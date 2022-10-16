@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 参考文献の書式変更 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 日本史教科書の本文から補足を追記 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - getQueryNameに「検索」追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
