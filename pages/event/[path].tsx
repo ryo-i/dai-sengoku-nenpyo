@@ -8,6 +8,7 @@ import Footer from '../../components/Footer';
 // Component
 const Path = ({ eventInfo }) => {
     const [eventPath, setEventPath] = useState(eventInfo.path);
+    console.log('eventPath', eventPath);
 
     return (
         <>
