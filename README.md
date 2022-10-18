@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 日本史図説の全国統一まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 日本史図説の家康死去まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - 勢力を修正、追記 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
