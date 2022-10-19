@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 天皇家の即位年月日追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 足利将軍の就任年月日追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - 勢力を修正、追記 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
