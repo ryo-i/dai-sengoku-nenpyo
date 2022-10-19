@@ -57,7 +57,7 @@ function InnerEvent() {
   function CommonInfoArray (props) {
     if (error) {
       return <p>エラー: {error.array}</p>;
-    } else if (props.array === '-' || props.array === '') {
+    } else if (props.array === '') {
       return null;
     } else if (!props.array) {
       return <p>読み込み中...</p>;
