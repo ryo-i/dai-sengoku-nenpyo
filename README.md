@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 日本史図説の正親町天皇まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 日本史図説の後水尾天皇まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - 勢力を修正、追記 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
