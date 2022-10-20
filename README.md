@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 関白（豊臣氏）と徳川将軍の就任年月日追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- 勢力を修正、追記 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- カテゴリーに「社会」を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

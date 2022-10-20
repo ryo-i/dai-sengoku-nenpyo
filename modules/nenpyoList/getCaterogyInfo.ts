@@ -15,6 +15,9 @@ const getCaterogyInfo = (category) => {
   } else if (category === 'seiji' || category === "政治") {
     categoryInfo.path = 'seiji';
     categoryInfo.name = '政治';
+  } else if (category === 'syakai' || category === "社会") {
+    categoryInfo.path = 'syakai';
+    categoryInfo.name = '社会';
   } else if (category === 'bunka' || category === "文化") {
     categoryInfo.path = 'bunka';
     categoryInfo.name = '文化';

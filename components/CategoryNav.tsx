@@ -55,6 +55,9 @@ function CategoryNav() {
         <li className={categoryName === 'seiji' ? 'current' : ''}>
           <Link href="/category/[category]" as="/category/seiji"><a>政治</a></Link>
         </li>
+        <li className={categoryName === 'syakai' ? 'current' : ''}>
+          <Link href="/category/[category]" as="/category/syakai"><a>社会</a></Link>
+        </li>
         <li className={categoryName === 'bunka' ? 'current' : ''}>
           <Link href="/category/[category]" as="/category/bunka"><a>文化</a></Link>
         </li>

@@ -49,6 +49,7 @@ export async function getStaticPaths() {
       { params: { category: 'senso' } },
       { params: { category: 'gaiko' } },
       { params: { category: 'seiji' } },
+      { params: { category: 'syakai' } },
       { params: { category: 'bunka' } },
       { params: { category: 'jinbutsu' } },
       { params: { category: 'seireki' } },
