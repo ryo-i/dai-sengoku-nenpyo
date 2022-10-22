@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 日本史図説の政治・社会、1550年代まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 日本史図説の政治・社会、1616年まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - パスを更新する設定を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
