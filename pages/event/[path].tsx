@@ -33,7 +33,10 @@ export async function getStaticPaths() {
 
     const paths = event.nenpyoList.map((data) => `/event/${data.path}`);
     // console.log('paths', paths);
-    return { paths, fallback: false };
+    return {
+        paths,
+        fallback: 'blocking'
+    };
 }
 
 
@@ -51,7 +54,8 @@ export async function getStaticProps({ params }) {
         props: {
             eventInfo
         },
-        notFound: !eventInfo
+        notFound: !eventInfo,
+        revalidate: 10
     };
 }
 

@@ -55,7 +55,7 @@ export async function getStaticPaths() {
       { params: { category: 'seireki' } },
       { params: { category: 'wareki' } }
     ],
-    fallback: false
+    fallback: 'blocking'
   };
 }
 
@@ -70,7 +70,8 @@ export async function getStaticProps({ params }) {
     props: {
       categoryInfo
     },
-    notFound: !categoryInfo
+    notFound: !categoryInfo,
+    revalidate: 10
   };
 }
 
