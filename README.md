@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 日本史図説の政治・社会、1421飢饉まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- カテゴリーに「社会」を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- パスが取得できない場合の処理を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

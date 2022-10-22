@@ -58,7 +58,7 @@ function About() {
                 <h2>進捗</h2>
                 <ul>
                     <li>日本史図説の政治・社会、1421飢饉まで追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
-                    <li>カテゴリーに「社会」を追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
+                    <li>パスが取得できない場合の処理を追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
             <section>

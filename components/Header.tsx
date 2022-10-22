@@ -65,6 +65,9 @@ const SearchForn = () => {
   const [searchValue, setSearchValue] = useState('');
   const router = useRouter();
 
+  if (router.isFallback) {
+    return <p>読み込み中...</p>
+  }
 
   const getSearchValue = (searchValue) => {
     let thisValue = searchValue;

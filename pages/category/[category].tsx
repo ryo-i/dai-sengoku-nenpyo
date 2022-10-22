@@ -66,7 +66,12 @@ export async function getStaticProps({ params }) {
   const categoryInfo = getCaterogyInfo(category);
   // console.log('category', category);
   // console.log('categoryInfo', categoryInfo);
-  return { props: { categoryInfo } };
+  return {
+    props: {
+      categoryInfo
+    },
+    notFound: !categoryInfo
+  };
 }
 
 export default Home;

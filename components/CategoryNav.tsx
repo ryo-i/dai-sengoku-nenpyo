@@ -34,6 +34,10 @@ function CategoryNav() {
   const router = useRouter();
   const { category } = router.query;
 
+  if (router.isFallback) {
+    return <p>読み込み中...</p>
+  }
+
   useEffect(() => {
     if (category) {
       setCategoryName(category);

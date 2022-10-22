@@ -47,7 +47,12 @@ export async function getStaticProps({ params }) {
 
     console.log('path', path);
     console.log('pathInfo', eventInfo);
-    return { props: { eventInfo } };
+    return {
+        props: {
+            eventInfo
+        },
+        notFound: !eventInfo
+    };
 }
 
 export default Path;

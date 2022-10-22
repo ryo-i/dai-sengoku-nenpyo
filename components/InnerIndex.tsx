@@ -388,7 +388,7 @@ function InnerIndex() {
   const NenpyoList = () => {
     if (error) {
       return <p>エラー: {error.message}</p>;
-    } else if (!isLoaded) {
+    } else if (!isLoaded || router.isFallback) {
       return <p>読み込み中...</p>;
     } else {
       return (
