@@ -392,7 +392,7 @@ function InnerIndex() {
                 <p className="date">
                   {data.commonDate}
                 </p>
-                <Link href={hierarchy + "event/" + data.path}>
+                <Link href={hierarchy + "event/" + data.title}>
                   <a><p className="title">{data.title}</p></a>
                 </Link>
               </dt>

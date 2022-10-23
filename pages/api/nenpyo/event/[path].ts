@@ -26,7 +26,7 @@ export default (req, res) => {
 
   let eventData = {};
   for (let i = 0; i < data.length; i++) {
-    if (data[i][keyNumbers.path] === path) {
+    if (data[i][keyNumbers.title] === path) {
       eventData = getDataObj(data[i]);
     }
   }
