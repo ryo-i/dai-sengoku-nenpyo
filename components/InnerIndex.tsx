@@ -317,7 +317,7 @@ function InnerIndex() {
             }
             key={index}
           >
-            <a className="country">{props.country}</a>
+            <a className="country">{data}</a>
           </Link>
         )}
       </>
@@ -341,7 +341,7 @@ function InnerIndex() {
             }
             key={index}
           >
-            <a className="region">{props.region}</a>
+            <a className="region">{data}</a>
           </Link>
         )}
       </>
