@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 日本史図説の文化、1550年代まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 日本史図説の文化、1610年代まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - 出来事ページのパンくずの表示をpath→titleに変更 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
