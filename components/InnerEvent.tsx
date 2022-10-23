@@ -61,7 +61,7 @@ function InnerEvent() {
 
     return (
       <ul className={props.paramKey}>
-        {infoArray.map((data, index) =>
+        {infoArray.map((data, index) => data &&
           <li key={index}>
             <Link href={"../?" + props.paramKey + "=" + data}>
               <a>{data + props.unit}</a>
@@ -80,7 +80,7 @@ function InnerEvent() {
 
     return (
       <ul className={props.paramKey}>
-        {remarksArray.map((data, index) =>
+        {remarksArray.map((data, index) => data &&
           <li key={index}>{data}</li>
         )}
       </ul>
@@ -95,7 +95,7 @@ function InnerEvent() {
 
     return (
       <ul className={"source"}>
-        {sourceArray.map((data, index) =>
+        {sourceArray.map((data, index) => data &&
           <li key={index}><a href={data} target="_blank">{data}</a></li>
         )}
       </ul>

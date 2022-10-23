@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 日本史図説の文化、1445年まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- データなしのページに対応、他リファクタ [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- 空文字判定を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

@@ -14,7 +14,7 @@ const IndexBreadcrumb = () => {
     const {hierarchy, setHierarchy} = useContext(indexContext);
 
 
-    if (!isCategory && !queryInfo) {
+    if (!isCategory && !queryInfo || !categoryName && !queryInfo) {
         return (
         <ul className="breadcrumb">
         </ul>

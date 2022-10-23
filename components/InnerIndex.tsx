@@ -244,7 +244,7 @@ function InnerIndex() {
 
     return (
       <>
-        {resultArray.map((data, index) =>
+        {resultArray.map((data, index) => data &&
           <Link href={
               isCategory ?
               hierarchy + "category/" + category.path + "?waGengo=" + data :
@@ -285,7 +285,7 @@ function InnerIndex() {
 
     return (
       <>
-        {resultArray.map((data, index) =>
+        {resultArray.map((data, index) => data &&
           <Link href={
               isCategory ?
               hierarchy + "category/" + category.path + "?adAge=" + data :
@@ -309,7 +309,7 @@ function InnerIndex() {
 
     return (
       <>
-        {resultArray.map((data, index) =>
+        {resultArray.map((data, index) => data &&
           <Link href={
             isCategory ?
             hierarchy + "category/" + category.path + "?country=" + data :
@@ -333,7 +333,7 @@ function InnerIndex() {
 
     return (
       <>
-        {resultArray.map((data, index) =>
+        {resultArray.map((data, index) => data &&
           <Link href={
               isCategory ?
               hierarchy + "category/" + category.path + "?region=" + data :
@@ -356,7 +356,7 @@ function InnerIndex() {
 
     return (
       <>
-        {resultArray.map((data, index) =>
+        {resultArray.map((data, index) => data &&
           <Link href={
               isCategory ?
               hierarchy + "category/" + category.path + "?influence=" + data :
@@ -384,7 +384,7 @@ function InnerIndex() {
 
     return (
       <ul className="nenpyoList">
-        {nenpyoData.map((data, index) =>
+        {nenpyoData.map((data, index) => data &&
           <li key={index} data-order={data.order}>
             <dl>
               <dt>
