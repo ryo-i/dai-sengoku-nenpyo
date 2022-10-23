@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { categoryContext } from '../context/categoryContext';
 import { indexContext } from '../context/indexContext';
-import { getPagination } from '../modules/nenpyoList/getPagination';
+import { getPagination } from '../modules/nenpyo/getPagination';
 
 
 // CSS in JS

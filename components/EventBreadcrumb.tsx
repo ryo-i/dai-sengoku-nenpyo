@@ -1,7 +1,7 @@
 import React, { useState, useContext }  from 'react';
 import Link from 'next/link';
 import { eventDataContext } from '../context/eventDataContext';
-import { getCaterogyInfo } from '../modules/nenpyoList/getCaterogyInfo';
+import { getCaterogyInfo } from '../modules/nenpyo/getCaterogyInfo';
 
 
 // Enenvt Bread Crumb
@@ -9,6 +9,10 @@ const EventBreadcrumb = () => {
   // Hooks
   const {eventData, setEventData} = useContext(eventDataContext);
   const category = getCaterogyInfo(eventData['category']);
+
+  if (!Object.keys(eventData).length) {
+    return null;
+  }
 
   return (
     <ul className="breadcrumb">

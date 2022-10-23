@@ -3,7 +3,7 @@ import { categoryContext } from '../../context/categoryContext';
 import Header from '../../components/Header';
 import InnerIndex from '../../components/InnerIndex';
 import Footer from '../../components/Footer';
-import { getCaterogyInfo } from '../../modules/nenpyoList/getCaterogyInfo';
+import { getCaterogyInfo } from '../../modules/nenpyo/getCaterogyInfo';
 import Data from '../../data/data.json';
 
 

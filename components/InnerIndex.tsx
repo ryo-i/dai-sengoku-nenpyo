@@ -12,13 +12,14 @@ import Pagination from './IndexPagination';
 import Nav from './style/Nav';
 import tagStyle from './style/tagStyle';
 import Data from '../data/data.json';
-import { getQueryParam } from '../modules/nenpyoList/getQueryParam';
-import { getHeadInfo } from '../modules/nenpyoList/getHeadInfo';
-import { getQueryInfo } from '../modules/nenpyoList/getQueryInfo';
-import { getPageKey } from '../modules/nenpyoList/getPageKey';
-import { deleteParam } from '../modules/nenpyoList/deleteParam';
-import { getDividedArray } from '../modules/nenpyoInfo/getDividedArray';
-import { getCaterogyInfo } from '../modules/nenpyoList/getCaterogyInfo';
+import { getQueryParam } from '../modules/nenpyo/getQueryParam';
+import { getHeadInfo } from '../modules/nenpyo/getHeadInfo';
+import { getQueryInfo } from '../modules/nenpyo/getQueryInfo';
+import { getPageKey } from '../modules/nenpyo/getPageKey';
+import { deleteParam } from '../modules/nenpyo/deleteParam';
+import { getDividedArray } from '../modules/nenpyo/getDividedArray';
+import { getCaterogyInfo } from '../modules/nenpyo/getCaterogyInfo';
+import { displayError } from '../modules/nenpyo/displayError';
 
 const headerTitle = Data.header.title;
 const headerText = Data.header.text;
@@ -188,7 +189,7 @@ function InnerIndex() {
         const res = await fetch(url);
         const resJson = await res.json();
         const data = resJson;
-        // console.log('data', data);
+        console.log('data', data);
         setNenpyoData(data.nenpyoList);
         setPageInfo(data.pageInfo);
         setIsLoaded(true);
@@ -205,21 +206,9 @@ function InnerIndex() {
   }, [router, queryParam, categoryName]);
 
 
-  // Desplay error
-  const desplayError = (props, key) => {
-    if (error) {
-      return <p>エラー: {error[key]}</p>;
-    } else if (props[key] === '-' || props[key] === '') {
-      return null;
-    } else if (!props[key]) {
-      return <p>読み込み中...</p>;
-    }
-  };
-
-
   // Category Icon
   function CategoryIcon (props) {
-    desplayError(props, "category");
+    displayError(error, props, "category");
     const category = getCaterogyInfo(props.category);
 
     return (
@@ -232,7 +221,7 @@ function InnerIndex() {
 
   // Wa Year Tag
   function WaYearTag (props) {
-    desplayError(props, "waYear");
+    displayError(error, props, "waYear");
     const category = getCaterogyInfo(props.category);
 
     return (
@@ -249,7 +238,7 @@ function InnerIndex() {
 
   // Wa Gengo Tag
   function WaGengoTag (props) {
-    desplayError(props, "waGengo");
+    displayError(error, props, "waGengo");
     const resultArray = getDividedArray(props.waGengo);
     const category = getCaterogyInfo(props.category);
 
@@ -273,7 +262,7 @@ function InnerIndex() {
 
   // AD Year Tag
   function AdYearTag (props) {
-    desplayError(props, "adYear");
+    displayError(error, props, "adYear");
     const category = getCaterogyInfo(props.category);
 
     return (
@@ -288,10 +277,9 @@ function InnerIndex() {
   }
 
 
-
   // AD Age Tag
   function AdAgeTag (props) {
-    desplayError(props, "adAge");
+    displayError(error, props, "adAge");
     const resultArray = getDividedArray(props.adAge);
     const category = getCaterogyInfo(props.category);
 
@@ -315,7 +303,7 @@ function InnerIndex() {
 
   // Country Tag
   function CountryTag (props) {
-    desplayError(props, "country");
+    displayError(error, props, "country");
     const resultArray = getDividedArray(props.country);
     const category = getCaterogyInfo(props.category);
 
@@ -339,7 +327,7 @@ function InnerIndex() {
 
   // Region Tag
   function RegionTag (props) {
-    desplayError(props, "region");
+    displayError(error, props, "region");
     const resultArray = getDividedArray(props.region);
     const category = getCaterogyInfo(props.category);
 
@@ -362,7 +350,7 @@ function InnerIndex() {
 
   // Influence Tag
   function InfluenceTag (props) {
-    desplayError(props, "influence");
+    displayError(error, props, "influence");
     const resultArray = getDividedArray(props.influence);
     const category = getCaterogyInfo(props.category);
 
@@ -390,83 +378,85 @@ function InnerIndex() {
       return <p>エラー: {error.message}</p>;
     } else if (!isLoaded || router.isFallback) {
       return <p>読み込み中...</p>;
-    } else {
-      return (
-        <ul className="nenpyoList">
-          {nenpyoData.map((data, index) =>
-            <li key={index} data-order={data.order}>
-              <dl>
-                <dt>
-                  <CategoryIcon category={data.category} />
-                  <p className="date">
-                    {data.commonDate}
-                  </p>
-                  <Link href={hierarchy + "event/" + data.path}>
-                    <a><p className="title">{data.title}</p></a>
-                  </Link>
-                </dt>
-                <dd>
-                  <p className="tag-area">
-                    <span className="wa-area">
-                      {data.waYearUnit === "年" ?
-                        <WaYearTag
-                          waYear={data.waYear}
-                          waYearUnit={data.waYearUnit}
-                          path={data.path}
-                          category={data.category}
-                        /> :
-                        <WaGengoTag
-                          waGengo={data.waGengo}
-                          waYearUnit={data.waYearUnit}
-                          path={data.path}
-                          category={data.category}
-                        />
-                      }
-                    </span>
-                    <span className="ad-area">
-                      {data.adYearUnit === "年" ?
-                        <AdYearTag
-                          adYear={data.adYear}
-                          adYearUnit={data.adYearUnit}
-                          path={data.path}
-                          category={data.category}
-                        /> :
-                        <AdAgeTag
-                          adAge={data.adAge}
-                          path={data.path}
-                          category={data.category}
-                        />
-                      }
-                    </span>
-                    <span className="place-area">
-                      {data.country ?
-                        <CountryTag
-                          country={data.country}
-                          path={data.path}
-                          category={data.category}
-                        /> :
-                        <RegionTag
-                          region={data.region}
-                          path={data.path}
-                          category={data.category}
-                        />
-                      }
-                    </span>
-                    <span className="influence-area">
-                      <InfluenceTag
-                        influence={data.influence}
+    } else if (!nenpyoData.length) {
+      return <p>データが見つかりません</p>;
+    }
+
+    return (
+      <ul className="nenpyoList">
+        {nenpyoData.map((data, index) =>
+          <li key={index} data-order={data.order}>
+            <dl>
+              <dt>
+                <CategoryIcon category={data.category} />
+                <p className="date">
+                  {data.commonDate}
+                </p>
+                <Link href={hierarchy + "event/" + data.path}>
+                  <a><p className="title">{data.title}</p></a>
+                </Link>
+              </dt>
+              <dd>
+                <p className="tag-area">
+                  <span className="wa-area">
+                    {data.waYearUnit === "年" ?
+                      <WaYearTag
+                        waYear={data.waYear}
+                        waYearUnit={data.waYearUnit}
+                        path={data.path}
+                        category={data.category}
+                      /> :
+                      <WaGengoTag
+                        waGengo={data.waGengo}
+                        waYearUnit={data.waYearUnit}
                         path={data.path}
                         category={data.category}
                       />
-                    </span>
-                  </p>
-                </dd>
-              </dl>
-            </li>
-          )}
-        </ul>
-      );
-    }
+                    }
+                  </span>
+                  <span className="ad-area">
+                    {data.adYearUnit === "年" ?
+                      <AdYearTag
+                        adYear={data.adYear}
+                        adYearUnit={data.adYearUnit}
+                        path={data.path}
+                        category={data.category}
+                      /> :
+                      <AdAgeTag
+                        adAge={data.adAge}
+                        path={data.path}
+                        category={data.category}
+                      />
+                    }
+                  </span>
+                  <span className="place-area">
+                    {data.country ?
+                      <CountryTag
+                        country={data.country}
+                        path={data.path}
+                        category={data.category}
+                      /> :
+                      <RegionTag
+                        region={data.region}
+                        path={data.path}
+                        category={data.category}
+                      />
+                    }
+                  </span>
+                  <span className="influence-area">
+                    <InfluenceTag
+                      influence={data.influence}
+                      path={data.path}
+                      category={data.category}
+                    />
+                  </span>
+                </p>
+              </dd>
+            </dl>
+          </li>
+        )}
+      </ul>
+    );
   };
 
 

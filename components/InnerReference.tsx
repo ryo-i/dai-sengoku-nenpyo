@@ -17,7 +17,9 @@ function InnerReference() {
       <>
         <ul>
           {reference.map((data, index) =>
-            <li>{data.author + '「' + data.title + '」' + data.publisher+ '(' + data.year + ')'}</li>
+            <li  key={index}>
+              {data.author + '「' + data.title + '」' + data.publisher+ '(' + data.year + ')'}
+            </li>
           )}
         </ul>
       </>

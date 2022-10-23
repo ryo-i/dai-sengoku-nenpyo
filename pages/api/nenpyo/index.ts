@@ -6,7 +6,7 @@ import { getNoCategoryData }from '../../../modules/api/getNoCategoryData';
 import { getPageSegmentation }from '../../../modules/api/getPageSegmentation';
 import { getDataLength }from '../../../modules/api/getDataLength';
 import { getNenpyoArray }from '../../../modules/api/getNenpyoArray';
-import { getCaterogyInfo } from '../../../modules/nenpyoList/getCaterogyInfo';
+import { getCaterogyInfo } from '../../../modules/nenpyo/getCaterogyInfo';
 
 
 getKeyNumber(nenpyoData.values[0], keyNumbers);
