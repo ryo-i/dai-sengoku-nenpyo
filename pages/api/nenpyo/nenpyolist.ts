@@ -13,7 +13,7 @@ const keyNumbers = {
 // Set Key Numbers
 const setKeyNumber = (data) => {
   for (let i = 0; i < data.length; i++) {
-    if (data[i] === 'path') {
+    if (data[i] === 'title') {
       keyNumbers.path = i;
     }
   }
@@ -21,13 +21,13 @@ const setKeyNumber = (data) => {
 setKeyNumber(dataValues[0]);
 
 
-// Get Page Info
-const getPageInfo = () => {
-  const pageInfo= {};
+// Get Path Info
+const getPathInfo = () => {
+  const PathInfo= {};
 
-  pageInfo['pathLength'] = dataValues.length -1;
+  PathInfo['pathLength'] = dataValues.length -1;
 
-  return pageInfo;
+  return PathInfo;
 };
 
 
@@ -48,11 +48,11 @@ const getNenpyoArray = () => {
 
 // Response
 export default (req, res) => {
-  const pageInfo = getPageInfo();
+  const pathInfo = getPathInfo();
   const nenpyoArray = getNenpyoArray();
 
   const nenpyoData = {};
-  nenpyoData['pageInfo'] = pageInfo;
+  nenpyoData['pathInfo'] = pathInfo;
   nenpyoData['nenpyoList'] = nenpyoArray;
   // console.log('nenpyoData', nenpyoData);
   res.status(200).json(nenpyoData);
