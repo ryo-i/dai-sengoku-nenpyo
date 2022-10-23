@@ -44,7 +44,7 @@ function InnerEvent() {
     };
 
     if (eventPath) {
-      console.log('eventPath', eventPath);
+      // console.log('eventPath', eventPath);
       const pageTitle = eventPath + ' | ' + headerTitle;
       const pageText =  '「' + eventPath + '」の詳細情報です。';
       setHeadTitle(pageTitle);
