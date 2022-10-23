@@ -57,7 +57,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>日本史図説の文化、1610年代まで追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
+                    <li>日本史図説の世界史、1490年代まで追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
                     <li>複数地方、複数国の表示を修正 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
