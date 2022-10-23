@@ -37,11 +37,7 @@ const IndexBreadcrumb = () => {
         return (
         <ul className="breadcrumb">
             <li><Link href="/"><a>Home</a></Link></li>
-            <li>
-            <Link href={hierarchy + "category/" + categoryPath}>
-                <a>{categoryName}</a>
-            </Link>
-            </li>
+            <li><Link href={hierarchy + "category/" + categoryPath}><a>{categoryName}</a></Link></li>
             <li>{queryInfo}</li>
         </ul>
         );

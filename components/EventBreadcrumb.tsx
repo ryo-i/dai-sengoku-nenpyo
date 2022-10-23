@@ -18,7 +18,7 @@ const EventBreadcrumb = () => {
     <ul className="breadcrumb">
       <li><Link href="/"><a>Home</a></Link></li>
       <li><Link href={"/category/" + category.path}><a>{category.name}</a></Link></li>
-      <li>{eventData['path']}</li>
+      <li>{eventData['title']}</li>
     </ul>
   );
 };
