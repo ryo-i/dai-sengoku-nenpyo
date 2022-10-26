@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- もういちど読む山川世界史、1590年代まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- もういちど読む山川世界史、1610年代まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - 場所、勢力のタグ、参考文献を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
