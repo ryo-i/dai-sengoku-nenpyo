@@ -57,7 +57,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>もういちど読む山川世界史、1610年代まで追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
+                    <li>詳説日本史の発行年を変更 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
                     <li>場所、勢力のタグ、参考文献を追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
