@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 詳説日本史の発行年を変更 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- 場所、勢力のタグ、参考文献を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- 参考文献に図説世界史を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 
