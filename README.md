@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 図説世界史の1590年代まで追加2 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 図説世界史の1610年代まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - 参考文献に図説世界史を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
