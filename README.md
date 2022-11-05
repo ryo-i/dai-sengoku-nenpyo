@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 関東管領系を追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 年代・年間を再チェック [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - 参考文献に図説世界史を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
