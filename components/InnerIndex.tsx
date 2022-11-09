@@ -189,7 +189,7 @@ function InnerIndex() {
         const res = await fetch(url);
         const resJson = await res.json();
         const data = resJson;
-        console.log('data', data);
+        // console.log('data', data);
         setNenpyoData(data.nenpyoList);
         setPageInfo(data.pageInfo);
         setIsLoaded(true);

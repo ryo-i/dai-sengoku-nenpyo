@@ -33,7 +33,7 @@ function InnerEvent() {
         const res = await fetch(url);
         const resJson = await res.json();
         const data = resJson.eventData;
-        console.log('data', data);
+        // console.log('data', data);
         setEventData(data);
         setIsLoaded(true);
       } catch(error) {
