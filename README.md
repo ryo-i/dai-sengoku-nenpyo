@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 図解戦国史、年表1575年まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- 参考文献に図説世界史を追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- Aboutに「大戦国・年表とは」を追記 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

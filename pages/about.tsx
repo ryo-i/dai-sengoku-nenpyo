@@ -58,24 +58,21 @@ function About() {
                 <h2>進捗</h2>
                 <ul>
                     <li>図解戦国史、年表1575年まで追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
-                    <li>参考文献に図説世界史を追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
+                    <li>Aboutに「大戦国・年表とは」を追記 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
             <section>
-                <h2>使い方</h2>
-                <section>
-                    <h3>使い方をここに書く</h3>
-                    <p>あああああ</p>
-                    <figure>
-                        <img src="" alt="あああああ" />
-                    </figure>
-                </section>
+                <h2>大戦国・年表とは</h2>
+                <p>戦国時代好きのイイダリョウが小学校の時から収集・愛読してきたさまざまな戦国時代の本（学研の歴史群像など）の年表化していくプロジェクトです（年表は随時更新中）</p>
+                <p><a href="https://dai-sengoku-nenpyo.vercel.app/tag">タグ一覧</a>にあるような時期・場所・勢力などのタグで絞り込みができます。ヘッダーの検索窓からフリーワード検索もできます。</p>
+                <p><a href="https://dai-sengoku-nenpyo.vercel.app/reference">参考文献</a>にあるよう書籍にある戦国時代の情報を統一したフォーマットで年表化していきます。</p>
+                <p>その他、Wikipediaをはじめとしたネット記事も参照させていただいております。</p>
             </section>
             <section>
                 <h2>詳細</h2>
                 <section>
                     <h3>ブログ</h3>
-                    <p>作成中</p>
+                    <p>（作成中）</p>
                 </section>
                 <section>
                     <h3>ソースコード（GitHub）</h3>
