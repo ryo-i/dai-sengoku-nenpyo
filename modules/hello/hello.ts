@@ -17,10 +17,10 @@ async function hello () {
         }
 
         dom.innerHTML = text;
-        console.log('text-> ' + text);
+        // console.log('text-> ' + text);
       } catch(err) {
-        console.log('err!');
-        console.log(err);
+        // console.log('err!');
+        // console.log(err);
     }
 };
 

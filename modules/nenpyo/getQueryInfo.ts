@@ -17,7 +17,7 @@ const getParamDate = (queryParamObject, propertyArray) => {
     }
 
     resultText = resultArray.join('');
-    console.log('resultText', resultText);
+    // console.log('resultText', resultText);
     return resultText;
 };
 

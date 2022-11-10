@@ -8,7 +8,7 @@ import Footer from '../../components/Footer';
 // Component
 const Path = ({ eventInfo }) => {
     const [eventPath, setEventPath] = useState(eventInfo.path);
-    console.log('eventPath', eventPath);
+    // console.log('eventPath', eventPath);
 
     return (
         <>
@@ -48,8 +48,8 @@ export async function getStaticProps({ params }) {
       };
       eventInfo.path = path;
 
-    console.log('path', path);
-    console.log('pathInfo', eventInfo);
+    // console.log('path', path);
+    // console.log('pathInfo', eventInfo);
     return {
         props: {
             eventInfo
