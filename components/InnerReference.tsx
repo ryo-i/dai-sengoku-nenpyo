@@ -15,13 +15,26 @@ function InnerReference() {
   const TagInfo = () => {
     return (
       <>
-        <ul>
-          {reference.map((data, index) =>
-            <li  key={index}>
-              {data.author + '『' + data.title + '』' + data.publisher+ '(' + data.year + ')'}
-            </li>
-          )}
-        </ul>
+      <section>
+          <h3>歴史全般</h3>
+          <ul>
+            {reference.allHistory.map((data, index) =>
+              <li  key={index}>
+                { data.author + '『' + data.title + '』' + data.publisher+ '(' + data.year + ')' + '【' + data.status + '】'}
+              </li>
+            )}
+          </ul>
+        </section>
+        <section>
+          <h3>戦国史</h3>
+          <ul>
+            {reference.sengokuHistory.map((data, index) =>
+              <li  key={index}>
+                { data.author + '『' + data.title + '』' + data.publisher+ '(' + data.year + ')' + '【' + data.status + '】'}
+              </li>
+            )}
+          </ul>
+        </section>
       </>
     );
   };

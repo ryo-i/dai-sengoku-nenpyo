@@ -577,38 +577,50 @@
             "influences": []
         }
     ],
-    "reference": [
-        {
-            "author": "石井進・笠原一男・児玉幸多・篠山晴生",
-            "title": "詳説日本史",
-            "publisher": "山川出版社",
-            "year": "1997"
-        },
-        {
-            "author": "浜島書店編集部",
-            "title": "新詳日本史図説",
-            "publisher": "浜島書店",
-            "year": "1991"
-        },
-        {
-            "author": "「世界の歴史」編集委員会",
-            "title": "新 もういちど読む 山川世界史",
-            "publisher": "山川出版社",
-            "year": "2017"
-        },
-        {
-            "author": "浜島書店編集部",
-            "title": "改訂新版 最新図説 世界史",
-            "publisher": "浜島書店",
-            "year": "1988"
-        },
-        {
-            "author": "成美堂出版編集部",
-            "title": "一冊でわかる イラストでわかる 図解戦国史",
-            "publisher": "成美堂出版",
-            "year": "2009"
-        }
-    ],
+    "reference": {
+        "allHistory": [
+            {
+                "author": "石井進・笠原一男・児玉幸多・篠山晴生",
+                "title": "詳説日本史",
+                "publisher": "山川出版社",
+                "year": "1997",
+                "status": "完了"
+            },
+            {
+                "author": "浜島書店編集部",
+                "title": "新詳日本史図説",
+                "publisher": "浜島書店",
+                "year": "1991",
+                "status": "完了"
+            },
+            {
+                "author": "「世界の歴史」編集委員会",
+                "title": "新 もういちど読む 山川世界史",
+                "publisher": "山川出版社",
+                "year": "2017",
+                "status": "完了"
+            },
+            {
+                "author": "浜島書店編集部",
+                "title": "改訂新版 最新図説 世界史",
+                "publisher": "浜島書店",
+                "year": "1988",
+                "status": "完了"
+            }
+        ],
+        "sengokuHistory": [
+            {
+                "author": "成美堂出版編集部",
+                "title": "一冊でわかる イラストでわかる 図解戦国史",
+                "publisher": "成美堂出版",
+                "year": "2009",
+                "status": "進行中"
+            }
+        ],
+        "notYet": [
+
+        ]
+    },
     "footer": {
         "text": "©️ イイダリョウ"
     }
