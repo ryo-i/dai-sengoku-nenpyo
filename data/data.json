@@ -615,10 +615,652 @@
                 "publisher": "成美堂出版",
                 "year": "2009",
                 "status": "進行中"
+            },
+            {
+                "author": "有限会社オフィス五稜郭",
+                "title": "戦国カラー新聞",
+                "publisher": "双葉社",
+                "year": "2010",
+                "status": "未着手"
+            },
+            {
+                "author": "小和田哲男(監修)",
+                "title": "地域別×武将だからおもしろい 戦国史",
+                "publisher": "朝日出版社",
+                "year": "2021",
+                "status": "未着手"
+            },
+            {
+                "author": "後藤武士",
+                "title": "読むだけですっきりわかる戦国史",
+                "publisher": "宝島社",
+                "year": "2014",
+                "status": "未着手"
+            },
+            {
+                "author": "外山淳",
+                "title": "カラービジュアル版 戦国大名勢力変遷地図",
+                "publisher": "日本実業出版社",
+                "year": "2013",
+                "status": "未着手"
+            },
+            {
+                "author": "武光誠(監修)",
+                "title": "図解 戦国史 大名勢力マップ 詳細版 増補改訂版",
+                "publisher": "スタンダーズ",
+                "year": "2017",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ特別編集 【決定版】図説 戦国合戦地図集",
+                "publisher": "学習研究社",
+                "year": "2008",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史人 2013.10 「もしも」の戦国史",
+                "publisher": "ABCアーク",
+                "year": "2013",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ10 戦乱南北朝",
+                "publisher": "学習研究社",
+                "year": "1989",
+                "status": "未着手"
+            },
+            {
+                "author": "水野大樹",
+                "title": "南北朝動乱(じっぴコンパクト新書)",
+                "publisher": "実業之日本社",
+                "year": "2017",
+                "status": "未着手"
+            },
+            {
+                "author": "森茂暁",
+                "title": "闇の歴史、後南朝",
+                "publisher": "角川書店",
+                "year": "1997",
+                "status": "未着手"
+            },
+            {
+                "author": "ムロタニツネ象",
+                "title": "学研まんが 日本の歴史 第8巻 天下の統一",
+                "publisher": "学習研究社",
+                "year": "1982",
+                "status": "未着手"
+            },
+            {
+                "author": "ムロタニツネ象",
+                "title": "学研まんが 日本の歴史 第9巻 江戸幕府ひらく",
+                "publisher": "学習研究社",
+                "year": "1982",
+                "status": "未着手"
+            },
+            {
+                "author": "歴史魂編集部",
+                "title": "つぶやき戦国武将 天下統一なう",
+                "publisher": "アスキー・メディア・ワークス",
+                "year": "2012",
+                "status": "未着手"
+            },
+            {
+                "author": "スエヒロ",
+                "title": "インスタ映えする戦国時代",
+                "publisher": "大和書房",
+                "year": "2019",
+                "status": "未着手"
             }
         ],
-        "notYet": [
-
+        "areaHistory": [
+            {
+                "author": "入間田宣夫・小林真人・斉藤利男",
+                "title": "北の内海世界",
+                "publisher": "山川出版社",
+                "year": "1999",
+                "status": "未着手"
+            },
+            {
+                "author": "江澤隆志",
+                "title": "北海道戦国史と松前氏(歴史新書)",
+                "publisher": "洋泉社",
+                "year": "2016",
+                "status": "未着手"
+            },
+            {
+                "author": "森嘉兵衛",
+                "title": "中世武士選書 第35巻 南部信直",
+                "publisher": "戎光祥出版",
+                "year": "2016",
+                "status": "未着手"
+            },
+            {
+                "author": "渋谷鉄五郎",
+                "title": "秋田「安東氏」研究ノート",
+                "publisher": "無明舎出版",
+                "year": "1988",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ19 伊達政宗",
+                "publisher": "学習研究社",
+                "year": "1990",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ8 上杉謙信",
+                "publisher": "学習研究社",
+                "year": "1988",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ2 戦国【関東三国志】",
+                "publisher": "学習研究社",
+                "year": "1987",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ14 真説【戦国北条5代】",
+                "publisher": "学習研究社",
+                "year": "1989",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ5 武田信玄",
+                "publisher": "学習研究社",
+                "year": "1988",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ6 風林火山",
+                "publisher": "学習研究社",
+                "year": "1988",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ7 真田戦記",
+                "publisher": "学習研究社",
+                "year": "1988",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ1 織田信長",
+                "publisher": "学習研究社",
+                "year": "1987",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ20 激闘 織田軍団",
+                "publisher": "学習研究社",
+                "year": "1990",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ27 風雲 信長記",
+                "publisher": "学習研究社",
+                "year": "1992",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "別冊歴史読本 1989 11月号 明智光秀",
+                "publisher": "新人物往来社",
+                "year": "1889",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ【戦国】セレクション 俊英 明智光秀",
+                "publisher": "学習研究社",
+                "year": "2002",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "TJ MOOK 誰も知らない明智光秀の真実",
+                "publisher": "宝島社",
+                "year": "2020",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ3 羽柴秀吉",
+                "publisher": "学習研究社",
+                "year": "1987",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ30 豪壮 秀吉軍団",
+                "publisher": "学習研究社",
+                "year": "1992",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ11 徳川家康",
+                "publisher": "学習研究社",
+                "year": "1989",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ22 徳川四天王",
+                "publisher": "学習研究社",
+                "year": "1991",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ62 徳川家光",
+                "publisher": "学習研究社",
+                "year": "2000",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "Books Esoterica 第22号 天皇の本",
+                "publisher": "学習研究社",
+                "year": "1998",
+                "status": "未着手"
+            },
+            {
+                "author": "笠原英彦",
+                "title": "歴代天皇総覧(中公新書)",
+                "publisher": "中央公論新社",
+                "year": "2001",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ特別編集 戦国京都",
+                "publisher": "学習研究社",
+                "year": "1994",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ9 毛利元就",
+                "publisher": "学習研究社",
+                "year": "1988",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ29 長宗我部元親",
+                "publisher": "学習研究社",
+                "year": "1992",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ12 戦国九州軍記",
+                "publisher": "学習研究社",
+                "year": "1989",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ【戦国】セレクション 裂帛 島津戦記",
+                "publisher": "学習研究社",
+                "year": "2001",
+                "status": "未着手"
+            },
+            {
+                "author": "鹿毛敏夫",
+                "title": "歴史文化ライブラリー409 アジアの中の戦国大名",
+                "publisher": "吉川弘文館",
+                "year": "2015",
+                "status": "未着手"
+            },
+            {
+                "author": "外間守善",
+                "title": "沖縄の歴史と文化(中公新書)",
+                "publisher": "中央公論社",
+                "year": "1986",
+                "status": "未着手"
+            },
+            {
+                "author": "田中健夫",
+                "title": "倭寇 海の歴史(講談社学術文庫)",
+                "publisher": "講談社",
+                "year": "2012",
+                "status": "未着手"
+            },
+            {
+                "author": "太田尚樹",
+                "title": "南洋の日本人町(平凡社新書)",
+                "publisher": "平凡社",
+                "year": "2022",
+                "status": "未着手"
+            }
+        ],
+        "kassen": [
+            {
+                "author": "",
+                "title": "歴史群像シリーズ37 応仁の乱",
+                "publisher": "学習研究社",
+                "year": "1994",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "新分析 現代に生きる戦略・戦術 川中島の戦い",
+                "publisher": "旺文社",
+                "year": "1984",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "新分析 現代に生きる戦略・戦術 長篠の戦い",
+                "publisher": "旺文社",
+                "year": "1984",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "新分析 現代に生きる戦略・戦術 天王山の戦い",
+                "publisher": "旺文社",
+                "year": "1984",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ15 賤ヶ岳の戦い",
+                "publisher": "学習研究社",
+                "year": "1989",
+                "status": "未着手"
+            },
+            {
+                "author": "百々幸雄・竹間芳明・関豊・米田穣",
+                "title": "骨が語る奥州戦国九戸落城",
+                "publisher": "東北大学出版会",
+                "year": "2008",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ35 文禄・慶長の役",
+                "publisher": "学習研究社",
+                "year": "1993",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ4 関ヶ原の戦い",
+                "publisher": "学習研究社",
+                "year": "1987",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ【戦国】セレクション 決戦 関ヶ原",
+                "publisher": "学習研究社",
+                "year": "2000",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "新分析 現代に生きる戦略・戦術 関ヶ原の戦い",
+                "publisher": "旺文社",
+                "year": "1984",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ40 大阪の陣",
+                "publisher": "学習研究社",
+                "year": "1994",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ【戦国】セレクション 激闘 大阪の陣",
+                "publisher": "学習研究社",
+                "year": "2000",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "新分析 現代に生きる戦略・戦術 大阪の陣",
+                "publisher": "旺文社",
+                "year": "1984",
+                "status": "未着手"
+            },
+            {
+                "author": "神田千里",
+                "title": "島原の乱(講談社学術文庫)",
+                "publisher": "講談社",
+                "year": "2018",
+                "status": "未着手"
+            }
+        ],
+        "jinbutsu": [
+            {
+                "author": "",
+                "title": "歴史群像シリーズ特別編集 決定版 図説 戦国武将118",
+                "publisher": "学習研究社",
+                "year": "2001",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史と旅 臨時増刊号52 戦国大名家家臣団総覧",
+                "publisher": "秋田書店",
+                "year": "1991",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "別冊歴史読本 第60号 激闘！戦国武将330傑",
+                "publisher": "新人物往来社",
+                "year": "1888",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "別冊歴史読本 '92秋号 戦国城盗り出世大名",
+                "publisher": "新人物往来社",
+                "year": "1992",
+                "status": "未着手"
+            },
+            {
+                "author": "中嶋繁雄",
+                "title": "日本の名門100家",
+                "publisher": "立風書房",
+                "year": "1979",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "新・歴史群像シリーズ6 戦国軍師伝",
+                "publisher": "学習研究社",
+                "year": "2007",
+                "status": "未着手"
+            },
+            {
+                "author": "渡辺敏樹",
+                "title": "戦国武将の健康カルテ",
+                "publisher": "アントレックス",
+                "year": "2017",
+                "status": "未着手"
+            },
+            {
+                "author": "橋場日月",
+                "title": "戦国美麗姫図鑑",
+                "publisher": "PHP研究所",
+                "year": "2009",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ特別編集 【決定版】図説 忍者と忍術",
+                "publisher": "学習研究社",
+                "year": "2007",
+                "status": "未着手"
+            },
+            {
+                "author": "清水昇",
+                "title": "戦国忍者列伝",
+                "publisher": "河出書房新社",
+                "year": "2008",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "Books Esoterica 第29号 古武道の本",
+                "publisher": "学習研究社",
+                "year": "2002",
+                "status": "未着手"
+            },
+            {
+                "author": "歴史群像編集部",
+                "title": "日本剣豪100人伝",
+                "publisher": "学習研究社",
+                "year": "2008",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ 日本の剣術",
+                "publisher": "学習研究社",
+                "year": "2005",
+                "status": "未着手"
+            },
+            {
+                "author": "小佐野淳",
+                "title": "図説 柔術",
+                "publisher": "新紀元社",
+                "year": "2001",
+                "status": "未着手"
+            },
+            {
+                "author": "藤堂良明",
+                "title": "柔道の歴史と文化",
+                "publisher": "不昧堂出版",
+                "year": "2007",
+                "status": "未着手"
+            },
+            {
+                "author": "外間哲弘",
+                "title": "空手道年表",
+                "publisher": "沖縄図書センター",
+                "year": "2001",
+                "status": "未着手"
+            },
+            {
+                "author": "岩井虎伯",
+                "title": "本部朝基と琉球カラテ",
+                "publisher": "愛隆堂",
+                "year": "2000",
+                "status": "未着手"
+            },
+            {
+                "author": "家永三郎",
+                "title": "日本文化史 第二版(岩波新書)",
+                "publisher": "岩波書店",
+                "year": "1982",
+                "status": "未着手"
+            },
+            {
+                "author": "辻惟雄(監修)",
+                "title": "増補新装「カラー版」日本美術史",
+                "publisher": "美術出版社",
+                "year": "2003",
+                "status": "未着手"
+            },
+            {
+                "author": "久保田慶一ほか",
+                "title": "はじめての音楽史 古代ギリシアの音楽から日本の現代音楽まで",
+                "publisher": "音楽之友社",
+                "year": "1996",
+                "status": "未着手"
+            },
+            {
+                "author": "山崎有一郎(監修)",
+                "title": "能楽入門1 初めての能・狂言",
+                "publisher": "小学館",
+                "year": "1999",
+                "status": "未着手"
+            },
+            {
+                "author": "鎌倉恵子(監修)",
+                "title": "一冊でわかる 歌舞伎名作ガイド50選",
+                "publisher": "成美堂出版",
+                "year": "2003",
+                "status": "未着手"
+            }
+        ],
+        "etc": [
+            {
+                "author": "鈴木眞哉",
+                "title": "戦国時代の大誤解(PHP新書)",
+                "publisher": "PHP研究所",
+                "year": "2007",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "TJ MOOK 新発見で迫る戦国の謎",
+                "publisher": "宝島社",
+                "year": "2017",
+                "status": "未着手"
+            },
+            {
+                "author": "歴史ミステリー研究会",
+                "title": "戦国の合戦99の謎",
+                "publisher": "彩図社",
+                "year": "2014",
+                "status": "未着手"
+            },
+            {
+                "author": "乃至政彦(監修)",
+                "title": "洋泉社MOOK 別冊歴史REAL 図解！戦国の陣形",
+                "publisher": "洋泉社",
+                "year": "2016",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ特別編集 【決定版】図説 日本刀大全",
+                "publisher": "学習研究社",
+                "year": "2006",
+                "status": "未着手"
+            },
+            {
+                "author": "",
+                "title": "歴史群像シリーズ特別編集 【決定版】図説 戦国甲冑集",
+                "publisher": "学習研究社",
+                "year": "2003",
+                "status": "未着手"
+            },
+            {
+                "author": "大野信長・有沢重雄・加唐亜紀",
+                "title": "ビジュアル百科 日本の城1000城",
+                "publisher": "aaa",
+                "year": "0000",
+                "status": "未着手"
+            },
+            {
+                "author": "渡邊大門",
+                "title": "戦国古文書入門",
+                "publisher": "東京堂出版",
+                "year": "2019",
+                "status": "未着手"
+            }
         ]
     },
     "footer": {
