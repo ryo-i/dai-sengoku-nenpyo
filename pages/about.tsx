@@ -8,7 +8,7 @@ import Data from '../data/data.json';
 
 const headerTitle = Data.header.title;
 const pageTitle = 'このアプリについて';
-const pageText = '「大戦国・年表」は南北合一から元和偃武までの戦国時代の年表（1392〜1616年）の年表です。';
+const pageText = '「大戦国・年表」は南北合一から元和偃武までの戦国時代の年表（1392〜1616年）です。';
 const headTitle = pageTitle + ' | ' + headerTitle;
 
 
@@ -72,7 +72,7 @@ function About() {
                 <h2>詳細</h2>
                 <section>
                     <h3>ブログ</h3>
-                    <p>（作成中）</p>
+                    <p><a href="https://www.i-ryo.com/entry/2022/11/13/121556" target="_blank">【React/Next.js】大戦国・年表を作った（年表は随時追加中ー） - クモのようにコツコツと</a></p>
                 </section>
                 <section>
                     <h3>ソースコード（GitHub）</h3>

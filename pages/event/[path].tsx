@@ -40,7 +40,7 @@ export async function getStaticPaths() {
 }
 
 
-// Get TrackInfo
+// Get Event Info
 export async function getStaticProps({ params }) {
     const path = params.path;
     const eventInfo = {
