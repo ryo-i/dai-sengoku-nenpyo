@@ -58,7 +58,7 @@ function About() {
                 <h2>進捗</h2>
                 <ul>
                     <li>図解戦国史、年表1582年まで追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
-                    <li>参考文献に未着手の本も追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
+                    <li>参考文献にurlも追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
             <section>

@@ -1202,6 +1202,13 @@
                 "publisher": "成美堂出版",
                 "year": "2003",
                 "status": "未着手"
+            },
+            {
+                "author": "今尾哲也(監修)",
+                "title": "歌舞伎の歴史(岩波新書)",
+                "publisher": "岩波書店",
+                "year": "2000",
+                "status": "未着手"
             }
         ],
         "etc": [
@@ -1250,8 +1257,8 @@
             {
                 "author": "大野信長・有沢重雄・加唐亜紀",
                 "title": "ビジュアル百科 日本の城1000城",
-                "publisher": "aaa",
-                "year": "0000",
+                "publisher": "西東社",
+                "year": "2012",
                 "status": "未着手"
             },
             {
@@ -1261,7 +1268,38 @@
                 "year": "2019",
                 "status": "未着手"
             }
-        ]
+        ],
+        "url": {
+            "date": [
+                "https://ja.wikipedia.org/wiki/元号一覧_(日本)",
+                "https://keisan.casio.jp/menu/system/000000000230",
+                "https://ja.wikipedia.org/wiki/太陰太陽暦",
+                "https://ja.wikipedia.org/wiki/グレゴリオ暦",
+                "https://ja.wikipedia.org/wiki/ユリウス暦",
+                "https://keisan.casio.jp/exec/system/1257144260"
+            ],
+            "country": [
+                "https://ja.wikipedia.org/wiki/令制国一覧",
+                "https://ja.wikipedia.org/wiki/陸中国",
+                "http://www.tt.rim.or.jp/~ishato/tiri/gun/map/1871/26tyuo.htm",
+                "http://www.tt.rim.or.jp/~ishato/tiri/gun/map/1871/27hokuo.htm",
+                "http://www.tt.rim.or.jp/~ishato/tiri/gun/map/1871/28ryou.htm"
+            ],
+            "authority": [
+                "https://ja.wikipedia.org/wiki/天皇の一覧",
+                "https://ja.wikipedia.org/wiki/摂政・関白の一覧",
+                "https://ja.wikipedia.org/wiki/足利将軍一覧",
+                "https://ja.wikipedia.org/wiki/平島公方",
+                "https://ja.wikipedia.org/wiki/徳川将軍一覧",
+                "https://ja.wikipedia.org/wiki/管領",
+                "https://ja.wikipedia.org/wiki/管領_(曖昧さ回避)",
+                "https://ja.wikipedia.org/wiki/明智光秀",
+                "https://ja.wikipedia.org/wiki/鎌倉公方",
+                "https://ja.wikipedia.org/wiki/古河公方",
+                "https://ja.wikipedia.org/wiki/小弓公方",
+                "https://ja.wikipedia.org/wiki/関東管領"
+            ]
+        }
     },
     "footer": {
         "text": "©️ イイダリョウ"

@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 図解戦国史、年表1582年まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- 参考文献に未着手の本も追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- 参考文献にurlも追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 

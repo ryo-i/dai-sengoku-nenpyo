@@ -75,6 +75,41 @@ function InnerReference() {
             )}
           </ul>
         </section>
+        <section>
+          <h2>url</h2>
+          <dl>
+            <dt>和暦・西暦</dt>
+            <dd>
+              <ul>
+                {reference.url.date.map((data, index) =>
+                  <li  key={index}>
+                    <a href={data} target="_blank">{data}</a>
+                  </li>
+                )}
+              </ul>
+            </dd>
+            <dt>律令国</dt>
+            <dd>
+              <ul>
+                {reference.url.country.map((data, index) =>
+                  <li  key={index}>
+                    <a href={data} target="_blank">{data}</a>
+                  </li>
+                )}
+              </ul>
+            </dd>
+            <dt>為政者</dt>
+            <dd>
+              <ul>
+                {reference.url.authority.map((data, index) =>
+                  <li  key={index}>
+                    <a href={data} target="_blank">{data}</a>
+                  </li>
+                )}
+              </ul>
+            </dd>
+          </dl>
+        </section>
       </>
     );
   };
