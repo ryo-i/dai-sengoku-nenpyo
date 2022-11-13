@@ -25,6 +25,7 @@ function InnerReference() {
             )}
           </ul>
         </section>
+        <hr />
         <section>
           <h2>戦国史</h2>
           <ul>
@@ -35,6 +36,7 @@ function InnerReference() {
             )}
           </ul>
         </section>
+        <hr />
         <section>
           <h2>地域史</h2>
           <ul>
@@ -45,6 +47,7 @@ function InnerReference() {
             )}
           </ul>
         </section>
+        <hr />
         <section>
           <h2>合戦</h2>
           <ul>
@@ -55,6 +58,7 @@ function InnerReference() {
             )}
           </ul>
         </section>
+        <hr />
         <section>
           <h2>人物</h2>
           <ul>
@@ -65,6 +69,7 @@ function InnerReference() {
             )}
           </ul>
         </section>
+        <hr />
         <section>
           <h2>その他</h2>
           <ul>
@@ -75,6 +80,7 @@ function InnerReference() {
             )}
           </ul>
         </section>
+        <hr />
         <section>
           <h2>url</h2>
           <dl>

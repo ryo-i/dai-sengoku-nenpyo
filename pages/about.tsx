@@ -8,7 +8,7 @@ import Data from '../data/data.json';
 
 const headerTitle = Data.header.title;
 const pageTitle = 'このアプリについて';
-const pageText = '「大戦国・年表」は南北合一から元和偃武までの戦国時代の年表（1392〜1616年）です。';
+const pageText = '「大戦国・年表」は南北朝合一（明徳の和約）から元和偃武（家康の死亡）での戦国時代（1392〜1616年）の年表を作るプロジェクトです（年表は随時追加中）';
 const headTitle = pageTitle + ' | ' + headerTitle;
 
 
@@ -58,7 +58,7 @@ function About() {
                 <h2>進捗</h2>
                 <ul>
                     <li>図解戦国史、年表1582年まで追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
-                    <li>参考文献にurlも追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
+                    <li>aboutのdisctiption修正 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
             <section>
