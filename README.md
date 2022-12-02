@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 図解戦国史、年表1616年まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 図解戦国史、武将別年表の信長・秀吉・家康を追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - 参考文献追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
