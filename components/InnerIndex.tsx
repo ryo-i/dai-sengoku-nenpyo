@@ -399,15 +399,15 @@ function InnerIndex() {
               <dd>
                 <p className="tag-area">
                   <span className="wa-area">
-                    {data.waYearUnit === "年" ?
+                    <WaGengoTag
+                      waGengo={data.waGengo}
+                      waYearUnit={'年間'}
+                      path={data.path}
+                      category={data.category}
+                    />
+                    {data.waYearUnit === "年" &&
                       <WaYearTag
                         waYear={data.waYear}
-                        waYearUnit={data.waYearUnit}
-                        path={data.path}
-                        category={data.category}
-                      /> :
-                      <WaGengoTag
-                        waGengo={data.waGengo}
                         waYearUnit={data.waYearUnit}
                         path={data.path}
                         category={data.category}
@@ -415,29 +415,29 @@ function InnerIndex() {
                     }
                   </span>
                   <span className="ad-area">
-                    {data.adYearUnit === "年" ?
+                    <AdAgeTag
+                      adAge={data.adAge}
+                      path={data.path}
+                      category={data.category}
+                    />
+                    {data.adYearUnit === "年" &&
                       <AdYearTag
                         adYear={data.adYear}
                         adYearUnit={data.adYearUnit}
-                        path={data.path}
-                        category={data.category}
-                      /> :
-                      <AdAgeTag
-                        adAge={data.adAge}
                         path={data.path}
                         category={data.category}
                       />
                     }
                   </span>
                   <span className="place-area">
-                    {data.country ?
+                    <RegionTag
+                      region={data.region}
+                      path={data.path}
+                      category={data.category}
+                    />
+                    {data.country &&
                       <CountryTag
                         country={data.country}
-                        path={data.path}
-                        category={data.category}
-                      /> :
-                      <RegionTag
-                        region={data.region}
                         path={data.path}
                         category={data.category}
                       />

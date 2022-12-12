@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 図解戦国史、武将別年表の北条・武田・上杉を追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
-- 参考文献追加 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
+- 年表一覧のタグ：年間、年代、地方を常時表示 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
 
