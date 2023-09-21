@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 図解戦国史、p25まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
+- 図解戦国史、p26まで追加 [#2](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2)
 - 年表一覧のタグ：年間、年代、地方を常時表示 [#3](https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3)
 
 ## 詳細（ブログ）
