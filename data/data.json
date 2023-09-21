@@ -577,6 +577,32 @@
             "influences": []
         }
     ],
+    "referenceCategory": {
+        "A": {
+            "category": "allHistory",
+            "title": "歴史全般"
+        },
+        "B": {
+            "category": "sengokuHistory",
+            "title": "戦国史"
+        },
+        "C": {
+            "category": "areaHistory",
+            "title": "地域史"
+        },
+        "D": {
+            "category": "kassen",
+            "title": "合戦"
+        },
+        "E": {
+            "category": "jinbutsu",
+            "title": "人物"
+        },
+        "F": {
+            "category": "etc",
+            "title": "その他"
+        }
+    },
     "reference": {
         "allHistory": [
             {
