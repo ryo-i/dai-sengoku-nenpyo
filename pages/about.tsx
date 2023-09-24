@@ -57,7 +57,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>図解戦国史、p27まで追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
+                    <li>図解戦国史、p29まで追加 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/2" target="_blank">#2</a></li>
                     <li>年表一覧のタグ：年間、年代、地方を常時表示 <a href="https://github.com/ryo-i/dai-sengoku-nenpyo/issues/3" target="_blank">#3</a></li>
                 </ul>
             </section>
